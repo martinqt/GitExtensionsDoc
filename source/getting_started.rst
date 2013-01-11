@@ -17,3 +17,10 @@ The installer can be found `here <http://code.google.com/p/gitextensions/>`_
 
 .. figure:: /images/install3.png
 
+.. figure:: /images/install4.png
+
+    Choose the options to install.
+
+.. figure:: /images/install5.png
+
+.. figure:: /images/install6.png
