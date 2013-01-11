@@ -1,3 +1,16 @@
+Git Extensions Manual
+=====================
+
+HTML Help Files
+---------------
+
+Download http://www.microsoft.com/en-us/download/details.aspx?id=21138.
+
+To build the file, use `makeHTMLHelp.cmd`
+
+PDF
+---
+
 To use the PDF builder, you'll need to install:
 
 * rst2pdf `easy_install rst2pdf`
