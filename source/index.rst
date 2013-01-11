@@ -6,3 +6,7 @@ GitExtensionsDoc Manual
 
    git_extensions
    getting_started
+   git_cheat_sheet
+
+
+:ref:`genindex`
