@@ -3,6 +3,7 @@ Getting Started
 
 .. index::
    single: Getting Started; Installation
+
 Installation
 ------------
 
