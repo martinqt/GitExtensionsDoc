@@ -258,7 +258,7 @@ texinfo_documents = [
 # regardless of the global pdf_compressed setting.
 
 pdf_documents = [
-    ('index', u'MyProject', u'My Project', u'Author Name'),
+    ('index', u'GitExtensionsManual', u'Git Extensions Manual', u'Author Name'),
 ]
 
 # A comma-separated list of custom stylesheets. Example:
