@@ -23,4 +23,14 @@ The installer can be found `here <http://code.google.com/p/gitextensions/>`_.
 
 .. figure:: /images/install5.png
 
+    Choose the SSH client to use. PuTTY is the default because it has better windows integration.
+
 .. figure:: /images/install6.png
+
+Settings
+--------
+
+All settings will be verified when Git Extensions is started for the first time. If Git Extensions requires 
+any settings to be changed the settings dialog will be shown. All incorrect settings will be marked red. You 
+can ask Git Extensions to try to fix the setting for you by clicking on it.
+
