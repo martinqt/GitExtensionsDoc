@@ -21,4 +21,4 @@ Also add this `,'rst2pdf.pdfbuilder'` to the source/cofig.py file at the line 28
 HTML
 ----
 
-Simply run `make.cmd html`
+Simply run `make.cmd html`.
