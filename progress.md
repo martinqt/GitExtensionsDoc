@@ -13,5 +13,5 @@ Progress
 - [ ] 3 Browse repository
   - [x] 3.1 View commit log
   - [x] 3.2 Search history
-  - [ ] 3.3 Singe file history
+  - [x] 3.3 Singe file history
   - [ ] 3.4 Blame
