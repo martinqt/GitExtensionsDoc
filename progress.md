@@ -15,3 +15,4 @@ Progress
   - [x] 3.2 Search history
   - [x] 3.3 Singe file history
   - [ ] 3.4 Blame
+- [x] Git Cheat Sheet

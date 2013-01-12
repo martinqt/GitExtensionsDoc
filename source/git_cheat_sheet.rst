@@ -7,55 +7,55 @@ Git Cheat Sheet
 +-----------------------------------------------------------------+---------------------------------------------------------------+
 |Action                                                           | Command                                                       |
 +=================================================================+===============================================================+
-|Create new repository                                            |   :bash:`$ git init`                                          |
+|Create new repository                                            | :bash:`$ git init`                                            |
 +-----------------------------------------------------------------+---------------------------------------------------------------+
-|Create shared repository                                         |   :bash:`$ git init –-bare –-shared=all`                      |
+|Create shared repository                                         | :bash:`$ git init –-bare –-shared=all`                        |
 +-----------------------------------------------------------------+---------------------------------------------------------------+
-|Clone repository                                                 |   :bash:`$ git clone c:/demo1 c:/demo2`                       |
+|Clone repository                                                 | :bash:`$ git clone c:/demo1 c:/demo2`                         |
 +-----------------------------------------------------------------+---------------------------------------------------------------+
-|Checkout branch                                                  |   :bash:`$ git checkout <name>`                               |
+|Checkout branch                                                  | :bash:`$ git checkout <name>`                                 |
 +-----------------------------------------------------------------+---------------------------------------------------------------+
-|Create branch                                                    |   :bash:`$ git branch <name>`                                 |
+|Create branch                                                    | :bash:`$ git branch <name>`                                   |
 +-----------------------------------------------------------------+---------------------------------------------------------------+
-|Delete branch                                                    |   :bash:`$ git branch -d <name>`                              |
+|Delete branch                                                    | :bash:`$ git branch -d <name>`                                |
 +-----------------------------------------------------------------+---------------------------------------------------------------+
-|Merge branch (from the branch to merge into):                    |   :bash:`$ git merge PDC`                                     |
+|Merge branch (from the branch to merge into):                    | :bash:`$ git merge PDC`                                       |
 +-----------------------------------------------------------------+---------------------------------------------------------------+
-|Solve conflicts (add --tool=kdiff3 if no mergetool is specified) |   :bash:`$ git mergetool`                                     |
-|                                                                 |   :bash:`$ git commit`                                        |
+|Solve conflicts (add --tool=kdiff3 if no mergetool is specified) | :bash:`$ git mergetool`                                       |
+|                                                                 | :bash:`$ git commit`                                          |
 +-----------------------------------------------------------------+---------------------------------------------------------------+
-|Create tag                                                       |   :bash:`$ git tag <name>`                                    |
+|Create tag                                                       | :bash:`$ git tag <name>`                                      |
 +-----------------------------------------------------------------+---------------------------------------------------------------+
-|Add files/changes (. for all files)                              |   $ git add .                                                 |
+|Add files/changes (. for all files)                              | :bash:`$ git add .`                                           |
 +-----------------------------------------------------------------+---------------------------------------------------------------+
-|Commit added files/changes (--amend to amend to last commit)     |   $ git commit –m “Enter commit message”                      |
+|Commit added files/changes (--amend to amend to last commit)     | :bash:`$ git commit –m “Enter commit message”`                |
 +-----------------------------------------------------------------+---------------------------------------------------------------+
-|Discard changes                                                  |   $ git reset --hard                                          |
+|Discard changes                                                  | :bash:`$ git reset --hard`                                    |
 +-----------------------------------------------------------------+---------------------------------------------------------------+
-|Create patch (-M = detect renames –C = detect copies)            |   $ git format-patch –M –C origin                             |
+|Create patch (-M = detect renames –C = detect copies)            | :bash:`$ git format-patch –M –C origin`                       |
 +-----------------------------------------------------------------+---------------------------------------------------------------+
-|Apply patch without merging                                      |   $ git apply c:/patch/0001-employee.patch                    |
+|Apply patch without merging                                      | :bash:`$ git apply c:/patch/0001-employee.patch`              |
 +-----------------------------------------------------------------+---------------------------------------------------------------+
-|Merge patch                                                      |   $ git am -–3way –-signoff c:/patch/0001-employee.patch      |
+|Merge patch                                                      | :bash:`$ git am -–3way –-signoff c:/patch/0001-employee.patch`|
 +-----------------------------------------------------------------+---------------------------------------------------------------+
-|Solve conflicts (add --tool=kdiff3 if no mergetool is specified) |   $ git mergetool                                             |
-|                                                                 |   $ git am –-3way -–resolved                                  |
+|Solve conflicts (add --tool=kdiff3 if no mergetool is specified) | :bash:`$ git mergetool`                                       |
+|                                                                 | :bash:`$ git am –-3way -–resolved`                            |
 +-----------------------------------------------------------------+---------------------------------------------------------------+
-|Stash changes                                                    |   $ git stash                                                 |
+|Stash changes                                                    | :bash:`$ git stash`                                           |
 +-----------------------------------------------------------------+---------------------------------------------------------------+
-|Apply stashed changes                                            |   $ git stash apply                                           |
+|Apply stashed changes                                            | :bash:`$ git stash apply`                                     |
 +-----------------------------------------------------------------+---------------------------------------------------------------+
-|Pull changes (add --rebase to rebase instead of merge)           |   $ git pull c:/demo1 master                                  |
+|Pull changes (add --rebase to rebase instead of merge)           | :bash:`$ git pull c:/demo1 master`                            |
 +-----------------------------------------------------------------+---------------------------------------------------------------+
-|Solve conflicts (add --tool=kdiff3 if no mergetool is specified) |   $ git mergetool                                             |
-|                                                                 |   $ git commit                                                |
+|Solve conflicts (add --tool=kdiff3 if no mergetool is specified) | :bash:`$ git mergetool`                                       |
+|                                                                 | :bash:`$ git commit`                                          |
 +-----------------------------------------------------------------+---------------------------------------------------------------+
-|Push changes (in branch $ git push c:/demo1 master master:<new>) |   $ git push c:/demo1                                         |
+|Push changes (in branch $ git push c:/demo1 master master:<new>) | :bash:`$ git push c:/demo1`                                   |
 +-----------------------------------------------------------------+---------------------------------------------------------------+
-|Blame                                                            |   $ git blame –M –w <filename>                                |
+|Blame                                                            | :bash:`$ git blame –M –w <filename>`                          |
 +-----------------------------------------------------------------+---------------------------------------------------------------+
-|Help                                                             |   $ git <command> --help                                      |
-+----------------------------------------------------------------+----------------------------------------------------------------+
+|Help                                                             | :bash:`$ git <command> --help`                                |
++------------------------------------------------------------------+--------------------------------------------------------------+
 
 Here are some default names used by Git.
 
