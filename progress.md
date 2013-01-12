@@ -15,4 +15,48 @@ Progress
   - [x] 3.2 Search history
   - [x] 3.3 Singe file history
   - [x] 3.4 Blame
+- [ ] 4 Commit
+  - [ ] 
+  - [ ] 
+  - [ ] 
+  - [ ] 
+- [ ] 5 Tag
+  - [ ] 
+  - [ ] 
+- [ ] 6 Branches
+  - [ ] 
+  - [ ] 
+  - [ ] 
+  - [ ] 
+  - [ ] 
+- [ ] 7 Patches
+  - [ ] 
+  - [ ] 
+- [ ] 8 Remote feature
+  - [ ] 
+  - [ ] 
+    - [ ] 
+    - [ ] 
+  - [ ] 
+  - [ ] 
+- [ ] 9 Merge conflicts
+  - [ ] 
+- [x] 10 Notes
+- [ ] 11 Submodules
+  - [ ] 
+  - [ ] 
+  - [ ] 
+- [ ] 12 Maintenance
+  - [ ] 
+  - [ ] 
+  - [ ] 
+  - [ ] 
+- [ ] 13 Translations
+  - [ ] 13.1 Change language
+  - [ ] 
+- [ ] 14 Integration
+  - [ ] 14.1 Visual Studio
+  - [ ] 14.2 Windows Explorer
+- [ ] 15 Command line
+  - [ ] 15.1 Git Extensions command line
 - [x] Git Cheat Sheet

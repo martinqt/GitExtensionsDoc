@@ -7,6 +7,7 @@ GitExtensionsDoc Manual
    git_extensions
    getting_started
    browse_repository
+   notes
    git_cheat_sheet
 
 
