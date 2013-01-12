@@ -128,3 +128,21 @@ be set here. This is only needed when these are not in the system path.
 |Dictionary for spelling checker                    | Choose the dictionary to use for the spelling checker in the commit dialog.|
 +---------------------------------------------------+----------------------------------------------------------------------------+
 
+
+Create new repository
+---------------------
+
+When you do not want to work on an existing project, you can create your own repository. Choose the menu option 
+‘Init new repository’ to create a new repository.
+
+.. image:: /images/new_repository.png
+
+You can choose to create a Personal repository or a Central repository.
+
+A personal repository looks the same as a normal working directory but has a directory named .git on root level 
+containing the version history. This is the most common repository.
+
+Central repositories only contain the version history. Because a central repository has no working directory you cannot 
+checkout a revision in a central repository. It is also impossible to merge or pull changes is a central repository. This 
+repository type can be used as a public repository where developers can push changes to or pull changes from.
+
