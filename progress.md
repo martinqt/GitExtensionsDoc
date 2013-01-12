@@ -57,6 +57,6 @@ Progress
 - [ ] 14 Integration
   - [ ] 14.1 Visual Studio
   - [ ] 14.2 Windows Explorer
-- [ ] 15 Command line
-  - [ ] 15.1 Git Extensions command line
+- [x] 15 Command line
+  - [x] 15.1 Git Extensions command line
 - [x] Git Cheat Sheet
