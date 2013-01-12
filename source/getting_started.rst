@@ -131,8 +131,8 @@ be set here. This is only needed when these are not in the system path.
 Clone existing repository
 -------------------------
 
-You can clone an existing repository using the ‘Clone’ menu option. You can choose the repository type to clone to. For 
-personal use you need to choose ‘Personal repository’. For a central or public repository, choose ‘Central repository’. A 
+You can clone an existing repository using the ``Clone`` menu option. You can choose the repository type to clone to. For 
+personal use you need to choose ``Personal repository``. For a central or public repository, choose ``Central repository``. A 
 central repository does not have a working directory.
 
 .. image:: /images/clone.png
@@ -149,13 +149,13 @@ Create new repository
 ---------------------
 
 When you do not want to work on an existing project, you can create your own repository. Choose the menu option 
-‘Init new repository’ to create a new repository.
+``Init new repository`` to create a new repository.
 
 .. image:: /images/new_repository.png
 
 You can choose to create a Personal repository or a Central repository.
 
-A personal repository looks the same as a normal working directory but has a directory named .git on root level 
+A personal repository looks the same as a normal working directory but has a directory named ``.git`` on root level 
 containing the version history. This is the most common repository.
 
 Central repositories only contain the version history. Because a central repository has no working directory you cannot 
