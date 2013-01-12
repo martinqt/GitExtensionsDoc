@@ -6,6 +6,7 @@ GitExtensionsDoc Manual
 
    git_extensions
    getting_started
+   browse_repository
    git_cheat_sheet
 
 

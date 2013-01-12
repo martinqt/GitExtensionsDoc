@@ -10,3 +10,8 @@ Progress
   - [ ] 2.3 Start Page
   - [x] 2.4 Clone existing repository
   - [x] 2.5 Create new repository
+- [ ] 3 Browse repository
+  - [x] 3.1 View commit log
+  - [ ] 3.2 Search history
+  - [ ] 3.3 Singe file history
+  - [ ] 3.4 Blame
