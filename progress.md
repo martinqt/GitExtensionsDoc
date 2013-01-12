@@ -20,9 +20,9 @@ Progress
   - [ ] 
   - [ ] 
   - [ ] 
-- [ ] 5 Tag
-  - [ ] 
-  - [ ] 
+- [x] 5 Tag
+  - [x] 5.1 Create tag
+  - [x] 5.2 Delete tag
 - [ ] 6 Branches
   - [ ] 
   - [ ] 
@@ -33,12 +33,12 @@ Progress
   - [ ] 
   - [ ] 
 - [ ] 8 Remote feature
-  - [ ] 
-  - [ ] 
-    - [ ] 
-    - [ ] 
-  - [ ] 
-  - [ ] 
+  - [ ] 8.1 Manage remote repositories
+  - [ ] 8.2 Create SSH key
+    - [ ] 8.2.1 PuTTY and github
+    - [ ] 8.2.2 OpenSSH and github
+  - [ ] 8.3 Pull changes
+  - [ ] 8.4 Push changes
 - [ ] 9 Merge conflicts
   - [ ] 9.1 Handle merge conflicts
 - [x] 10 Notes
