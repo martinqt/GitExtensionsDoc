@@ -40,12 +40,12 @@ Progress
   - [ ] 
   - [ ] 
 - [ ] 9 Merge conflicts
-  - [ ] 
+  - [ ] 9.1 Handle merge conflicts
 - [x] 10 Notes
 - [ ] 11 Submodules
-  - [ ] 
-  - [ ] 
-  - [ ] 
+  - [ ] 11.1 Manage submodules
+  - [ ] 11.2 Add submodule
+  - [ ] 11.3 Remove submodule
 - [ ] 12 Maintenance
   - [ ] 
   - [ ] 
