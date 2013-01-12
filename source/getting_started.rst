@@ -128,6 +128,22 @@ be set here. This is only needed when these are not in the system path.
 |Dictionary for spelling checker                    | Choose the dictionary to use for the spelling checker in the commit dialog.|
 +---------------------------------------------------+----------------------------------------------------------------------------+
 
+Clone existing repository
+-------------------------
+
+You can clone an existing repository using the ‘Clone’ menu option. You can choose the repository type to clone to. For 
+personal use you need to choose ‘Personal repository’. For a central or public repository, choose ‘Central repository’. A 
+central repository does not have a working directory.
+
+.. image:: /images/clone.png
+
+The repository you want to clone could be on a network share or could be a repository that is accessed through an internet 
+or intranet connection. Depending on the protocol (http or ssh) you might need to load a SSH key into PuTTY.
+
+There are two different types of repositories you can create when making a clone. A personal repository contains the complete 
+history and also contains a working copy of the source tree. A central repository is used as a public repository where 
+developers push there changes they want to share with others to. A central repository contains the complete history but to not 
+have a working directory like personal repositories.
 
 Create new repository
 ---------------------
