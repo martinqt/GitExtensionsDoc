@@ -16,3 +16,17 @@ In the context menu of the commit log you can enable or disable the revision gra
 current branch instead of showing all branches. The other options will be discussed later.
 
 .. image:: /images/commit_contextual_menu.png
+
+Search history
+--------------
+
+The history can be searched using regular expressions are basic search terms. The quick filter in the toolbar searches in 
+the commit message, the author and the committer.
+
+.. image:: /images/quick_filter.png
+
+In the context menu of the commit log you can open the advanced filter dialog. The advanced filter dialog allows you to 
+search for more specific commits. To remove the filter either remove the filter in the toolbar and press enter or remove the 
+filter in the advanced filter dialog.
+
+.. image:: /images/advance_filter_dialog.png
