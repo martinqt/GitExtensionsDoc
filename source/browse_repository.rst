@@ -49,3 +49,12 @@ You can view the difference report from the commit in the ``Diff`` tab.
     Added lines are marked with a ``+``, removed lines are marked with a ``–``.
 
 .. image:: /images/file_history_diff.png
+
+Blame
+-----
+
+There is a blame function in the file history browser. It shows the last person editing a single line. 
+
+.. image:: /images/blame.png
+
+Double clicking on a code line shows the full commit introducing the change.
