@@ -16,22 +16,22 @@ Progress
   - [x] 3.3 Singe file history
   - [x] 3.4 Blame
 - [ ] 4 Commit
-  - [ ] 
-  - [ ] 
-  - [ ] 
-  - [ ] 
+  - [ ] 4.1 Commit changes
+  - [ ] 4.2 Cherry pick commit
+  - [ ] 4.3 Revert commit
+  - [ ] 4.4 Stash changes
 - [x] 5 Tag
   - [x] 5.1 Create tag
   - [x] 5.2 Delete tag
 - [ ] 6 Branches
-  - [ ] 
-  - [ ] 
-  - [ ] 
-  - [ ] 
-  - [ ] 
+  - [ ] 6.1 Create branch
+  - [ ] 6.2 Checkout branch
+  - [ ] 6.3 Merge branches
+  - [ ] 6.4 Rebase branch
+  - [ ] 6.5 Delete branch
 - [ ] 7 Patches
-  - [ ] 
-  - [ ] 
+  - [ ] 7.1 Create patch
+  - [ ] 7.2 Apply patches
 - [ ] 8 Remote feature
   - [ ] 8.1 Manage remote repositories
   - [ ] 8.2 Create SSH key
@@ -47,13 +47,13 @@ Progress
   - [ ] 11.2 Add submodule
   - [x] 11.3 Remove submodule
 - [ ] 12 Maintenance
-  - [ ] 
-  - [ ] 
-  - [ ] 
-  - [ ] 
+  - [ ] 12.1 Compress Git database
+  - [ ] 12.2 Recover lost objects
+  - [ ] 12.3 Fix user names
+  - [ ] 12.4 Ignore files
 - [ ] 13 Translations
   - [ ] 13.1 Change language
-  - [ ] 
+  - [ ] 13.2 Translate Git Extensions
 - [ ] 14 Integration
   - [ ] 14.1 Visual Studio
   - [ ] 14.2 Windows Explorer
