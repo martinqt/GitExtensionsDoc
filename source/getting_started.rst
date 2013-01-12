@@ -79,3 +79,31 @@ be set here. This is only needed when these are not in the system path.
 |                                                   | staged files. This option can cause slowdowns when browsing large          |
 |                                                   | repositories.                                                              |
 +---------------------------------------------------+----------------------------------------------------------------------------+
+|Show stash count on status bar in browse window    | When you use the stash a lot, it can be useful to show the number of       |
+|                                                   | stashed items on the toolbar. This option causes serious slowdowns in large|
+|                                                   | repositories and is turned off by default.                                 |
++---------------------------------------------------+----------------------------------------------------------------------------+
+|Close process dialog automatically when process is | When a process is finished, clause the process dialog automatically. Leave |
+|succeeded                                          | this option off if you want to see the result of processes. When a process |
+|                                                   | has been failed, the dialog will keep open.When a process is finished,     |
+|                                                   | clause the process dialog automatically. Leave this option off if you want |
+|                                                   | to see the result of processes. When a process has been failed, the dialog |
+|                                                   | will keep open.                                                            |
++---------------------------------------------------+----------------------------------------------------------------------------+
+|Show Git command line dialog when executing process| Git Extensions uses command line tools to access the git database. In some |
+|                                                   | environments it might be useful to see the command line dialog when a      |
+|                                                   | process is executed.                                                       |
++---------------------------------------------------+----------------------------------------------------------------------------+
+|Show revision graph in commit log                  | Turn revision graph in commit log on/off.                                  |
++---------------------------------------------------+----------------------------------------------------------------------------+
+|Use FileSystemWatcher to check if index is changed | Using the FileSystemWatcher to check index state improves the performance  |
+|                                                   | is some cases. Turn this off if you experience refresh problems in commit  |
+|                                                   | log.                                                                       |
++---------------------------------------------------+----------------------------------------------------------------------------+
+|Follow renames in file history                     | Try to follow file renames in the file history.                            |
++---------------------------------------------------+----------------------------------------------------------------------------+
+|Revision graph quicksearch timeout [ms]            | The timeout used for the quicksearch feature in the revision graph. The    |
+|                                                   | quicksearch will be enabled when you start typing and the revision graph is|
+|                                                   | focussed.                                                                  |
++---------------------------------------------------+----------------------------------------------------------------------------+
+
