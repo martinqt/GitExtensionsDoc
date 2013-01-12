@@ -45,7 +45,7 @@ Progress
 - [ ] 11 Submodules
   - [ ] 11.1 Manage submodules
   - [ ] 11.2 Add submodule
-  - [ ] 11.3 Remove submodule
+  - [x] 11.3 Remove submodule
 - [ ] 12 Maintenance
   - [ ] 
   - [ ] 

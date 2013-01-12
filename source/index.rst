@@ -8,6 +8,7 @@ GitExtensionsDoc Manual
    getting_started
    browse_repository
    notes
+   submodules
    command_line
    git_cheat_sheet
 
