@@ -7,7 +7,7 @@ Progress
 - [ ] 2 Getting started
   - [x] 2.1 Install
   - [ ] 2.2 Settings
-  - [ ] 2.3 Start Page
+  - [x] 2.3 Start Page
   - [x] 2.4 Clone existing repository
   - [x] 2.5 Create new repository
 - [x] 3 Browse repository

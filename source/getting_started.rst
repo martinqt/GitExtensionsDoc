@@ -128,6 +128,18 @@ be set here. This is only needed when these are not in the system path.
 |Dictionary for spelling checker                    | Choose the dictionary to use for the spelling checker in the commit dialog.|
 +---------------------------------------------------+----------------------------------------------------------------------------+
 
+Start Page
+----------
+
+The start page contains the most common tasks, recently opened repositories and favourites. The left side of the start page 
+is static. The other items can be edited.
+
+.. image:: /images/start_page.png
+
+Repositories can be moved to favourites using the context menu. Choose edit to add new repositories to any category.
+
+.. image:: /images/move_to_category.png
+
 Clone existing repository
 -------------------------
 
