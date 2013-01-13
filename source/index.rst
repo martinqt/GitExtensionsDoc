@@ -8,6 +8,7 @@ GitExtensionsDoc Manual
    getting_started
    browse_repository
    tag
+   branches
    notes
    submodules
    command_line
