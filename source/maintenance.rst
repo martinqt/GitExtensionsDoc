@@ -97,4 +97,4 @@ A short overview of the syntax:
 |     | regular file or a symbolic link foo (this is consistent with the way how pathspec works in general in git).              |
 +-----+--------------------------------------------------------------------------------------------------------------------------+
 
-For more `detailed information <http://www.kernel.org/pub/software/scm/git/docs/gitignore.html>`_
+For more `detailed information <http://www.kernel.org/pub/software/scm/git/docs/gitignore.html>`_.
