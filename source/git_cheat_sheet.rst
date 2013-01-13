@@ -38,8 +38,8 @@ Git Cheat Sheet
 +-----------------------------------------------------------------+---------------------------------------------------------------+
 |Merge patch                                                      | :bash:`$ git am -–3way –-signoff c:/patch/0001-employee.patch`|
 +-----------------------------------------------------------------+---------------------------------------------------------------+
-|Solve conflicts (add --tool=kdiff3 if no mergetool is specified) | * :bash:`$ git mergetool`                                     |
-|                                                                 | * :bash:`$ git am –-3way -–resolved`                          |
+|Solve conflicts (add --tool=kdiff3 if no mergetool is specified) | | :bash:`$ git mergetool`                                     |
+|                                                                 | | :bash:`$ git am –-3way -–resolved`                          |
 +-----------------------------------------------------------------+---------------------------------------------------------------+
 |Stash changes                                                    | :bash:`$ git stash`                                           |
 +-----------------------------------------------------------------+---------------------------------------------------------------+
@@ -47,8 +47,8 @@ Git Cheat Sheet
 +-----------------------------------------------------------------+---------------------------------------------------------------+
 |Pull changes (add --rebase to rebase instead of merge)           | :bash:`$ git pull c:/demo1 master`                            |
 +-----------------------------------------------------------------+---------------------------------------------------------------+
-|Solve conflicts (add --tool=kdiff3 if no mergetool is specified) | * :bash:`$ git mergetool`                                     |
-|                                                                 | * :bash:`$ git commit`                                        |
+|Solve conflicts (add --tool=kdiff3 if no mergetool is specified) | | :bash:`$ git mergetool`                                     |
+|                                                                 | | :bash:`$ git commit`                                        |
 +-----------------------------------------------------------------+---------------------------------------------------------------+
 |Push changes (in branch $ git push c:/demo1 master master:<new>) | :bash:`$ git push c:/demo1`                                   |
 +-----------------------------------------------------------------+---------------------------------------------------------------+
