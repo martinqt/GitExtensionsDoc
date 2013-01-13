@@ -1,5 +1,5 @@
 Branches
---------
+========
 
 .. image:: /images/branch.png
     :align: right
@@ -37,3 +37,15 @@ branch the next commit will be committed to the new branch.
 
 Creating branches in Git requires only 41 bytes of space in the repository. Creating a new branch is very easy and is 
 very fast. The complete work flow of Git is optimized for branching and merging.
+
+Checkout branch
+---------------
+
+Merge branches
+--------------
+
+Rebase branch
+-------------
+
+Delete branch
+-------------
