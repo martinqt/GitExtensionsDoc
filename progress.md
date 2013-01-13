@@ -15,11 +15,11 @@ Progress
   - [x] 3.2 Search history
   - [x] 3.3 Singe file history
   - [x] 3.4 Blame
-- [ ] 4 Commit
+- [x] 4 Commit
   - [x] 4.1 Commit changes
-  - [ ] 4.2 Cherry pick commit
-  - [ ] 4.3 Revert commit
-  - [ ] 4.4 Stash changes
+  - [x] 4.2 Cherry pick commit
+  - [x] 4.3 Revert commit
+  - [x] 4.4 Stash changes
 - [x] 5 Tag
   - [x] 5.1 Create tag
   - [x] 5.2 Delete tag

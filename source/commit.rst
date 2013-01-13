@@ -70,8 +70,31 @@ folder inside the Git Extensions installation folder.
 Cherry pick commit
 ------------------
 
+A commit can be recommitted by using the cherry pick function. This can be very useful when you want to make the same change 
+on multiple branches.
+
+.. image:: /images/cherry_pick.png
+
 Revert commit
 -------------
 
+A commit cannot be deleted once it is published. If you need to undo the changes made in a commit, you need to create a new 
+commit that undoes the changes. This is called a revert commit.
+
+.. image:: /images/revert_commit.png
+
 Stash changes
 -------------
+
+If there are local changes that you do not want to commit yet and not want to throw away either, you can temporarily stash 
+them. This is useful when working on a feature and you need to start working on something else for a few hours. You can 
+stash changes away and then reapply them to your working dir again later. Stashes are typically used for very short periods. 
+
+.. image:: /images/stash_dialog.png
+
+You can create multiple stashes if needed. Stashes are shown in the commit log with the text ``[stash]``.
+
+.. image:: /images/commit_log_stash.png
+
+The stash is especially useful when pulling remote changes into a dirty working directory. If you want a more permanent 
+stash, you should create a branch.
