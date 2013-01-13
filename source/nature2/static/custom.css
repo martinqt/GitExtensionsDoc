@@ -1,0 +1,11 @@
+/*******Custom Part********/
+div.caution {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-top: 2px solid #DA0404;
+    border-bottom: 2px solid #DA0404;
+    background-color: #F9ADAD;
+}
+div.caution p.admonition-title {
+    color: #A40101;
+}
