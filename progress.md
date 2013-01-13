@@ -51,9 +51,9 @@ Progress
   - [x] 12.2 Recover lost objects
   - [x] 12.3 Fix user names
   - [x] 12.4 Ignore files
-- [ ] 13 Translations
-  - [ ] 13.1 Change language
-  - [ ] 13.2 Translate Git Extensions
+- [x] 13 Translations
+  - [x] 13.1 Change language
+  - [x] 13.2 Translate Git Extensions
 - [x] 14 Integration
   - [x] 14.1 Visual Studio
   - [x] 14.2 Windows Explorer
