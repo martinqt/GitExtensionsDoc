@@ -34,3 +34,12 @@ A Git Extensions toolbar allows you to perform the most common actions.
 Almost all function can be started from the ``Git`` menu in Visual Studio.
 
 .. image:: /images/visual_studio/git_menu.png
+
+Windows Explorer
+----------------
+
+The common commands can be started from Windows Explorer using the shell extensions. This option is only available 
+when Shell Extensions are installed.
+
+.. image:: /images/explorer_integration.png
+

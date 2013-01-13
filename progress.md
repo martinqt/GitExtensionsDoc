@@ -54,9 +54,9 @@ Progress
 - [ ] 13 Translations
   - [ ] 13.1 Change language
   - [ ] 13.2 Translate Git Extensions
-- [ ] 14 Integration
+- [x] 14 Integration
   - [x] 14.1 Visual Studio
-  - [ ] 14.2 Windows Explorer
+  - [x] 14.2 Windows Explorer
 - [x] 15 Command line
   - [x] 15.1 Git Extensions command line
 - [x] Git Cheat Sheet
