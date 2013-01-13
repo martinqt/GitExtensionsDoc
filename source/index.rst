@@ -11,6 +11,7 @@ GitExtensionsDoc Manual
    branches
    notes
    submodules
+   integration
    command_line
    git_cheat_sheet
 
