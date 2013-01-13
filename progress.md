@@ -42,9 +42,9 @@ Progress
 - [x] 9 Merge conflicts
   - [x] 9.1 Handle merge conflicts
 - [x] 10 Notes
-- [ ] 11 Submodules
-  - [ ] 11.1 Manage submodules
-  - [ ] 11.2 Add submodule
+- [x] 11 Submodules
+  - [x] 11.1 Manage submodules
+  - [x] 11.2 Add submodule
   - [x] 11.3 Remove submodule
 - [ ] 12 Maintenance
   - [ ] 12.1 Compress Git database
