@@ -29,9 +29,9 @@ Progress
   - [ ] 6.3 Merge branches
   - [ ] 6.4 Rebase branch
   - [ ] 6.5 Delete branch
-- [ ] 7 Patches
-  - [ ] 7.1 Create patch
-  - [ ] 7.2 Apply patches
+- [x] 7 Patches
+  - [x] 7.1 Create patch
+  - [x] 7.2 Apply patches
 - [ ] 8 Remote feature
   - [ ] 8.1 Manage remote repositories
   - [ ] 8.2 Create SSH key
