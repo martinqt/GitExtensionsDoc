@@ -2,10 +2,18 @@
 div.caution {
     padding-top: 2px;
     padding-bottom: 2px;
-    border-top: 2px solid #DA0404;
-    border-bottom: 2px solid #DA0404;
+    border: 1px solid #DA0404;
     background-color: #F9ADAD;
 }
 div.caution p.admonition-title {
     color: #A40101;
+}
+div.note {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border: 1px solid #127D00;
+    background-color: #DEFFD9;
+}
+div.note p.admonition-title {
+    color: #058C1A;
 }
