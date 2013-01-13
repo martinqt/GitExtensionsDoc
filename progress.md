@@ -16,7 +16,7 @@ Progress
   - [x] 3.3 Singe file history
   - [x] 3.4 Blame
 - [ ] 4 Commit
-  - [ ] 4.1 Commit changes
+  - [x] 4.1 Commit changes
   - [ ] 4.2 Cherry pick commit
   - [ ] 4.3 Revert commit
   - [ ] 4.4 Stash changes
