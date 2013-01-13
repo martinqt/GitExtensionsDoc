@@ -46,11 +46,11 @@ Progress
   - [x] 11.1 Manage submodules
   - [x] 11.2 Add submodule
   - [x] 11.3 Remove submodule
-- [ ] 12 Maintenance
-  - [ ] 12.1 Compress Git database
-  - [ ] 12.2 Recover lost objects
-  - [ ] 12.3 Fix user names
-  - [ ] 12.4 Ignore files
+- [x] 12 Maintenance
+  - [x] 12.1 Compress Git database
+  - [x] 12.2 Recover lost objects
+  - [x] 12.3 Fix user names
+  - [x] 12.4 Ignore files
 - [ ] 13 Translations
   - [ ] 13.1 Change language
   - [ ] 13.2 Translate Git Extensions
