@@ -85,6 +85,33 @@ This is done in the ``Manage remote repositories`` dialog.
 OpenSSH and github
 ^^^^^^^^^^^^^^^^^^
 
+When you choose to use OpenSSH you need to configure GitExtensions as shown in the screenshot below.
+
+.. image:: /images/github_openssh.png
+
+OpenSSH is the best SSH client there is but it lacks Windows support. Therefore it is slightly more complex to use. 
+Another drawback is that GitExtensions cannot control OpenSSH and needs to show the command line dialogs when OpenSSH might 
+be used. GitExtensions will show the command line window for every command that might require a SSH connection. For this 
+reason PuTTY is the prefered SSH client in GitExtensions.
+
+To generate a key pair in OpenSSH you need to go to the command line. I recommend to use the git bash because the path to 
+OpenSSH is already set.
+
+.. image:: /images/git_bash_toolbar.png
+
+Type the following command: ``ssh-keygen -C "your@email.com" -t rsa``
+Use the same email address as the email address used in git. You will be asked where if you want to protect the private 
+key with a password. This is not necessary. By default the public and private keys are stored in 
+``c:\Documents and Settings\[User]\.ssh\`` or ``c:\Users\[user]\.ssh\``.
+
+.. image:: /images/ssh_bash.png
+
+You do not need to tell GitExtensions about the private key because OpenSSH will load it for you. Now open the public 
+key using notepad and copy the key to github. This can be done in ``Account Settings`` in the tab ``SSH Public Keys`` 
+on `GitHub <http://www.github.com>`_.
+
+.. image:: /images/ssh_folder.png
+
 Pull changes
 ------------
 
