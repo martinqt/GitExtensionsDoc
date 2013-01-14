@@ -79,5 +79,44 @@ also delete the Refactor branch if it is not used anymore.
 Rebase branch
 -------------
 
+The rebase command is the most complex command in Git. The rebase command is very similar to the merge command. Both rebase 
+and merge are used to get a branch up-to-date. The main difference is that rebase can be used to keep the history linear 
+contrary to merges.
+
+.. image:: /images/rebase1.png
+
+A rebase of Refactor on top of master will perform the following actions:
+
+* All commits specific to the Refactor branch will be stashed in a temporary location
+* The branch Refactor will be removed
+* The branch Refactor will be recreated on the master branch
+* All commits will be recommitted in the new Refactor branch
+
+During a rebase merge conflicts can occur. You need to solve the merge conflicts for each commit that is rebased. The 
+rebase function in Git Extensions will guide you through all steps needed for a successful rebase.
+
+.. image:: /images/rebase_dialog.png
+
+The image below shows the commit log after the rebase. Notice that the history is changed and is seems like the commits on 
+the Refactor branch are created after the commits on the master branch.
+
+.. image:: /images/rebase2.png
+
+.. warning::
+
+    Because this function rewrites history you should only use this on branches that are not published to other repositories 
+    yet. When you rebase a branch that is already pushed it will be harder to pull or push to that remote. If you want to get 
+    a branch up-to-date that is already published you should merge.
+
 Delete branch
 -------------
+
+It is very common to create a lot of branches. You can delete branches when they are not needed anymore and you do not want 
+to keep the work done in that branch. When you delete a branch that is not yet merged, all commits will be lost. When you 
+delete a branch that is already merged with another branch, the merged commits will not be lost because they are also part 
+of another branch. 
+
+You can delete a branch using ``Delete branch`` in ``Commands`` menu. If you want to delete a branch that is not merged into 
+another branch, you need to check the ``Force delete`` checkbox.
+
+.. image:: /images/delet_branch.png
