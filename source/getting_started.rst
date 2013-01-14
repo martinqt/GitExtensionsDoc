@@ -128,6 +128,61 @@ be set here. This is only needed when these are not in the system path.
 |Dictionary for spelling checker                    | Choose the dictionary to use for the spelling checker in the commit dialog.|
 +---------------------------------------------------+----------------------------------------------------------------------------+
 
+.. image:: /images/settings/start_page.png
+
+The items on the Start Page can be edited. In this tab you can add and remove categories. Per category you can either configure 
+a RSS feed or add repositories. The order can be changed using the context menus in the Start Page.
+
+.. image:: /images/settings/colors.png
+
+In the color tab the following items can be set:
+
++-----------------------+-------------------------------------------------------------------------------------------+
+|Revision graph colors  | The colors that are used in the revision graph.                                           |
++-----------------------+-------------------------------------------------------------------------------------------+
+|Difference view colors | The colors that are used to mark changes.                                                 |
++-----------------------+-------------------------------------------------------------------------------------------+
+|Application Icon       | The color of the application icon. This is useful for recognising various open instances. |
++-----------------------+-------------------------------------------------------------------------------------------+
+
+.. image:: /images/settings/global_settings.png
+
+In the ``Global settings`` tab some global Git settings can be set.
+
++------------------+-------------------------------------------------------------------------------------------------------+
+|User name         | User name shown in commits and patches.                                                               |
++------------------+-------------------------------------------------------------------------------------------------------+
+|User email        | User email shown in commits and patches.                                                              |
++------------------+-------------------------------------------------------------------------------------------------------+
+|Editor            | Editor that git.exe opens (e.g. for editing commit message). This is not used by Git Extensions, only |
+|                  | when you call git.exe from the command line. By default Git will use the command line text editor vi. |
++------------------+-------------------------------------------------------------------------------------------------------+
+|Mergetool         | Merge tool used to solve merge conflicts. Git Extensions will search for common merge tools on your   |
+|                  | system.                                                                                               |
++------------------+-------------------------------------------------------------------------------------------------------+
+|Path to mergetool | Path to merge tool. Git Extensions will search for common merge tools on your system.                 |
++------------------+-------------------------------------------------------------------------------------------------------+
+|Mergetool command | Command that Git uses to call the merge tool. Git Extensions will try to set this automatic when a    |
+|                  | merge tool is chosen. This setting can be left empty when Git supports the mergetool (e.g. kdiff3).   |
++------------------+-------------------------------------------------------------------------------------------------------+
+|DiffTool          | DiffTool that is used.                                                                                |
++------------------+-------------------------------------------------------------------------------------------------------+
+|Path to DiffTool  | The path to the difftool.                                                                             |
++------------------+-------------------------------------------------------------------------------------------------------+
+|DiffToolCommand   | Command that Git uses to start the DiffTool. This setting should only be filled when Git doesn't      |
+|                  | support the mergetool.                                                                                |
++------------------+-------------------------------------------------------------------------------------------------------+
+|Line endings      | Choose how git should handle line endings.                                                            |
++------------------+-------------------------------------------------------------------------------------------------------+
+|Encoding          | Choose the encoding you want GitExtensions to use.                                                    |
++------------------+-------------------------------------------------------------------------------------------------------+
+
+.. image:: /images/settings/ssh.png
+
+In the tab ``SSH`` you can configure the SSH client you want Git to use. Git Extensions is optimized for PuTTY. Git Extensions 
+will show command line dialogs if you do not use PuTTY and user input is required. Git Extensions can load SSH keys for PuTTY 
+when needed.
+
 Start Page
 ----------
 
