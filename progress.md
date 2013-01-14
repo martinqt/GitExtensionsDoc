@@ -33,9 +33,9 @@ Progress
   - [x] 7.1 Create patch
   - [x] 7.2 Apply patches
 - [ ] 8 Remote feature
-  - [ ] 8.1 Manage remote repositories
+  - [x] 8.1 Manage remote repositories
   - [ ] 8.2 Create SSH key
-    - [ ] 8.2.1 PuTTY and github
+    - [x] 8.2.1 PuTTY and github
     - [ ] 8.2.2 OpenSSH and github
   - [ ] 8.3 Pull changes
   - [ ] 8.4 Push changes
