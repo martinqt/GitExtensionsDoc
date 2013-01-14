@@ -25,8 +25,8 @@ Progress
   - [x] 5.2 Delete tag
 - [ ] 6 Branches
   - [x] 6.1 Create branch
-  - [ ] 6.2 Checkout branch
-  - [ ] 6.3 Merge branches
+  - [x] 6.2 Checkout branch
+  - [x] 6.3 Merge branches
   - [ ] 6.4 Rebase branch
   - [ ] 6.5 Delete branch
 - [x] 7 Patches

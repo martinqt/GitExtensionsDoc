@@ -41,8 +41,40 @@ very fast. The complete work flow of Git is optimized for branching and merging.
 Checkout branch
 ---------------
 
+You can switch from the current branch to another branch using the checkout command. Checkout a branch sets the current 
+branch and updates all sources in the working directory. Uncommitted changes in the working directory can be overwritten, 
+make sure your working directory is clean.
+
+.. image:: /images/checkout_branch.png
+
 Merge branches
 --------------
+
+In the image below there are two branches, ``[Refactor]`` and ``[master]``. We can merge the commits from the master branch 
+into the Refactor. If we do this, the Refactor branch will be up to date with the master branch, but not the other way around. 
+As long as we are working on the Refactor branch we cannot tough the master branch itself. We can merge the sources of 
+master into our branch, but cannot make any change to the master branch.
+
+.. image:: /images/merge1.png
+
+To merge the Refactor branch into the master branch, we need to switch to the master branch first. 
+
+.. image:: /images/merge2.png
+
+Once we are on the master branch we can choose merge by choosing ``Merge branches`` from the ``Commands`` menu. In the merge 
+dialog you can check the branch you are working on. After selected the branch to merge with, click the ``Merge`` button.
+
+.. image:: /images/merge_dialog.png
+
+After the merge the commit log will show the new commit containing the merge. Notice that the Refactor branch is not changed 
+by this merge. If you want to continue working on the Refactor branch you can merge the Refactor branch with master. You could 
+also delete the Refactor branch if it is not used anymore.
+
+.. image:: /images/merge3.png
+
+.. note::
+
+    When you need to merge with on unnamed branch you can use a tag to give it a temporary name.
 
 Rebase branch
 -------------
