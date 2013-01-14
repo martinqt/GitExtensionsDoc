@@ -38,7 +38,7 @@ Progress
     - [x] 8.2.1 PuTTY and github
     - [ ] 8.2.2 OpenSSH and github
   - [ ] 8.3 Pull changes
-  - [ ] 8.4 Push changes
+  - [x] 8.4 Push changes
 - [x] 9 Merge conflicts
   - [x] 9.1 Handle merge conflicts
 - [x] 10 Notes

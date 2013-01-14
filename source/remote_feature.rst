@@ -90,3 +90,24 @@ Pull changes
 
 Push changes
 ------------
+
+In the browse window you can check if there are local commits that are not pushed to a remote repository yet. In the image 
+below the green labels mark the position of the master branch on the remote repository. The red label marks the position of 
+the master branch on the local repository. The local repository is ahead three commits.
+
+.. image:: /images/push1.png
+
+To push the changes press ``Push`` in the toolbar. 
+
+.. image:: /images/push_toolbar.png
+
+The push dialog allows you to choose the remote repository to push to. The remote repository is set to the remote of the 
+current branch. You can choose another remote or choose a url to push to. You can also specify a branch to push. 
+
+.. image:: /images/push_dialog.png
+
+Tags are not pushed to the remote repository. If you want to push a tag you need to open the ``Tags`` tab in the dialog. You 
+can choose to push a singe tag or all tags. No commits will be pushed when the ``Tags`` tab is selected, only tags. 
+
+You can not merge your changes in the remote repository. Merging must be done locally. This means that you cannot push your 
+changes before the commits are merged locally. In practice you need to pull before you can push most of the times.
