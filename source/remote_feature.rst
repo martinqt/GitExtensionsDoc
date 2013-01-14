@@ -88,6 +88,48 @@ OpenSSH and github
 Pull changes
 ------------
 
+You can get remote changes using the pull function. Before you can pull remote changes you need to make sure there are no 
+uncommitted changes in your local repository. If you have uncommitted changes you should commit them or stash them during the 
+pull. You can read about how to use the stash in the Stash chapter.
+
+.. image:: /images/pull_toolbar.png
+
+In order to get your personal repository up-to-date, you need to fetch changes from a remote repository. You can do this using 
+the ``Pull`` dialog. When the dialog starts the default remote for the current branch is set. You can choose another remote 
+or enter a custom url if you like. When the remote branches configured correctly, you do not need to choose a remote branch.
+
+If you just fetch the commits from the remote repository and you already committed some changes to your local repository, the 
+commits will be in a different branch. In the pull dialog this is illustrated in the image on the left. This can be useful when 
+you want to review the changes before you want to merge them with your own changes.
+
+
+.. image:: /images/pull_dialog.png
+
+When you choose to merge the remote branch after fetching the changes a branch will be created, and will be merged you’re 
+your commit. Doing this creates a lot of branches and merges, making the history harder to read.
+
+.. image:: /images/pull_dialog2.png
+
+Instead of merging the fetched commits with your local commits, you can also choose to rebase your commits on top of the 
+fetched commits. This is illustrated on the left in the image below. A rebase will first undo your local commits (c and d), 
+then fetch the remote commits (e) and finally recommit your local commits. When there is a merge conflict during the rebase, 
+the rebase dialog will show.
+
+.. image:: /images/pull_dialog3.png
+
+Next to the pull button there are some buttons that can be useful:
+
++----------------+-------------------------------------------------------------------------------------------------------+
+|Solve conflicts | When there are merge conflicts, you can solve them by pressing this button.                           |
++----------------+-------------------------------------------------------------------------------------------------------+
+|Stash changes   | When the working dir contains uncommitted changes, you need to stash them before pulling.             |
++----------------+-------------------------------------------------------------------------------------------------------+
+|Auto stash      | Check this checkbox if you want to stash before pulling. The stash will be reapplied after pulling.   |
++----------------+-------------------------------------------------------------------------------------------------------+
+|Load SSH key    | This button is only available when you use PuTTY as SSH client. You can press this button to load the |
+|                | key configured for the remote. If no key is set, a dialog will prompt for the key.                    |
++----------------+-------------------------------------------------------------------------------------------------------+
+
 Push changes
 ------------
 

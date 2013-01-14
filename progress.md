@@ -37,7 +37,7 @@ Progress
   - [ ] 8.2 Create SSH key
     - [x] 8.2.1 PuTTY and github
     - [ ] 8.2.2 OpenSSH and github
-  - [ ] 8.3 Pull changes
+  - [x] 8.3 Pull changes
   - [x] 8.4 Push changes
 - [x] 9 Merge conflicts
   - [x] 9.1 Handle merge conflicts
