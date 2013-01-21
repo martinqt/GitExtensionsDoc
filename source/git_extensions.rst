@@ -4,7 +4,7 @@ Git Extensions
 Git Extensions is a toolkit aimed to make working with Git under Windows more intuitive. The shell 
 extension will integrate in Windows Explorer and presents a context menu on files and directories. 
 There is also a Visual Studio plug-in to use Git from the Visual Studio IDE. The source code of Git 
-Extensions is located here: http://github.com/spdr870/gitextensions/tree/master
+Extensions is located here: https://github.com/gitextensions/gitextensions
 
 Features
 --------
