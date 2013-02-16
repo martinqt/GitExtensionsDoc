@@ -126,11 +126,6 @@ be set here. This is only needed when these are not in the system path.
 |Dictionary for spelling checker                    | Choose the dictionary to use for the spelling checker in the commit dialog.|
 +---------------------------------------------------+----------------------------------------------------------------------------+
 
-.. image:: /images/settings/start_page.png
-
-The items on the Start Page can be edited. In this tab you can add and remove categories. Per category you can either configure 
-a RSS feed or add repositories. The order can be changed using the context menus in the Start Page.
-
 .. image:: /images/settings/colors.png
 
 In the color tab the following items can be set:
@@ -142,6 +137,11 @@ In the color tab the following items can be set:
 +-----------------------+-------------------------------------------------------------------------------------------+
 |Application Icon       | The color of the application icon. This is useful for recognising various open instances. |
 +-----------------------+-------------------------------------------------------------------------------------------+
+
+.. image:: /images/settings/start_page.png
+
+The items on the Start Page can be edited. In this tab you can add and remove categories. Per category you can either configure 
+a RSS feed or add repositories. The order can be changed using the context menus in the Start Page.
 
 .. image:: /images/settings/global_settings.png
 
