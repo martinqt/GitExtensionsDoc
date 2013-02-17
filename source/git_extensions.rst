@@ -9,8 +9,8 @@ Extensions is located here: https://github.com/gitextensions/gitextensions
 Features
 --------
 
-* Windows Explorer integration for Git 77
-* Visual Studio (2005/2008/2010) plug-in for Git 
+* Windows Explorer integration for Git
+* Visual Studio (2005/2008/2010/2012) plug-in for Git 
 * Feature rich user interface for Git 
 * Single installer installs Git, Git Extensions and the merge tool KDiff3 
 * 32bit and 64bit support
