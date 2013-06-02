@@ -4,9 +4,6 @@ Getting Started
 This section is primarily written for Windows users. There is an extra section
 about installing Git Extensions on Linux. 
 
-.. index::
-   single: Getting Started; Installation
-
 Installation
 ------------
 
