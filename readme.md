@@ -6,7 +6,6 @@ or by opening issues.
 View Online
 -----------
 The current documentation can be viewed here: https://gitextensions.readthedocs.org/en/latest/
-and downloaded as PDF here: https://readthedocs.org/projects/gitextensions/downloads/
 
 Build
 -----
