@@ -10,15 +10,24 @@ and downloaded as PDF here: https://readthedocs.org/projects/gitextensions/downl
 
 Build
 -----
+
 ### HTML
-Simply run `make.cmd html`.
+Simply run `make-html.cmd`. You can also use `make-singlehtml.cmd` to generate a single HTML
+file. The `make_and_start_Browser.cmd` is an alias of `make-html.cmd` that will open in your
+default browser the documentation main index.
 
 ### HTML Help Files
+**Warning:** This format is not completly supported (i.e: you can generate it but we don't 
+guarantee an as good display quality as for HTML).
+
 Download HTML Help Workshop (http://www.microsoft.com/en-us/download/details.aspx?id=21138).
 
 To build the file, use `makeHTMLHelp.cmd`
 
 ### PDF
+**Warning:** This format is not completly supported (i.e: you can generate it but we don't 
+guarantee an as good display quality as for HTML).
+
 To use the PDF builder, you'll need to install:
 
 * rst2pdf `easy_install rst2pdf`
