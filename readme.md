@@ -7,6 +7,12 @@ View Online
 -----------
 The current documentation can be viewed here: https://gitextensions.readthedocs.org/en/latest/
 
+PDF and others format can be downloaded here: https://readthedocs.org/projects/gitextensions/downloads/
+
+**Note:** Only the HTML is "supported" (i.e: on the display point of view). Other format might have layout issue
+but the content remains the same for all format, wether or not you build it locally (provided your local clone is 
+up to date).
+
 Build
 -----
 
