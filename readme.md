@@ -27,7 +27,7 @@ guarantee an as good display quality as for HTML).
 
 Download HTML Help Workshop (http://www.microsoft.com/en-us/download/details.aspx?id=21138).
 
-To build the file, use `makeHTMLHelp.cmd`
+To build the file, use `make-HTMLHelp.cmd`
 
 ### PDF
 **Warning:** This format is not completly supported (i.e: you can generate it but we don't 
