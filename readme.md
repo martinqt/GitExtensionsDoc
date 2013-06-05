@@ -5,9 +5,9 @@ or by opening issues.
 
 View Online
 -----------
-The current documentation can be viewed here: https://gitextensions.readthedocs.org/en/latest/
+The current documentation can be viewed here: https://git-extensions-documentation.readthedocs.org/en/latest/
 
-PDF and others format can be downloaded here: https://readthedocs.org/projects/gitextensions/downloads/
+PDF and others format can be downloaded here: https://readthedocs.org/projects/git-extensions-documentation/downloads/
 
 **Note:** Only the HTML is "supported" (i.e: on the display point of view). Other format might have layout issue
 but the content remains the same for all format, wether or not you build it locally (provided your local clone is 
