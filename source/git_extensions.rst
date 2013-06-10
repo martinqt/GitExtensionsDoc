@@ -34,7 +34,7 @@ Links
 
 See the following links for the Git Extensions download page, source code and documentation. 
 
-* Download page: http://code.google.com/p/gitextensions/downloads/list
+* Download page: https://sourceforge.net/projects/gitextensions/
 * Source Code: https://github.com/gitextensions/gitextensions
 * Source Code Issue tracker: https://github.com/gitextensions/gitextensions/issues
 * Documentation: https://github.com/gitextensions/GitExtensionsDoc
