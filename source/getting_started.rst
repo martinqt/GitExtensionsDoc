@@ -99,8 +99,7 @@ buttons have no effect for the page - this will be noted on the page in the area
 |``Apply``                      | Any entered changes in *any* settings page are saved.                    |
 +-------------------------------+--------------------------------------------------------------------------+
 
-All settings that are specific to Git Extensions will be stored in a file either in the user's application data path or with the program. 
-The location is dependant on the IsPortable setting in the GitExtensions.exe.config file that is with the program.
+All settings that are specific to Git Extensions will be stored in the Windows registry.
 The settings that are used by Git are stored in the configuration files of Git. The global settings are stored in a file called 
 ``.gitconfig`` in the user directory. The local settings are stored in the ``.git\config`` file of the repository.
 
