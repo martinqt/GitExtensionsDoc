@@ -20,4 +20,5 @@ Git Extensions |release| Manual
    integration
    command_line
    z_appendix
+   plugins
 
