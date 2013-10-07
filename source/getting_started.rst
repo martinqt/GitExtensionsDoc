@@ -39,7 +39,7 @@ For further help go to https://groups.google.com/forum/?fromgroups=#!forum/gitex
 Installation (Mac)
 ------------------
 
-This section only covers mono installation, you should have git installed in your Mac at this point. Please refer to http://git-scm.com/download
+This section only covers mono installation, you should have git installed in your Mac at this point. Please refer to http://git-scm.com/downloads
 
 First, make sure you have the latest mono version on your Mac. This section will cover installation of mono 2.10.11 on a Mac.
 
@@ -61,7 +61,7 @@ First, make sure you have the latest mono version on your Mac. This section will
         LLVM:          yes(2.9svn-mono)
         GC:            Included Boehm (with typed GC)
 
-6) Now download Git Extensions latest version from https://code.google.com/p/gitextensions/downloads/list. Remember to select the appropriate package otherwise you could have problems.
+6) Now download Git Extensions latest version from https://sourceforge.net/projects/gitextensions. Remember to select the appropriate package otherwise you could have problems.
 7) Browse into the folder where you extracted the package and just run mono command, like the example below::
 
     $ mono GitExtensions.exe 
