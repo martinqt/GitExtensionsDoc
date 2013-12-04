@@ -8,7 +8,7 @@ View commit log
 ---------------
 
 The full commit history can be browsed. There is a graph that shows branches and merges. You can show the difference 
-between two revision by selection them using ctrl-click.
+between any two revisions by selecting them using ctrl-click.
 
 .. image:: /images/commit_diff_view.png
 
@@ -34,7 +34,7 @@ filter in the advanced filter dialog.
 Singe file history
 ------------------
 
-To display the single file history, right click on a file name in the ``File tree`` or in the ``Diff`` tab and select ``blame``.
+To display the single file history, right click on a file name in the ``File tree`` or in the ``Diff`` tab and select ``File history``.
 
 .. image:: /images/context_menu_blame.png
 
