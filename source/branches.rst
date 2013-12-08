@@ -4,15 +4,18 @@ Branches
 .. image:: /images/branch.png
     :align: right
 
-Branches are used to commit changes separate from other commits. It is very common to create a branch when you 
-start working on a feature and you are not sure if this feature will be finished in time for the next release. The 
-image on the right illustrates a branch created on top of commit B. 
+Branches are used to commit changes separate from other commits. It is very common to create a new branch when you 
+start working on a feature to keep the work done on that feature separate from other work. When the feature is 
+complete the branch can be merged or rebased as you choose such that the commits for the feature either remain as a 
+parallel branch or appear as a continuous single line of development as if the branch had never existed in the first 
+place. The image on the right illustrates a branch created on top of commit B. 
 
-In Git branches are created very often. Creating a branch is very easy to do and it is recommended to create a branch 
-very often. In fact, when you make a commit to a cloned repository you start a new branch. I will explain this in the 
-pull chapter.
-
-You can check on what branch you are working in the toolbar.
+You can see the name of your current branch in a combo box in the toolbar. You can switch to another branch by 
+choosing from the combo box list. In the commit log the current branch has an arrow head to the left of its name. If 
+you are not currently on a branch because you have checked out a specific commit but not any particular branch then 
+Git Extensions will show ``(no branch)`` in place of a branch name in the toolbar. This is called "Detached HEAD 
+mode". In Git you can refer to your current branch or commit by the special reference ``HEAD`` in place of the 
+branch name or commit reference. 
 
 .. image:: /images/branch_name.png
 
@@ -24,9 +27,9 @@ context menu in the commit log. This will create a new branch on the revision th
 
 .. image:: /images/new_branch.png
 
-I will create a new branch called ``Refactor``. In this branch I can do whatever I want without considering others. 
-In the ``Create branch`` dialog there is a checkbox you can check if you want to checkout this branch immediately after 
-the branch is created.
+I will create a new branch called ``Refactor``. In this branch I can do whatever I want without affecting others. 
+The default in Git Extensions is to check out a new branch after it is created. If you want to create a new branch
+but remain on your current branch, uncheck the ``Checkout after create`` checkbox in the ``Create branch`` dialog.
 
 .. image:: /images/create_branch_dialog.png
 
@@ -35,8 +38,8 @@ branch the next commit will be committed to the new branch.
 
 .. image:: /images/refactor_branch.png
 
-Creating branches in Git requires only 41 bytes of space in the repository. Creating a new branch is very easy and is 
-very fast. The complete work flow of Git is optimized for branching and merging.
+Creating branches in Git requires only 41 bytes of space in the repository. Creating a new branch is very easy and 
+fast. The complete work flow of Git is optimized for branching and merging.
 
 Orphan branches
 ^^^^^^^^^^^^^^^
@@ -52,8 +55,20 @@ Checkout branch
 ---------------
 
 You can switch from the current branch to another branch using the checkout command. Checking out a branch sets the current 
-branch and updates all sources in the working directory. Uncommitted changes in the working directory can be overwritten so 
-make sure your working directory is clean.
+branch and updates all of the source files in the working directory. Uncommitted changes in the working directory can be 
+overwritten so it is best practice to make sure your working directory is clean by either committing or stashing any current 
+changes before checking out a branch. If you do not clean your working directory then, in the ``Checkout branch`` dialog, you 
+can choose between four options for your local uncommitted changes: 
+
++------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ``Don't change`` | Local changes will be retained if there are not conflicting changes from the branch you are checking out.                                                                 |
++------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ``Merge``        | Performs a three-way merge between your current branch, your local changes and the branch you are checking out.                                                           |
++------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ``Stash``        | Your local changes are stashed and the new branch is checked out. You can retrieve your changes on the new branch with stash-pop.                                         |
++------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ``Reset``        | Your local changes are discarded and the new branch is checked out. Use caution with this option as Git has no record of uncommitted changes so they cannot be retrieved. |
++------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 .. image:: /images/checkout_branch.png
 
@@ -72,13 +87,13 @@ To merge the Refactor branch into the master branch, we first need to switch to 
 .. image:: /images/merge2.png
 
 Once we are on the master branch we can choose merge by choosing ``Merge branches`` from the ``Commands`` menu. In the merge 
-dialog you can check the branch you are working on. After selecting the branch to merge with, click the ``Merge`` button.
+dialog you can verify which branch you are working on. Select the branch to merge with then click the ``Merge`` button.
 
 .. image:: /images/merge_dialog.png
 
 After the merge the commit log will show the new commit containing the merge. Notice that the Refactor branch is not changed 
-by this merge. If you want to continue working on the Refactor branch you can merge the Refactor branch with master. You could 
-also delete the Refactor branch if it is not used anymore.
+by this merge. If you want to continue working on the Refactor branch you can merge the Refactor branch with master. You can 
+instead delete the Refactor branch if it is not used anymore.
 
 .. image:: /images/merge3.png
 
@@ -121,12 +136,15 @@ the Refactor branch are created after the commits on the master branch.
 Delete branch
 -------------
 
-It is very common to create a lot of branches. You can delete branches when they are not needed anymore and you do not want 
-to keep the work done in that branch. When you delete a branch that is not yet merged, all commits will be lost. When you 
-delete a branch that is already merged with another branch, the merged commits will not be lost because they are also part 
-of another branch. 
+Since it is common to create many branches, it is often necessary to delete branches. Most commonly you will need to delete
+branches on which work has finished and their contents are merged into master or your main branch. You can also delete 
+unmerged branches when they are not needed anymore and you do not want to keep the work done in that branch. 
+
+When you delete a branch that is not yet merged, all of the commits that are in only the deleted branch will be lost. 
+When you delete a branch that is already merged with another branch, the merged commits will not be lost because they are 
+also part of another branch. 
 
 You can delete a branch using ``Delete branch`` from the ``Commands`` menu. If you want to delete a branch that is not merged into 
-another branch, you need to check the ``Force delete`` checkbox.
+your current branch (``HEAD`` in Git), you need to check the ``Force delete`` checkbox.
 
 .. image:: /images/delet_branch.png
