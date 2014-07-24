@@ -25,7 +25,7 @@ context menu in the commit log. This will create a new branch on the revision th
 .. image:: /images/new_branch.png
 
 I will create a new branch called ``Refactor``. In this branch I can do whatever I want without considering others. 
-In the ``Create branch`` dialog there is a checkbox you can check if you want to checkout this branch immediate after 
+In the ``Create branch`` dialog there is a checkbox you can check if you want to checkout this branch immediately after 
 the branch is created.
 
 .. image:: /images/create_branch_dialog.png
@@ -51,8 +51,8 @@ If you uncheck the last option then the working dir and index will not be touche
 Checkout branch
 ---------------
 
-You can switch from the current branch to another branch using the checkout command. Checkout a branch sets the current 
-branch and updates all sources in the working directory. Uncommitted changes in the working directory can be overwritten, 
+You can switch from the current branch to another branch using the checkout command. Checking out a branch sets the current 
+branch and updates all sources in the working directory. Uncommitted changes in the working directory can be overwritten so 
 make sure your working directory is clean.
 
 .. image:: /images/checkout_branch.png
@@ -61,18 +61,18 @@ Merge branches
 --------------
 
 In the image below there are two branches, ``[Refactor]`` and ``[master]``. We can merge the commits from the master branch 
-into the Refactor. If we do this, the Refactor branch will be up to date with the master branch, but not the other way around. 
-As long as we are working on the Refactor branch we cannot tough the master branch itself. We can merge the sources of 
+into the Refactor branch. If we do this, the Refactor branch will be up to date with the master branch, but not the other way around. 
+As long as we are working on the Refactor branch we cannot touch the master branch itself. We can merge the sources of 
 master into our branch, but cannot make any change to the master branch.
 
 .. image:: /images/merge1.png
 
-To merge the Refactor branch into the master branch, we need to switch to the master branch first. 
+To merge the Refactor branch into the master branch, we first need to switch to the master branch. 
 
 .. image:: /images/merge2.png
 
 Once we are on the master branch we can choose merge by choosing ``Merge branches`` from the ``Commands`` menu. In the merge 
-dialog you can check the branch you are working on. After selected the branch to merge with, click the ``Merge`` button.
+dialog you can check the branch you are working on. After selecting the branch to merge with, click the ``Merge`` button.
 
 .. image:: /images/merge_dialog.png
 
@@ -84,7 +84,7 @@ also delete the Refactor branch if it is not used anymore.
 
 .. note::
 
-    When you need to merge with on unnamed branch you can use a tag to give it a temporary name.
+    When you need to merge with an unnamed branch you can use a tag to give it a temporary name.
 
 Rebase branch
 -------------
@@ -107,7 +107,7 @@ rebase function in Git Extensions will guide you through all steps needed for a 
 
 .. image:: /images/rebase_dialog.png
 
-The image below shows the commit log after the rebase. Notice that the history is changed and is seems like the commits on 
+The image below shows the commit log after the rebase. Notice that the history is changed and it seems like the commits on 
 the Refactor branch are created after the commits on the master branch.
 
 .. image:: /images/rebase2.png
@@ -126,7 +126,7 @@ to keep the work done in that branch. When you delete a branch that is not yet m
 delete a branch that is already merged with another branch, the merged commits will not be lost because they are also part 
 of another branch. 
 
-You can delete a branch using ``Delete branch`` in ``Commands`` menu. If you want to delete a branch that is not merged into 
+You can delete a branch using ``Delete branch`` from the ``Commands`` menu. If you want to delete a branch that is not merged into 
 another branch, you need to check the ``Force delete`` checkbox.
 
 .. image:: /images/delet_branch.png
