@@ -9,7 +9,7 @@ Installation
 
 There is a single click installer that installs MsysGit, Kdiff3 and Git Extensions. The installer will detect 
 if 32bit and/or 64bit versions should be installed.
-The installer can be found `here <http://code.google.com/p/gitextensions/>`_.
+The installer can be found `here <http://sourceforge.net/projects/gitextensions/>`_.
 
 .. image:: /images/install/install1.png
 
