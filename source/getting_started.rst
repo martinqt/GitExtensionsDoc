@@ -475,25 +475,38 @@ Git settings for this specific repository.
 .. _settings-build-server-integration:
 
 Build server integration
-^^^
+^^^^^^^^^^^^^^^^^^^^^^^^
 
-This page allows you to configure the integration with build servers (TeamCity being the only server currently supported).
-This allows the build status of each commit to be displayed directly in the revision grid, as well as providing a tab for direct access to the TeamCity build report for the selected commit.
+This page allows you to configure the integration with build servers. This allows the build status of each commit
+to be displayed directly in the revision log, as well as providing a tab for direct access to the Build Server 
+build report for the selected commit.
 
-+-----------------------------------------+----------------------------------------------------------------------------+
-| Setting                                 | Description                                                                |
-+=========================================+============================================================================+
-|Enable build server integration          | Check to globally enable/disable the integration functionality.            |
-+-----------------------------------------+----------------------------------------------------------------------------+
-|Show build status summary in revision log|                                                                            |
-+-----------------------------------------+----------------------------------------------------------------------------+
-|Build server type                        | Select an integration target. Currently only TeamCity is supported.        |
-+-----------------------------------------+----------------------------------------------------------------------------+
-|TeamCity server URL                      | Enter the URL of the server (and port, if applicable).                     |
-|                                         |                                                                            |
-+-----------------------------------------+----------------------------------------------------------------------------+
-|Project name                             | Enter the name of the project which tracks this repository in TeamCity.    |
-+-----------------------------------------+----------------------------------------------------------------------------+
++-------------+-----------------------------------------+----------------------------------------------------------------------------+
+|Group        | Setting                                 | Description                                                                |
++=============+=========================================+============================================================================+
+|General      |Enable build server integration          | Check to globally enable/disable the integration functionality.            |
+|             +-----------------------------------------+----------------------------------------------------------------------------+
+|             |Show build status summary in revision log|                                                                            |
+|             +-----------------------------------------+----------------------------------------------------------------------------+
+|             |Build server type                        | Select an integration target.                                              |
++-------------+-----------------------------------------+----------------------------------------------------------------------------+
+|Jenkins      |Jenkins server URL                       | Enter the URL of the server (and port, if applicable).                     |
+|             +-----------------------------------------+----------------------------------------------------------------------------+
+|             |Project name                             | Enter the name of the project which tracks this repository in TeamCity.    |
++-------------+-----------------------------------------+----------------------------------------------------------------------------+
+|TeamCity     |TeamCity server URL                      | Enter the URL of the server (and port, if applicable).                     |
+|             +-----------------------------------------+----------------------------------------------------------------------------+
+|             |Project name                             | Enter the name of the project which tracks this repository in Jenkins.     |
++-------------+-----------------------------------------+----------------------------------------------------------------------------+
+|Team         |Tfs server (Name or URL)                 | Enter the URL of the server (and port, if applicable).                     |
+|Foundation   +-----------------------------------------+----------------------------------------------------------------------------+
+|             |Team collection name                     |                                                                            |
+|             +-----------------------------------------+----------------------------------------------------------------------------+
+|             |Project name                             | Enter the name of the project which tracks this repository in Tfs.         |
+|             +-----------------------------------------+----------------------------------------------------------------------------+
+|             |Build definition name                    |                                                                            |
+|             |(use first found if left empty)          |                                                                            |
++-------------+-----------------------------------------+----------------------------------------------------------------------------+
 
 .. _settings-ssh:
 
