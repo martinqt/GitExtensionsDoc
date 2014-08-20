@@ -89,8 +89,8 @@ The settings dialog can be invoked at any time by selecting ``Settings`` from th
 
 .. image:: /images/settings/settings.png
 
-The following buttons are always available on any page of the Settings dialog. Sometimes the ``Cancel`` and ``Discard``
-buttons have no effect for the page - this will be noted on the page in the area next to the buttons.
+The following buttons are always available on any page of the Settings dialog. Sometimes the ``Cancel`` 
+button has no effect for the page - this will be noted on the page in the area next to the buttons.
 
 +-------------------------------+--------------------------------------------------------------------------+
 | Button                        | Description                                                              |
@@ -100,9 +100,6 @@ buttons have no effect for the page - this will be noted on the page in the area
 +-------------------------------+--------------------------------------------------------------------------+
 |``Cancel``                     | Any entered changes in *any* settings page are *not* saved. The Settings |
 |                               | dialog is closed.                                                        |
-+-------------------------------+--------------------------------------------------------------------------+
-|``Discard``                    | Any entered changes in *any* settings page are discarded i.e. they are   |
-|                               | reset back to their original values.                                     |
 +-------------------------------+--------------------------------------------------------------------------+
 |``Apply``                      | Any entered changes in *any* settings page are saved.                    |
 +-------------------------------+--------------------------------------------------------------------------+
