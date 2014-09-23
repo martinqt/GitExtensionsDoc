@@ -18,7 +18,7 @@ Commit changes
 
 Changes can be committed to the local repository. Unlike most other source control management systems you do not need to 
 checkout files before you start editing. You can just start editing files, and review all the changes you made in the commit 
-dialog later. When you open de commit dialog, all changes are listed in the top-left. 
+dialog later. When you open the commit dialog, all changes are listed in the top-left. 
 
 .. image:: /images/commit_dialog.png
 
@@ -34,30 +34,83 @@ There are three kinds of changes:
 +----------+----------------------------------------------------------------------------------------------------------------+
 
 When you rename or move a file Git will notice that this file has been moved, but currently Git Extensions does not show 
-this in the commit dialog. Occasionally you will need to undo the file change. This can be done in the context menu of any 
-unstaged file.
-
-.. image:: /images/reset_changes.png
+this in the commit dialog. 
 
 During your initial commit there are probably lots of files you do not want to be tracked. You can ignore these files by not 
-staging them, but they will show every time. You could also add them to the .gitignore file of you repository. Files that are 
+staging them, but they will show every time. You can instead add them to the ``.gitignore`` file of your repository. Files that are 
 in the ``.gitignore`` file will not show up in the commit dialog again. You can open the ``.gitignore`` editor from the menu 
 ``Working dir changes`` by selecting ``Edit ignored files``.
 
-.. image:: /images/show_untracked.png
+.. image:: /images/commit_menu_edit_ignored.png
 
-You need to stage the changes you want to commit by pressing the ‘Stage selected files’ button. You also need to stage deleted 
-files because you stage the change and not the file. When all the changes you want to commit are staged, enter a commit message 
-and press the commit button.
+Staging Changes
+^^^^^^^^^^^^^^^
+
+The changes that you have made to your working directory are not automatically included in a commit. You must choose
+which of the changed files, or individual changes from within those files, will be included in the commit by "staging" the
+changes in Git Extensions. Staging changes in Git Extensions is the same as using ``git add`` on the Git command line.
+
+You can stage the changes you want to commit by selecting the files in the top-left or "Unstaged changes" pane and pressing
+the ``Stage`` button or pressing the ``[S]`` key. The file entries will move to the lower left or "Staged changes" pane. You
+need to stage deleted files because you stage the change and not the file. If you have staged changes from a file and you
+wish to exclude those changes from the commit, select the entry in the staged changes pane and press the ``Unstage``
+button or press the ``[U]`` key.
+
+If the file that is selected in either the unstaged or staged changes pane is text format, Git Extensions will show a
+Git "diff" view in the right side pane of the window.
+
+Staging Selected Lines
+^^^^^^^^^^^^^^^^^^^^^^
+
+You do not have to commit all of the changes in a text format file in one commit. You can select and stage individual lines
+from within a file such that only the chosen lines will be included in your next commit; the remaining changes in the file
+will appear as unstaged changes for the next commit.
+
+In the diff view on the right, select the line or lines that you want to stage then right-click and choose ``Stage selected
+line(s)`` or press the ``[S]`` key. The file will now appear in both the staged changes and unstaged changes panes on the left
+since now there are both staged and unstaged changes in the same file. The change that was selected will disappear from the
+diff view on the right because the diff view is showing only the unstanged changes.
+
+To see the line changes that have been staged select the entry for the file in the staged changes pane. To unstage selected
+changed lines from a file, select that file in the staged changes pane, then select the line or lines in the diff view, right
+-click, and choose ``Unstage selected line(s)`` or press the ``[U]`` key.
+
+.. note:: If you select an entire line including the end-of-line character then staging or unstaging that line will include
+    both the selected line and the next line. To select a single line to stage or unstage you may simply click onto the line
+    without selecting any particular characters.
+
+.. note:: Staging and unstaging individual lines from a file does not change the file itself. It is simply choosing which 
+    changes from within that file will be included in the next commit.
+
+Undoing or Resetting Changes
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+You can undo or reset changes to files from the commit dialog. You can only do this from the top-left or "Unstaged changes"
+pane. If you have already staged the changes then you must first unstage them as described above. To reset the changes in a
+file, select the file in the unstaged changes pane, right-click and choose ``Reset file or directory changes`` or press the
+``[R]`` key.
+
+.. image:: /images/reset_changes.png
+
+You can reset individual changed lines in a similar way to staging and unstaging individual lines, which are described above.
+To reset an individual line, select the line or lines in the diff view on the right then right-click and choose ``Reset
+selected lines`` or press the ``[R]`` key.
+
+.. warning:: Resetting changes modifies the file, discarding either all of the changes or the changes on the selected lines.
+
+Making the commit
+^^^^^^^^^^^^^^^^^
+
+When all the changes you want to commit are staged, enter a commit message into the lower-right pane and press the commit button.
 
 .. image:: /images/commit_dialog_commit.png
 
-It is also possible to add files to you last commit using the ``Amend to last commit`` button. This can be very useful when you 
+It is also possible to add changes to your last commit by checking the ``Amend Commit`` checkbox. This can be very useful when you 
 forgot some changes. This function rewrites history; it deletes the last commit and commits it again including the added 
-changes. Make sure you only use ``Amend to last commit`` when the commit is not yet published to other developers.
+changes. Make sure you only use ``Amend Commit`` when the commit is not yet published to other developers.
 
-There is a build in spelling checker that checks the commit message. Incorrect spelled words are underlined with a red wave line. 
-By right-clicking on the misspelled word you can choose the correct spelling or one of the other options.
+There is a built-in spelling checker that checks the commit message. Incorrectly spelled words are underlined with a wavey red line. 
+Right-click on the misspelled word to choose the correct spelling or choose one of the other options.
 
 .. image:: /images/commit_dialog_spellchecker.png
 
