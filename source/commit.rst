@@ -107,7 +107,7 @@ When all the changes you want to commit are staged, enter a commit message into 
 
 It is also possible to add changes to your last commit by checking the ``Amend Commit`` checkbox. This can be very useful when you 
 forgot some changes. This function rewrites history; it deletes the last commit and commits it again including the added 
-changes. Make sure you only use ``Amend Commit`` when the commit is not yet published to other developers.
+changes. Make sure you only use ``Amend Commit`` when the commit is not yet published to a remote repository.
 
 There is a built-in spelling checker that checks the commit message. Incorrectly spelled words are underlined with a wavey red line. 
 Right-click on the misspelled word to choose the correct spelling or choose one of the other options.
