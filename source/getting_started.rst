@@ -300,39 +300,40 @@ This page contains settings that affect the appearance of the application.
 Revision Links
 ^^^^^^^^^^^^^^
 
-You can configure here how to convert parts of revision data into clickable links. This links will be located under commit message on ``Commit``
-tab in ``Related links`` section. 
+You can configure here how to convert the parts of a revision into clickable links. These links will be located under the commit message on the ``Commit``
+tab in the ``Related links`` section. 
  
 +---------------------------------------------------+----------------------------------------------------------------------------+
 | Setting                                           | Description                                                                |
 +===================================================+============================================================================+
 |Categories                                         | Lists all the currently defined Categories. Click the Add button to        |
 |                                                   | add a new empty Category. The default name is 'new'.  To remove a Category |
-|                                                   | select it and click Remove. This will delete the Category.                 |
+|                                                   | select it and click the Remove button.                                     |
 +---------------------------------------------------+----------------------------------------------------------------------------+
 |Name                                               | This is the Category name used to match the same categories defined on     |
-|                                                   | different levels of settings.                                              |
+|                                                   | different levels of the Settings.                                          |
 +---------------------------------------------------+----------------------------------------------------------------------------+
 |Enabled                                            | Indicates whether the Category is enabled or not. Disabled categories are  |
-|                                                   | skipped while converting revision data into links.                         |
+|                                                   | skipped while creating links.                                              |
 +---------------------------------------------------+----------------------------------------------------------------------------+
-|Search in                                          | List of revision parts which can be used for matching texts to be          |
-|                                                   | converted into links. Only checked parts will be searched for matches.     |
+|Search in                                          | List of revision parts which can be used for matching texts in to be       |
+|                                                   | converted into links. Only the checked parts will be searched for matches. |
 +---------------------------------------------------+----------------------------------------------------------------------------+
 |Search pattern/Nested pattern                      | Regular expression used for matching text in chosen revision parts.        |
 |                                                   | Each matched fragment will be used to create a new link. More than one     |
 |                                                   | fragment can be used in a single link by using capturing group. Capturing  |
 |                                                   | group value can be passed to a link by using zero-based indexed            |
 |                                                   | placeholders in a link format definition e.g. {0}. ``Nested pattern`` can  |
-|                                                   | be used when not a whole matched by ``Search pattern`` text has to be used |
-|                                                   | to format a link. When ``Nested pattern`` is empty, matches found by       |
-|                                                   | ``Search pattern`` are used to create links.                               |
+|                                                   | be used when not a whole matched by the ``Search pattern`` text has to be  |
+|                                                   | used to format a link. When the ``Nested pattern`` is empty, matches       |
+|                                                   | found by the ``Search pattern`` are used to create links.                  |
 +---------------------------------------------------+----------------------------------------------------------------------------+
 |Links: Caption/URI                                 | List of links to be created from a single match. Link consists of          |
-|                                                   | ``Caption`` to be displayed and ``URI`` to be opened when link cliked on.  |
-|                                                   | In addition to standard zero-based indexed placeholders, ``%COMMIT_HASH%`` |
-|                                                   | placeholder can be used put commit hash into link.                         |
-|                                                   | (e.g. https://github.com/gitextensions/gitextensions/commit/%COMMIT_HASH%) |
+|                                                   | the ``Caption`` to be displayed and the ``URI`` to be opened when the link |
+|                                                   | is clicked on. In addition to the standard zero-based indexed placeholders,|
+|                                                   | the ``%COMMIT_HASH%`` placeholder can be used to put the commit's hash into|
+|                                                   | the link. For example:                                                     |
+|                                                   | https://github.com/gitextensions/gitextensions/commit/%COMMIT_HASH%        |
 +---------------------------------------------------+----------------------------------------------------------------------------+
 
 .. _settings-colors:
