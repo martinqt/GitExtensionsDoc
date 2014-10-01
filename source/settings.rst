@@ -3,13 +3,7 @@
 Settings
 ========
 
-All settings will be verified when Git Extensions is started for the first time. If Git Extensions requires 
-any settings to be changed, the Settings dialog will be shown. All incorrect settings will be marked in red. 
-You can ask Git Extensions to try to fix the setting for you by clicking on it.
-When installing Git Extensions for the first time (and you do not have Git already installed on your system),
-you will normally be required to configure your username and email address.
-
-The settings dialog can be invoked at any time by selecting ``Settings`` from the ``Settings`` menu option.
+The settings dialog can be invoked at any time by selecting ``Settings`` from the ``Tools`` menu option.
 
 .. image:: /images/settings/settings.png
 
