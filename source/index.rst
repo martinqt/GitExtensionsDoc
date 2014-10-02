@@ -6,6 +6,7 @@ Git Extensions |release| Manual
 
    git_extensions
    getting_started
+   settings
    browse_repository
    commit
    tag
