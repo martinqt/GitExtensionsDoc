@@ -41,7 +41,7 @@ Installation (Mac)
 
 This section only covers mono installation, you should have git installed in your Mac at this point. Please refer to http://git-scm.com/downloads
 
-First, make sure you have the latest mono version on your Mac. This section will cover installation of mono 2.10.11 on a Mac.
+First, make sure you have the latest mono version on your Mac. This section will cover installation of mono 3.8.0 on a Mac.
 
 1) Download mono latest version. You can always check for this here: http://www.go-mono.com/mono-downloads/download.html
 2) After you have completed the download, you will see a .dmg file. Double click it to open the package.
@@ -50,7 +50,7 @@ First, make sure you have the latest mono version on your Mac. This section will
 5) If everything went okay, you should open your terminal and check mono version::
 
     $ mono --version
-    Mono JIT compiler version 2.10.11 (mono-2-10/2baeee2 Wed Jan 16 16:40:16 EST 2013)
+    Mono JIT compiler version 3.8.0 (mono-3-8/2baeee2 Wed Jan 16 16:40:16 EST 2013)
     Copyright (C) 2002-2012 Novell, Inc, Xamarin, Inc and Contributors. www.mono-project.com
         TLS:           normal
         SIGSEGV:       normal
