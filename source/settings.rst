@@ -28,7 +28,7 @@ The location is dependant on the IsPortable setting in the ``GitExtensions.exe.c
 Settings that are specific to Git Extensions but apply to only the current repository will be stored in a file of the same 
 name, ``GitExtensions.settings``, but in either the root folder of the repository or the ``.git`` folder of the repository, 
 depending on whether or not they are distributed with that repository.
-The settings that are used by Git are stored in the configuration files of Git. The global settings are stored in a file called 
+The settings that are used by Git are stored in the configuration files of Git. The global settings are stored in the file called 
 ``.gitconfig`` in the user directory. The local settings are stored in the ``.git\config`` file of the repository.
 
 .. _settings-checklist:
