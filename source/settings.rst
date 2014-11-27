@@ -22,8 +22,12 @@ button has no effect for the page - this will be noted on the page in the area n
 |``Apply``                      | Any entered changes in *any* settings page are saved.                    |
 +-------------------------------+--------------------------------------------------------------------------+
 
-All settings that are specific to Git Extensions will be stored in a file either in the user's application data path or with the program. 
-The location is dependant on the IsPortable setting in the GitExtensions.exe.config file that is with the program.
+Settings that are specific to Git Extensions and apply globally will be stored in a file called ``GitExtensions.settings`` 
+either in the user's application data path or with the program. 
+The location is dependant on the IsPortable setting in the ``GitExtensions.exe.config`` file that is with the program.
+Settings that are specific to Git Extensions but apply to only the current repository will be stored in a file of the same 
+name, ``GitExtensions.settings``, but in either the root folder of the repository or the ``.git`` folder of the repository, 
+depending on whether or not they are distributed with that repository.
 The settings that are used by Git are stored in the configuration files of Git. The global settings are stored in a file called 
 ``.gitconfig`` in the user directory. The local settings are stored in the ``.git\config`` file of the repository.
 
@@ -44,7 +48,7 @@ This page contains the following settings and buttons.
 |if all settings are correct)                       | the next time Git Extensions is started. If all settings are 'green' this  |
 |                                                   | will be automatically unchecked.                                           |
 +---------------------------------------------------+----------------------------------------------------------------------------+
-|Save and rescan Button                             | Saves any setting changes made and re-checks the settings to see if the    |
+|``Save and rescan`` button                         | Saves any setting changes made and re-checks the settings to see if the    |
 |                                                   | minimal requirements are now met.                                          |
 +---------------------------------------------------+----------------------------------------------------------------------------+
 
@@ -60,20 +64,20 @@ tools. For Windows usually MsysGit or cygwin are used. Git Extensions will try t
 |Group        | Setting                             | Description                                                                |
 +=============+=====================================+============================================================================+
 |Git          |Command used to run git (git.cmd or  | Needed for Git Extensions to run Git commands. Set the full command used   |
-|             |git.exe)                             | to run git (MsysGit or cygwin). Use the Browse button to find the          |
+|             |git.exe)                             | to run git (MsysGit or cygwin). Use the ``Browse`` button to find the      |
 |             |                                     | executable on your file system.                                            |
 |             +-------------------------------------+----------------------------------------------------------------------------+
 |             |Path to Linux tools (sh). Leave empty| A few linux tools are used by Git Extensions. When MsysGit is installed,   |
 |             |when it is in the path.              | these tools are located in the bin directory of MsysGit. Use the           |
-|             |                                     | Browse button to find the directory on your file system.                   |
+|             |                                     | ``Browse`` button to find the directory on your file system.               |
 +-------------+-------------------------------------+----------------------------------------------------------------------------+
-|Environment  |Change HOME Button                   | This button opens a dialog where the HOME directory can be changed.        |
+|Environment  |``Change HOME`` button               | This button opens a dialog where the HOME directory can be changed.        |
 +-------------+-------------------------------------+----------------------------------------------------------------------------+
 
 The global configuration file used by git will be put in the HOME directory. On some systems the home directory is not set 
 or is pointed to a network drive. Git Extensions will try to detect the optimal setting for your environment. When there is 
 already a global git configuration file, this location will be used. If you need to relocate the home directory for git, 
-click the Change HOME button to change this setting. Otherwise leave this setting as the default.
+click the ``Change HOME`` button to change this setting. Otherwise leave this setting as the default.
 
 .. _settings-git-extensions:
 
@@ -86,7 +90,7 @@ This page contains general settings for Git Extensions.
 |Group        | Setting                             | Description                                                                |
 +=============+=====================================+============================================================================+
 |Performance  |Show repository status in browse     | When enabled, the number of pending commits are shown on the toolbar as a  |
-|             |dialog (number of changes in toolbar,| figure in parentheses next to the Commit button. Git Extensions must be    |
+|             |dialog (number of changes in toolbar,| figure in parentheses next to the ``Commit`` button. Git Extensions must be|
 |             |restart required)                    | stopped and restarted to activate changes to this option.                  |
 |             +-------------------------------------+----------------------------------------------------------------------------+
 |             |Show current working dir changes in  | When enabled, two extra revisions are added to the revision graph. The     |
@@ -112,23 +116,19 @@ This page contains general settings for Git Extensions.
 |             |                                     | window. To see more commits than are loaded, then this setting will need   |
 |             |                                     | to be adjusted and Git Extensions restarted.                               |
 +-------------+-------------------------------------+----------------------------------------------------------------------------+
-|Behaviour    |Close Process dialog when process is | When a process is finished, close the process dialog automatically. Leave  |
-|             |succeeded                            | this option off if you want to see the result of processes. When a process |
+|Behaviour    |Close Process dialog when process    | When a process is finished, close the process dialog automatically. Leave  |
+|             |succeeds                             | this option off if you want to see the result of processes. When a process |
 |             |                                     | has failed, the dialog will automatically remain open.                     |
 |             +-------------------------------------+----------------------------------------------------------------------------+
 |             |Show console window when executing   | Git Extensions uses command line tools to access the git repository. In    |
 |             |git process                          | some environments it might be useful to see the command line dialog when a |
 |             |                                     | process is executed. An option on the command line dialog window displayed |
-|             |                                     | allows this setting to to be turned off.                                   |
+|             |                                     | allows this setting to be turned off.                                      |
 |             +-------------------------------------+----------------------------------------------------------------------------+
 |             |Use patience diff algorithm          | Use the Git 'patience diff' algorithm instead of the default. This         |
 |             |                                     | algorithm is useful in situations where two files have diverged            |
 |             |                                     | significantly and the default algorithm may become 'misaligned', resulting |
 |             |                                     | in a totally unusable conflict file.                                       |
-|             +-------------------------------------+----------------------------------------------------------------------------+
-|             |Show errors when staging files       | If an error occurs when files are staged(in the Commit dialog), then the   |
-|             |                                     | process dialog showing the results of the git command is shown if this     |
-|             |                                     | setting is checked.                                                        |
 |             +-------------------------------------+----------------------------------------------------------------------------+
 |             |Include untracked files in stash     | If checked, when a stash is performed as a result of any action except a   |
 |             |                                     | manual stash request, e.g. checking out a new branch and requesting a stash| 
@@ -143,19 +143,46 @@ This page contains general settings for Git Extensions.
 |             |Play Special Startup Sound           | Play a sound when starting Git Extensions. It will put you in a good       |
 |             |                                     | moooooood!                                                                 |
 |             +-------------------------------------+----------------------------------------------------------------------------+
-|             |Compose commit messages in Commit    | If this is unchecked, then commit messages cannot be entered in the commit |
-|             |dialog (otherwise the message will be| dialog. When the Commit button is clicked, a new editor window is opened   |
-|             |requested during commit)             | where the commit message can be entered.                                   |
-|             +-------------------------------------+----------------------------------------------------------------------------+
-|             |Default clone destination            | Git Extensions will prefill destination directory input with value of this |
+|             |Default clone destination            | Git Extensions will pre-fill destination directory input with value of this|
 |             |                                     | setting on any form used to perform repository clone.                      |
 |             +-------------------------------------+----------------------------------------------------------------------------+
 |             |Revision grid quick search timeout   | The timeout (milliseconds) used for the quick search feature in the        |
 |             |[ms]                                 | revision graph. The quick search will be enabled when you start typing and |
 |             |                                     | the revision graph has the focus.                                          |
++-------------+-------------------------------------+----------------------------------------------------------------------------+
+|Email        |SMTP server name                     | SMTP server to use for sending patches.                                    |
+|settings for +-------------------------------------+----------------------------------------------------------------------------+
+|sending      |Port                                 | SMTP port number to use.                                                   |
+|patches      +-------------------------------------+----------------------------------------------------------------------------+
+|             |Use SSL/TLS                          | Check this box if the SMTP server uses SSL or TLS.                         |
++-------------+-------------------------------------+----------------------------------------------------------------------------+
+
+.. _settings-commit-dialog:
+
+Commit dialog
+-------------
+
+This page contains settings for the Git Extensions Commit dialog.
+
++-------------+-------------------------------------+----------------------------------------------------------------------------+
+|Group        | Setting                             | Description                                                                |
++=============+=====================================+============================================================================+
+|Behaviour    |Show errors when staging files       | If an error occurs when files are staged (in the Commit dialog), then the  |
+|             |                                     | process dialog showing the results of the git command is shown if this     |
+|             |                                     | setting is checked.                                                        |
 |             +-------------------------------------+----------------------------------------------------------------------------+
-|             |Smtp server for sending patches by   | Smtp server to use for sending patches.                                    |
-|             |email                                |                                                                            |
+|             |Compose commit messages in Commit    | If this is unchecked, then commit messages cannot be entered in the commit |
+|             |dialog (otherwise the message will be| dialog. When the ``Commit`` button is clicked, a new editor window is      |
+|             |requested during commit)             | opened where the commit message can be entered.                            |
+|             +-------------------------------------+----------------------------------------------------------------------------+
+|             |Number of previous messages in commit| The number of commit messages, from the top of the current branch, that    |
+|             |dialog                               | will be made available from the ``Commit message`` combo box on the Commit |
+|             |                                     | dialog.                                                                    |
+|             +-------------------------------------+----------------------------------------------------------------------------+
+|             |Show additional buttons in commit    | Tick the boxes in this sub-group for any of the additional buttons that you|
+|             |button area                          | wish to have available below the commit button. These buttons are          |
+|             |                                     | considered additional to basic functionality and have consequences if you  |
+|             |                                     | should click them accidentally, including resetting unrecorded work.       |
 +-------------+-------------------------------------+----------------------------------------------------------------------------+
 
 .. _settings-appearance:
@@ -175,18 +202,20 @@ This page contains settings that affect the appearance of the application.
 |             |                                     | the Git Extensions toolbar within Visual Studio.                           |
 |             +-------------------------------------+----------------------------------------------------------------------------+
 |             |Auto scale user interface when high  | Automatically resize controls and their contents according to the current  |
-|             |dpi is used                          | system resolution of the display, measured in dots per inch (DPI).         |
+|             |DPI is used                          | system resolution of the display, measured in dots per inch (DPI).         |
 |             +-------------------------------------+----------------------------------------------------------------------------+
 |             |Truncate long filenames              | This setting affects the display of filenames in a component of a window   |
-|             |                                     | e.g. in the Diff tab of the Commit Log window. The three options that can  |
-|             |                                     | be selected are:                                                           |
+|             |                                     | e.g. in the Diff tab of the Commit Log window. The options that can be     |
+|             |                                     | selected are:                                                              |
 |             |                                     |                                                                            |
-|             |                                     | | None: no truncation occurs; a horizontal scroll bar is used to see the   |
-|             |                                     |   whole filename.                                                          |
-|             |                                     | | Compact: no horizontal scroll bar. Filenames are truncated at both start |
-|             |                                     |   and end to fit into the width of the display component.                  |
-|             |                                     | | Trimstart: no horizontal scroll bar. Filenames are truncated at the start|
-|             |                                     |   only.                                                                    |
+|             |                                     | | ``None``: no truncation occurs; a horizontal scroll bar is used to see   |
+|             |                                     |   the whole filename.                                                      |
+|             |                                     | | ``Compact``: no horizontal scroll bar. Filenames are truncated at both   |
+|             |                                     |   start and end to fit into the width of the display component.            |
+|             |                                     | | ``Trimstart``: no horizontal scroll bar. Filenames are truncated at the  |
+|             |                                     |   start only.                                                              |
+|             |                                     | | ``FileNameOnly``: the path is always removed, leaving only the name of   |
+|             |                                     |   the file, even if there is space for the path.                           |
 +-------------+-------------------------------------+----------------------------------------------------------------------------+
 |Author images|Get author image from gravatar.com   | If checked, `gravatar <http://gravatar.com/>`_ will be accessed to         |
 |             |                                     | retrieve an image for the author of commits. This image is displayed on    |
@@ -200,13 +229,13 @@ This page contains settings that affect the appearance of the application.
 |             |No image service                     | If the author has not set up their own image, then gravatar can return an  |
 |             |                                     | image based on one of these services.                                      |
 |             +-------------------------------------+----------------------------------------------------------------------------+
-|             |Clear image cache button             | Clear the cached avatars.                                                  |
+|             |``Clear image cache`` button         | Clear the cached avatars.                                                  |
 +-------------+-------------------------------------+----------------------------------------------------------------------------+
 |Fonts        |Code font                            | Change the font used for the display of file contents.                     |
 |             +-------------------------------------+----------------------------------------------------------------------------+
 |             |Application font                     | Change the font used on Git Extensions windows and dialogs.                |
 |             +-------------------------------------+----------------------------------------------------------------------------+
-|             |Commit font                          | Change the font used for entering a commit message in the commit dialog.   |
+|             |Commit font                          | Change the font used for entering a commit message in the Commit dialog.   |
 +-------------+-------------------------------------+----------------------------------------------------------------------------+
 |Language     |Language (restart required)          | Choose the language for the Git Extensions interface.                      |
 |             +-------------------------------------+----------------------------------------------------------------------------+
@@ -252,7 +281,7 @@ tab in the ``Related links`` section.
 |                                                   | is clicked on. In addition to the standard zero-based indexed placeholders,|
 |                                                   | the ``%COMMIT_HASH%`` placeholder can be used to put the commit's hash into|
 |                                                   | the link. For example:                                                     |
-|                                                   | https://github.com/gitextensions/gitextensions/commit/%COMMIT_HASH%        |
+|                                                   | ``https://github.com/gitextensions/gitextensions/commit/%COMMIT_HASH%``    |
 +---------------------------------------------------+----------------------------------------------------------------------------+
 
 .. _settings-colors:
@@ -313,7 +342,7 @@ Categories, can be changed using the context menus in the Start Page. See :ref:`
 +---------------------------------------------------+----------------------------------------------------------------------------+
 | Setting                                           | Description                                                                |
 +===================================================+============================================================================+
-|Categories                                         | Lists all the currently defined Categories. Click the Add button to        |
+|Categories                                         | Lists all the currently defined Categories. Click the ``Add`` button to    |
 |                                                   | add a new empty Category. The default name is 'new'.  To remove a Category |
 |                                                   | select it and click Remove. This will delete the Category *and* any        |
 |                                                   | repositories belonging to that Category.                                   |
@@ -345,12 +374,20 @@ You can also follow commits on public GitHub repositories by
 
 Your Start Page will then show each commit - clicking on a link will open your browser and take you to the commit on GitHub. 
 
+.. _settings-git-config:
 .. _settings-global-settings:
+.. _settings-local-settings:
 
-Global Settings
----------------
+Git Config
+----------
 
-This page contains the following global Git settings. These settings will affect all repositories.
+This page contains some of the settings of Git that are used by and therefore can be changed from within Git Extensions.
+
+If you change a Git setting from the Git command line using ``git config`` then the same change in setting can be seen inside
+Git Extensions. If you change a Git setting from inside Git Extensions then that change can be seen using ``git config --get``.
+
+Git configuration can be global or local configuration. Global configuration applies to all repositories. Local configuration overrides
+the global configuration for the current repository.
 
 +-------------+-------------------------------------+----------------------------------------------------------------------------+
 |Group        | Setting                             | Description                                                                |
@@ -396,39 +433,6 @@ This page contains the following global Git settings. These settings will affect
 |             |Files content encoding               | The default encoding for file contents.                                    |
 +-------------+-------------------------------------+----------------------------------------------------------------------------+
 
-.. _settings-local-settings:
-
-Local Settings
---------------
-
-This page contains the Git settings *for a repository*. These settings are only required if you wish to override the global
-Git settings for this specific repository.
-
-+-------------+-------------------------------------+----------------------------------------------------------------------------+
-|Group        | Setting                             | Description                                                                |
-+=============+=====================================+============================================================================+
-|             |User name                            | User name shown in commits and patches.                                    |
-|             +-------------------------------------+----------------------------------------------------------------------------+
-|             |User email                           | User email shown in commits and patches.                                   |
-|             +-------------------------------------+----------------------------------------------------------------------------+
-|             |Editor                               | Editor that git.exe opens (e.g. for editing commit message). This is not   |
-|             |                                     | used by Git Extensions, only when you call git.exe from the command line.  |
-|             |                                     | By default Git will use the command line text editor vi.                   |
-|             +-------------------------------------+----------------------------------------------------------------------------+
-|             |Mergetool                            | Merge tool used to solve merge conflicts. Git Extensions will search for   |
-|             |                                     | common merge tools on your system.                                         |
-|             +-------------------------------------+----------------------------------------------------------------------------+
-|             |Keep backup (.orig) after merge      | Check to save the state of the original file before modifying to solve     |
-|             |                                     | merge conflicts. Refer to Git configuration setting                        |
-|             |                                     | ```mergetool.keepBackup```.                                                |
-+-------------+-------------------------------------+----------------------------------------------------------------------------+
-|Line endings |Checkout/commit radio buttons        |Choose how git should handle line endings when checking out and checking in |
-|             |                                     |files. Refer to                                                             |
-|             |                                     |https://help.github.com/articles/dealing-with-line-endings#platform-all     |
-+-------------+-------------------------------------+----------------------------------------------------------------------------+
-|             |Files content encoding               | Choose the encoding you want GitExtensions to use.                         |
-+-------------+-------------------------------------+----------------------------------------------------------------------------+
-
 .. _settings-build-server-integration:
 
 Build server integration
@@ -443,17 +447,24 @@ build report for the selected commit.
 +=============+=========================================+============================================================================+
 |General      |Enable build server integration          | Check to globally enable/disable the integration functionality.            |
 |             +-----------------------------------------+----------------------------------------------------------------------------+
-|             |Show build status summary in revision log|                                                                            |
+|             |Show build status summary in revision log| Check to show a summary of the build results with the commits in the main  |
+|             |                                         | revision log.                                                              |
 |             +-----------------------------------------+----------------------------------------------------------------------------+
 |             |Build server type                        | Select an integration target.                                              |
 +-------------+-----------------------------------------+----------------------------------------------------------------------------+
 |Jenkins      |Jenkins server URL                       | Enter the URL of the server (and port, if applicable).                     |
 |             +-----------------------------------------+----------------------------------------------------------------------------+
-|             |Project name                             | Enter the name of the project which tracks this repository in TeamCity.    |
+|             |Project name                             | Enter the name of the project which tracks this repository in Jenkins.     |
 +-------------+-----------------------------------------+----------------------------------------------------------------------------+
 |TeamCity     |TeamCity server URL                      | Enter the URL of the server (and port, if applicable).                     |
 |             +-----------------------------------------+----------------------------------------------------------------------------+
-|             |Project name                             | Enter the name of the project which tracks this repository in Jenkins.     |
+|             |Project name                             | Enter the name of the project which tracks this repository in TeamCity.    |
+|             |                                         | Multiple project names can be entered separated by the | character.        |
+|             +-----------------------------------------+----------------------------------------------------------------------------+
+|             |Build Id Filter                          | Enter a regexp filter for which build results you want to retrieve in the  |
+|             |                                         | case that your build project creates multiple builds. For example, if your |
+|             |                                         | project includes both devBuild and docBuild you may wish to apply a filter |
+|             |                                         | of "devBuild" to retrieve the results from only the program build.         |
 +-------------+-----------------------------------------+----------------------------------------------------------------------------+
 |Team         |Tfs server (Name or URL)                 | Enter the URL of the server (and port, if applicable).                     |
 |Foundation   +-----------------------------------------+----------------------------------------------------------------------------+
@@ -477,11 +488,11 @@ with key instead of password). Git Extensions can load SSH keys for PuTTY when n
 +-------------+-------------------------------------+----------------------------------------------------------------------------+
 |Group        | Setting                             | Description                                                                |
 +=============+=====================================+============================================================================+
-|Specify which|PuTTY radio button                   | Use PuTTY as SSH client.                                                   |
+|Specify which|``PuTTY`` radio button               | Use PuTTY as SSH client.                                                   |
 |ssh client   +-------------------------------------+----------------------------------------------------------------------------+
-|to use       |OpenSSH radio button                 | Use OpenSSH as SSH client.                                                 |
+|to use       |``OpenSSH`` radio button             | Use OpenSSH as SSH client.                                                 |
 |             +-------------------------------------+----------------------------------------------------------------------------+
-|             |Other ssh client                     | Use another SSH client. Enter the path to the SSH client you wish to use.  |
+|             |``Other ssh client`` radio button    | Use another SSH client. Enter the path to the SSH client you wish to use.  |
 +-------------+-------------------------------------+----------------------------------------------------------------------------+
 |Configure    |Path to plink.exe                    | Enter the path to the plink.exe executable.                                |
 |PuTTY        |                                     |                                                                            |
@@ -493,6 +504,31 @@ with key instead of password). Git Extensions can load SSH keys for PuTTY when n
 |             |Automatically start authentication   | If an SSH key has been configured, then when accessing a remote repository |
 |             |                                     | the key will automatically be used by the SSH client if this is checked.   |
 +-------------+-------------------------------------+----------------------------------------------------------------------------+
+|Configure Git|Command                              | Enter the helper string for the Git "Credential Helper".                   |
+|credential   |                                     | This setting is the global Git configuration ``credential.helper``, see    |
+|helper       |                                     | http://git-scm.com/docs/gitcredentials. By way of example, the setting for |
+|             |                                     | `git-credential-winstore <https://gitcredentialstore.codeplex.com>`_, when |
+|             |                                     | installed from the full installation package for Git Extensions, is:       |
+|             |                                     |                                                                            |
+|             |                                     | ``!"C:/Program Files                                                       |
+|             |                                     | (x86)/GitExtensions/GitCredentialWinStore/git-credential-winstore.exe"``.  |
+|             |                                     |                                                                            |
+|             |                                     | The setting begins with "!" so the setting is considered as a shell snippet|
+|             |                                     | and everything after the "!" becomes the command.                          |
+|             |                                     | Use the ``Browse`` button to find the executable in your file system.      |
+|             +-------------------------------------+----------------------------------------------------------------------------+
+|             |``Suggest`` button                   | Suggest an appropriate setting for the Git credential helper.              |
+|             |                                     | This works only if the program git-credential-winstore.exe is installed in |
+|             |                                     | the "GitCredentialWinStore" folder under your Git Extensions installation. |
++-------------+-------------------------------------+----------------------------------------------------------------------------+
+
+.. note::
+
+    If you get errors relating to git-credential-winstore, ensure that your setting for the Git credential helper command in Git 
+    Extensions has ``"`` at the start and end and not ``\"``. When viewed in the global Git configuration file, ``.gitconfig`` in 
+    your user directory, you should find the setting does show the escaped quotation marks ``\"`` (but not ``\\\"``).
+    Also ensure that you do indeed have the program file git-credential-winstore.exe in the specified directory as you may have a 
+    setting retained from a previous installation of the credential helper program.
 
 .. _settings-scripts:
 
@@ -508,31 +544,34 @@ A hotkey can also be assigned to execute a specific script. See :ref:`settings-h
 +---------------------------------------------------+----------------------------------------------------------------------------+
 | Setting                                           | Description                                                                |
 +===================================================+============================================================================+
-|Add Button                                         | Adds a new script. Complete the details in the bottom half of the screen.  |
+|``Add`` button                                     | Adds a new script. Complete the details in the bottom half of the screen.  |
 +---------------------------------------------------+----------------------------------------------------------------------------+
-|Remove Button                                      | Removes a script.                                                          |
+|``Remove`` button                                  | Removes a script.                                                          |
 +---------------------------------------------------+----------------------------------------------------------------------------+
 |Up/Down Arrows                                     | Changes order of scripts.                                                  |
 +---------------------------------------------------+----------------------------------------------------------------------------+
 |Name                                               | The name of the script.                                                    |
 +---------------------------------------------------+----------------------------------------------------------------------------+
-|Enabled checkbox                                   | If checked, the script is active and will be performed at the appropriate  |
+|Enabled                                            | If checked, the script is active and will be performed at the appropriate  |
 |                                                   | time (as determined by the On Event setting).                              |
 +---------------------------------------------------+----------------------------------------------------------------------------+
-|Ask for confirmation checkbox                      | If checked, then a popup window is displayed just before the script is run |
+|Ask for confirmation                               | If checked, then a popup window is displayed just before the script is run |
 |                                                   | to confirm whether or not the script is to be run. Note that this popup    |
 |                                                   | is *not* displayed when the script is added as a command to the User Menu  |
 |                                                   | (On Event setting is ShowInUserMenuBar).                                   |
 +---------------------------------------------------+----------------------------------------------------------------------------+
-|Add to revision grid context menu checkbox         | If checked, the script is added to the context menu that is displayed when |
+|Run in background                                  | If checked, the script will run in the background and Git Extensions will  |
+|                                                   | return to your control without waiting for the script to finish.           |
++---------------------------------------------------+----------------------------------------------------------------------------+
+|Add to revision grid context menu                  | If checked, the script is added to the context menu that is displayed when |
 |                                                   | right-clicking on a line in the Commit Log page.                           |
 +---------------------------------------------------+----------------------------------------------------------------------------+
 |Command                                            | Enter the command to be run. This can be any command that your system can  |
 |                                                   | run e.g. an executable program, a .bat script, a Python command, etc.      |
-|                                                   | Use the ```Browse`` button to find the command to run.                     |
+|                                                   | Use the ``Browse`` button to find the command to run.                      |
 +---------------------------------------------------+----------------------------------------------------------------------------+
 |Arguments                                          | Enter any arguments to be passed to the command that is run.  The          |
-|                                                   | ```Help``` button displays items that will be resolved by Git Extensions   |
+|                                                   | ``Help`` button displays items that will be resolved by Git Extensions     |
 |                                                   | before executing the command e.g. {cBranch} will resolve to the currently  |
 |                                                   | checked out branch, {UserInput} will display a popup where you can enter   |
 |                                                   | data to be passed to the command when it is run.                           |
@@ -552,7 +591,7 @@ commands on that page that can have a hotkey associated with them.
 
 The Hotkeyable Items consist of the following pages
 
-1) Commit: the page displayed when a Commit is requested via the ```Commit``` User Menu button or the ```Commands/Commit``` menu option.
+1) Commit: the page displayed when a Commit is requested via the ``Commit`` User Menu button or the ``Commands/Commit`` menu option.
 2) Browse: the Commit Log page (the page displayed after a repository is selected from the Start Page).
 3) RevisionGrid: the list of commits on the Commit Log page.
 4) FileViewer: the page displayed when viewing the contents of a file.
@@ -564,14 +603,15 @@ The Hotkeyable Items consist of the following pages
 +===================================================+============================================================================+
 |Hotkey                                             | After selecting a Hotkeyable Item and the Command, the current keyboard    |
 |                                                   | shortcut associated with the command is displayed here. To alter this      |
-|                                                   | shortcut, just press the keyboard combination required. This field will be |
-|                                                   | updated to reflect the keys pressed.                                       |
+|                                                   | shortcut, click in the box where the current hotkey is shown and press the |
+|                                                   | new keyboard combination.                                                  |
 +---------------------------------------------------+----------------------------------------------------------------------------+
-|Apply button                                       | Click to apply the entered keyboard combination to the Command.            |
+|``Apply`` button                                   | Click to apply the new keyboard combination to the currently selected      |
+|                                                   | Command.                                                                   |
 +---------------------------------------------------+----------------------------------------------------------------------------+
-|Clear button                                       | Sets the keyboard shortcut for the Command to 'None'.                      |
+|``Clear`` button                                   | Sets the keyboard shortcut for the currently selected Command to 'None'.   |
 +---------------------------------------------------+----------------------------------------------------------------------------+
-|Reset all Hotkeys to defaults button               | Resets all keyboard shortcuts to the defaults (i.e. the values when Git    |
+|``Reset all Hotkeys to defaults`` button           | Resets all keyboard shortcuts to the defaults (i.e. the values when Git    |
 |                                                   | Extensions was first installed).                                           |
 +---------------------------------------------------+----------------------------------------------------------------------------+
 
@@ -581,11 +621,15 @@ Shell Extension
 ---------------
 
 When installed, Git Extensions adds items to the context menu when a file/folder is right-clicked within Windows Explorer. One of these items
-is ```Git Extensions``` from which a further(cascaded) menu can be opened. This settings page identifies what items will appear on that cascaded
-menu. 
+is ``Git Extensions`` from which a further (cascaded) menu can be opened. This settings page determines which items will appear on that cascaded
+menu and which will appear in the main context menu. Items that are checked will appear in the cascaded menu.
 
-.. note:: what is displayed also depends on what item is being right-clicked in Windows Explorer;
-	a file or a folder(and whether the folder is a Git repository or not).
+To the right side of the list of check boxes is a preview that shows you how the Git Extensions menu items will be arranged with
+your current choices. 
+
+By default, what is displayed in the context menu also depends on what item is right-clicked in Windows Explorer; a file or a folder 
+(and whether the folder is a Git repository or not). If you want Git Extensions to always include all of its context menu items,
+check the box ``Always show all commands``.
 
 .. _settings-advanced:
    
@@ -606,8 +650,15 @@ Refer :ref:`settings-confirmations`.
 |             |                                     | is shown *only* if this setting is unchecked. If this setting is checked,  |
 |             |                                     | then no dialog is shown and the last chosen action is used.                |
 +-------------+-------------------------------------+----------------------------------------------------------------------------+
-|General      |Don't show help images               | In the Pull dialog, images can be displayed to explain different scenarios.|
+|General      |Don't show help images               | In the Pull, Merge and Rebase dialogs, images are displayed by default to  |
+|             |                                     | explain what happens with the branches and their commits and the meaning of|
+|             |                                     | LOCAL, BASE and REMOTE (for resolving merge conflicts) in different merge  |
+|             |                                     | or rebase scenarios.                                                       |
 |             |                                     | If checked, these Help images will not be displayed.                       |
+|             +-------------------------------------+----------------------------------------------------------------------------+
+|             |Always show advanced options         | In the Push, Merge and Rebase dialogs, advanced options are hidden by      |
+|             |                                     | default and shown only after you click a link or checkbox. If this setting |
+|             |                                     | is checked then these options are always shown on those dialogs.           |
 +-------------+-------------------------------------+----------------------------------------------------------------------------+
 
 .. _settings-confirmations:
@@ -622,24 +673,28 @@ This page allows you to turn off certain confirmation popup windows.
 |Don't ask to |Amend last commit                    |If checked, do not display the popup warning about the rewriting of history |
 |confirm to   |                                     |when you have elected to amend the last committed change.                   |
 |             +-------------------------------------+----------------------------------------------------------------------------+
-|             |Apply stashed changes after          |In the Pull dialog, if ```Auto stash``` is checked, then any changes will be|
+|             |Apply stashed changes after          |In the Pull dialog, if ``Auto stash`` is checked, then any changes will be  |
 |             |successful pull                      |stashed before the pull is performed. Any stashed changes are then          |
 |             |                                     |re-applied after the pull is complete. If this setting is checked, the      |
 |             |                                     |stashed changes are applied with no confirmation popup.                     |
 |             +-------------------------------------+----------------------------------------------------------------------------+
-|             |Push a new branch for the remote     |When pushing a new branch that does not exist on the remote repository, a   |
-|             |                                     |confirmation popup will normally be displayed. If this setting is checked,  |
-|             |                                     |then the new branch will be pushed with no confirmation popup.              |
+|             |Apply stashed changes after          |In the Checkout Branch dialog, if ``Stash`` is checked, then any changes    |
+|             |successful checkout                  |will be stashed before the branch is checked out. If this setting is        |
+|             |                                     |checked, then the stashed changes will be automatically re-applied after    |
+|             |                                     |successful checkout of the branch with no confirmation popup.               |
 |             +-------------------------------------+----------------------------------------------------------------------------+
 |             |Add a tracking reference for newly   |When you push a local branch to a remote and it doesn't have a tracking     |
 |             |pushed branch                        |reference, you are asked to confirm whether you want to add such a          |
 |             |                                     |reference. If this setting is checked, a tracking reference will always be  |
 |             |                                     |added if it does not exist.                                                 |
 |             +-------------------------------------+----------------------------------------------------------------------------+
-|             |Apply stashed changes after          |In the Checkout Branch dialog, if ```Stash``` is checked, then any changes  |
-|             |successful checkout                  |will be stashed before the branch is checked out. If this setting is        |
-|             |                                     |checked, then the stashed changes will be automatically re-applied after    |
-|             |                                     |successful checkout of the branch with no confirmation popup.               |
+|             |Push a new branch for the remote     |When pushing a new branch that does not exist on the remote repository, a   |
+|             |                                     |confirmation popup will normally be displayed. If this setting is checked,  |
+|             |                                     |then the new branch will be pushed with no confirmation popup.              |
+|             +-------------------------------------+----------------------------------------------------------------------------+
+|             |Update submodules on checkout        |When you check out a branch from a repository that has submodules, you will |
+|             |                                     |be asked to update the submodules. If this setting is checked, the          |
+|             |                                     |submodules will be updated without asking.                                  |
 +-------------+-------------------------------------+----------------------------------------------------------------------------+
 
 .. _settings-plugins:
@@ -652,16 +707,6 @@ Plugins provide extra functionality for Git Extensions.
 +-------------+-------------------------------------+----------------------------------------------------------------------------+
 |Plugin       | Setting                             | Description                                                                |
 +=============+=====================================+============================================================================+
-|Check for    |**This plugin is used by Git Extensions to check for updates to the Git Extensions software.**                    |
-|Updates      |                                                                                                                  |
-|             +-------------------------------------+----------------------------------------------------------------------------+
-|             |Enabled (true/false)                 |Enable or disable the check.                                                |
-|             +-------------------------------------+----------------------------------------------------------------------------+
-|             |Check every # days                   |Check for updates after this number of days have elapsed since the last     |
-|             |                                     |check.                                                                      |
-|             +-------------------------------------+----------------------------------------------------------------------------+
-|             |Last check (yyyy/M/dd)               |Shows date of the last check.                                               |
-+-------------+-------------------------------------+----------------------------------------------------------------------------+
 |Auto compile |**This plugin proposes (confirmation required) that you automatically build submodules after they are updated via |
 |SubModules   |the GitExtensions Update submodules command.**                                                                    |
 |             |                                                                                                                  |
@@ -671,6 +716,23 @@ Plugins provide extra functionality for Git Extensions.
 |             |Path to msbuild.exe                  | Enter the path to the msbuild.exe executable.                              |
 |             +-------------------------------------+----------------------------------------------------------------------------+
 |             |msbuild.exe arguments                | Enter any arguments to msbuild.                                            |
++-------------+-------------------------------------+----------------------------------------------------------------------------+
+|Periodic     |**This plugin keeps your remote tracking branches up-to-date automatically by fetching periodically.**            |
+|background   +-------------------------------------+----------------------------------------------------------------------------+
+|fetch        |Arguments of git command to run      |Enter the git command and its arguments into the edit box. The default      |
+|             |                                     |command is ``fetch --all``, which will fetch all branches from all remotes. |
+|             |                                     |You can modify the command if you would prefer, for example, to fetch only  |
+|             |                                     |a specific remote, e.g. ``fetch upstream``.                                 |
+|             +-------------------------------------+----------------------------------------------------------------------------+
+|             |Fetch every (seconds)                |Enter the number of seconds to wait between each fetch.                     |
+|             |                                     |Enter 0 to disable this plugin.                                             |
+|             +-------------------------------------+----------------------------------------------------------------------------+
+|             |Refresh view after fetch             |If checked, the commit log and branch labels will be refreshed after the    |
+|             |                                     |fetch. If you are browsing the commit log and comparing revisions you may   |
+|             |                                     |wish to disable the refresh to avoid unexpected changes to the commit log.  |
+|             +-------------------------------------+----------------------------------------------------------------------------+
+|             |Fetch all submodules                 |If checked, also perform "git fetch --all" recursively on all configured    |
+|             |                                     |submodules as part of the periodic background fetch.                        |
 +-------------+-------------------------------------+----------------------------------------------------------------------------+
 |Create local |**This plugin will create local tracking branches for all branches on a remote repository. The remote repository  |
 |tracking     |is specified when the plugin is run.**                                                                            |
@@ -694,9 +756,17 @@ Plugins provide extra functionality for Git Extensions.
 +-------------+-------------------------------------+----------------------------------------------------------------------------+
 |Gerrit Code  |**The Gerrit plugin provides integration with Gerrit for GitExtensions. This plugin has been based on the         |
 |Review       |git-review tool.**                                                                                                |
+|             |                                                                                                                  |
+|             |For more information see: http://code.google.com/p/gerrit/                                                        |
++-------------+-------------------------------------+----------------------------------------------------------------------------+
+|GitFlow      |**The GitFlow plugin provides high-level repository operations for Vincent Driessen's branching model**           |
+|             |                                                                                                                  |
+|             |For more information see: https://github.com/nvie/gitflow                                                         |
 +-------------+-------------------------------------+----------------------------------------------------------------------------+
 |Github       |**This plugin will create an OAuth token so that some common GitHub actions can be integrated with Git            |
 |             |Extensions.**                                                                                                     |
+|             |                                                                                                                  |
+|             |For more information see: https://github.com/                                                                     |
 |             +-------------------------------------+----------------------------------------------------------------------------+
 |             |OAuth Token                          |The token generated and retrieved from GitHub.                              |
 +-------------+-------------------------------------+----------------------------------------------------------------------------+
@@ -717,6 +787,7 @@ Plugins provide extra functionality for Git Extensions.
 +-------------+-------------------------------------+----------------------------------------------------------------------------+
 |gource       |**Gource is a software version control visualization tool.**                                                      |
 |             |                                                                                                                  |
+|             |For more information see: https://code.google.com/p/gource/                                                       |
 |             +-------------------------------------+----------------------------------------------------------------------------+
 |             |Path to "gource"                     | Enter the path to the gource software.                                     |
 |             +-------------------------------------+----------------------------------------------------------------------------+
@@ -739,6 +810,19 @@ Plugins provide extra functionality for Git Extensions.
 +-------------+-------------------------------------+----------------------------------------------------------------------------+
 |Release Notes|**This plugin will generate 'release notes'. This involves summarising all commits between the specified from and |
 |Generator    |to commit expressions when the plugin is started. This output can be copied to the clipboard in various formats.**|
++-------------+-------------------------------------+----------------------------------------------------------------------------+
+|Create       |**If your repository is hosted on Atlassian Stash then this plugin will enable you to create a pull request for   |
+|Stash Pull   |Stash from Git Extensions**                                                                                       |
+|Request      |                                                                                                                  |
+|             |For more information see: https://www.atlassian.com/software/stash                                                |
+|             +-------------------------------------+----------------------------------------------------------------------------+
+|             |Stash Username                       |The username required to access Stash.                                      |
+|             +-------------------------------------+----------------------------------------------------------------------------+
+|             |Stash Password                       |The password required to access Stash.                                      |
+|             +-------------------------------------+----------------------------------------------------------------------------+
+|             |Specify the base URL to Stash        |The URL from which you will access Stash.                                   |
+|             +-------------------------------------+----------------------------------------------------------------------------+
+|             |Disable SSL verification             |Check this option if you do not require SSL verification to access Stash.   |
 +-------------+-------------------------------------+----------------------------------------------------------------------------+
 
 
