@@ -7,15 +7,14 @@ about installing Git Extensions on Linux and Mac OS X.
 Installation
 ------------
 
-There is a single click installer that installs MsysGit, Kdiff3 and Git Extensions. The installer will detect 
-if 32bit and/or 64bit versions should be installed.
-The installer can be found `here <http://sourceforge.net/projects/gitextensions/>`_.
+There is a single click installer GitExtensions-X.XX.XX-SetupComplete.msi that installs Git for Windows 32bit, Kdiff3 32bit
+and Git Extensions. The installer can be found `here <http://sourceforge.net/projects/gitextensions/>`_.
 
 .. image:: /images/install/install1.png
 
 .. figure:: /images/install/install2.png
 
-    Git Extensions depends heavily on MsysGit. When MsysGit is not installed, ensure the "Install MsysGit" checkbox is checked. Kdiff3 is 
+    Git Extensions depends heavily on Git for Windows. When Git for Windows is not installed, ensure the "Install Git for Windows" checkbox is checked. Kdiff3 is 
     optional, but is advised as a merge tool.
 
 .. image:: /images/install/install3.png
