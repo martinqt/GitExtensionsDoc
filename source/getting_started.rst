@@ -8,7 +8,7 @@ Installation
 ------------
 
 There is a single click installer GitExtensions-X.XX.XX-SetupComplete.msi that installs Git for Windows 32bit, Kdiff3 32bit
-and Git Extensions. The installer can be found `here <http://sourceforge.net/projects/gitextensions/>`_.
+and Git Extensions. The installer can be found `here <https://github.com/gitextensions/gitextensions/releases/latest>`_.
 
 .. image:: /images/install/install1.png
 
@@ -60,7 +60,7 @@ First, make sure you have the latest mono version on your Mac. This section will
         LLVM:          yes(2.9svn-mono)
         GC:            Included Boehm (with typed GC)
 
-6) Now download Git Extensions latest version from https://sourceforge.net/projects/gitextensions. Remember to select the appropriate package otherwise you could have problems.
+6) Now download Git Extensions latest version from https://github.com/gitextensions/gitextensions/releases/latest. Remember to select the appropriate package otherwise you could have problems.
 7) Browse into the folder where you extracted the package and just run mono command, like the example below::
 
     $ mono GitExtensions.exe 
