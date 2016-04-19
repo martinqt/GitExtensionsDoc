@@ -7,7 +7,7 @@ The settings dialog can be invoked at any time by selecting ``Settings`` from th
 
 .. image:: /images/settings/settings.png
 
-The following buttons are always available on any page of the Settings dialog. Sometimes the ``Cancel`` 
+The following buttons are always available on any page of the Settings dialog. Sometimes the ``Cancel``
 button has no effect for the page - this will be noted on the page in the area next to the buttons.
 
 +-------------------------------+--------------------------------------------------------------------------+
@@ -22,13 +22,13 @@ button has no effect for the page - this will be noted on the page in the area n
 |``Apply``                      | Any entered changes in *any* settings page are saved.                    |
 +-------------------------------+--------------------------------------------------------------------------+
 
-Settings that are specific to Git Extensions and apply globally will be stored in a file called ``GitExtensions.settings`` 
-either in the user's application data path or with the program. 
+Settings that are specific to Git Extensions and apply globally will be stored in a file called ``GitExtensions.settings``
+either in the user's application data path or with the program.
 The location is dependant on the IsPortable setting in the ``GitExtensions.exe.config`` file that is with the program.
-Settings that are specific to Git Extensions but apply to only the current repository will be stored in a file of the same 
-name, ``GitExtensions.settings``, but in either the root folder of the repository or the ``.git`` folder of the repository, 
+Settings that are specific to Git Extensions but apply to only the current repository will be stored in a file of the same
+name, ``GitExtensions.settings``, but in either the root folder of the repository or the ``.git`` folder of the repository,
 depending on whether or not they are distributed with that repository.
-The settings that are used by Git are stored in the configuration files of Git. The global settings are stored in the file called 
+The settings that are used by Git are stored in the configuration files of Git. The global settings are stored in the file called
 ``.gitconfig`` in the user directory. The local settings are stored in the ``.git\config`` file of the repository.
 
 .. _settings-checklist:
@@ -37,7 +37,7 @@ Checklist
 ---------
 
 This page is a visual overview of the minimal settings that Git Extensions requires to work properly. Any items highlighted in red should
-be configured by clicking on the highlighted item. 
+be configured by clicking on the highlighted item.
 
 This page contains the following settings and buttons.
 
@@ -57,7 +57,7 @@ This page contains the following settings and buttons.
 Git
 ---
 
-This page contains the settings needed to access git repositories. The repositories will be accessed using external 
+This page contains the settings needed to access git repositories. The repositories will be accessed using external
 tools. For Windows usually MsysGit or cygwin are used. Git Extensions will try to configure these settings automatically.
 
 +-------------+-------------------------------------+----------------------------------------------------------------------------+
@@ -74,9 +74,9 @@ tools. For Windows usually MsysGit or cygwin are used. Git Extensions will try t
 |Environment  |``Change HOME`` button               | This button opens a dialog where the HOME directory can be changed.        |
 +-------------+-------------------------------------+----------------------------------------------------------------------------+
 
-The global configuration file used by git will be put in the HOME directory. On some systems the home directory is not set 
-or is pointed to a network drive. Git Extensions will try to detect the optimal setting for your environment. When there is 
-already a global git configuration file, this location will be used. If you need to relocate the home directory for git, 
+The global configuration file used by git will be put in the HOME directory. On some systems the home directory is not set
+or is pointed to a network drive. Git Extensions will try to detect the optimal setting for your environment. When there is
+already a global git configuration file, this location will be used. If you need to relocate the home directory for git,
 click the ``Change HOME`` button to change this setting. Otherwise leave this setting as the default.
 
 .. _settings-git-extensions:
@@ -131,7 +131,7 @@ This page contains general settings for Git Extensions.
 |             |                                     | in a totally unusable conflict file.                                       |
 |             +-------------------------------------+----------------------------------------------------------------------------+
 |             |Include untracked files in stash     | If checked, when a stash is performed as a result of any action except a   |
-|             |                                     | manual stash request, e.g. checking out a new branch and requesting a stash| 
+|             |                                     | manual stash request, e.g. checking out a new branch and requesting a stash|
 |             |                                     | then any files not tracked by git will also be saved to the stash.         |
 |             +-------------------------------------+----------------------------------------------------------------------------+
 |             |Follow renames in file history       | Try to follow file renames in the file history.                            |
@@ -248,8 +248,8 @@ Revision Links
 --------------
 
 You can configure here how to convert parts of a revision into clickable links. These links will be located under the commit message on the ``Commit``
-tab in the ``Related links`` section. 
- 
+tab in the ``Related links`` section.
+
 +---------------------------------------------------+----------------------------------------------------------------------------+
 | Setting                                           | Description                                                                |
 +===================================================+============================================================================+
@@ -335,10 +335,10 @@ This page contains settings to define the colors used in the application.
 Start Page
 ----------
 
-This page allows you to add/remove or modify the Categories and repositories that will appear on the Start Page when Git Extensions is 
+This page allows you to add/remove or modify the Categories and repositories that will appear on the Start Page when Git Extensions is
 launched. Per Category you can either configure an RSS feed or add repositories. The order of both Categories, and repositories within
 Categories, can be changed using the context menus in the Start Page. See :ref:`start-page` for further details.
- 
+
 +---------------------------------------------------+----------------------------------------------------------------------------+
 | Setting                                           | Description                                                                |
 +===================================================+============================================================================+
@@ -372,7 +372,7 @@ You can also follow commits on public GitHub repositories by
 5) Copy the link
 6) Paste the link into the RSS Feed field in the Settings - Start Page as shown above.
 
-Your Start Page will then show each commit - clicking on a link will open your browser and take you to the commit on GitHub. 
+Your Start Page will then show each commit - clicking on a link will open your browser and take you to the commit on GitHub.
 
 .. _settings-git-config:
 .. _settings-global-settings:
@@ -439,7 +439,7 @@ Build server integration
 ------------------------
 
 This page allows you to configure the integration with build servers. This allows the build status of each commit
-to be displayed directly in the revision log, as well as providing a tab for direct access to the Build Server 
+to be displayed directly in the revision log, as well as providing a tab for direct access to the Build Server
 build report for the selected commit.
 
 +-------------+-----------------------------------------+----------------------------------------------------------------------------+
@@ -481,7 +481,7 @@ build report for the selected commit.
 SSH
 ---
 
-This page allows you to configure the SSH client you want Git to use. Git Extensions is optimized for PuTTY. Git Extensions 
+This page allows you to configure the SSH client you want Git to use. Git Extensions is optimized for PuTTY. Git Extensions
 will show command line dialogs if you do not use PuTTY and user input is required (unless you have configured SSH to use authentication
 with key instead of password). Git Extensions can load SSH keys for PuTTY when needed.
 
@@ -504,38 +504,14 @@ with key instead of password). Git Extensions can load SSH keys for PuTTY when n
 |             |Automatically start authentication   | If an SSH key has been configured, then when accessing a remote repository |
 |             |                                     | the key will automatically be used by the SSH client if this is checked.   |
 +-------------+-------------------------------------+----------------------------------------------------------------------------+
-|Configure Git|Command                              | Enter the helper string for the Git "Credential Helper".                   |
-|credential   |                                     | This setting is the global Git configuration ``credential.helper``, see    |
-|helper       |                                     | http://git-scm.com/docs/gitcredentials. By way of example, the setting for |
-|             |                                     | `git-credential-winstore <https://gitcredentialstore.codeplex.com>`_, when |
-|             |                                     | installed from the full installation package for Git Extensions, is:       |
-|             |                                     |                                                                            |
-|             |                                     | ``!"C:/Program Files                                                       |
-|             |                                     | (x86)/GitExtensions/GitCredentialWinStore/git-credential-winstore.exe"``.  |
-|             |                                     |                                                                            |
-|             |                                     | The setting begins with "!" so the setting is considered as a shell snippet|
-|             |                                     | and everything after the "!" becomes the command.                          |
-|             |                                     | Use the ``Browse`` button to find the executable in your file system.      |
-|             +-------------------------------------+----------------------------------------------------------------------------+
-|             |``Suggest`` button                   | Suggest an appropriate setting for the Git credential helper.              |
-|             |                                     | This works only if the program git-credential-winstore.exe is installed in |
-|             |                                     | the "GitCredentialWinStore" folder under your Git Extensions installation. |
-+-------------+-------------------------------------+----------------------------------------------------------------------------+
 
-.. note::
-
-    If you get errors relating to git-credential-winstore, ensure that your setting for the Git credential helper command in Git 
-    Extensions has ``"`` at the start and end and not ``\"``. When viewed in the global Git configuration file, ``.gitconfig`` in 
-    your user directory, you should find the setting does show the escaped quotation marks ``\"`` (but not ``\\\"``).
-    Also ensure that you do indeed have the program file git-credential-winstore.exe in the specified directory as you may have a 
-    setting retained from a previous installation of the credential helper program.
 
 .. _settings-scripts:
 
 Scripts
 -------
 
-This page allows you to configure specific commands to run before/after Git actions or to add a new command to the User Menu. 
+This page allows you to configure specific commands to run before/after Git actions or to add a new command to the User Menu.
 The top half of the page summarises all of the scripts currently defined. If a script is selected from the summary, the bottom
 half of the page will allow modifications to the script definition.
 
@@ -587,7 +563,7 @@ Hotkeys
 
 This page allows you to define keyboard shortcuts to actions when specific pages of Git Extensions are displayed.
 The HotKeyable Items identifies a page within Git Extensions. Selecting a Hotkeyable Item displays the list of
-commands on that page that can have a hotkey associated with them. 
+commands on that page that can have a hotkey associated with them.
 
 The Hotkeyable Items consist of the following pages
 
@@ -596,7 +572,7 @@ The Hotkeyable Items consist of the following pages
 3) RevisionGrid: the list of commits on the Commit Log page.
 4) FileViewer: the page displayed when viewing the contents of a file.
 5) FormMergeConflicts: the page displayed when merge conflicts are detected that need correcting.
-6) Scripts: shows scripts defined in Git Extensions and allows shortcuts to be assigned. Refer :ref:`settings-scripts`.    
+6) Scripts: shows scripts defined in Git Extensions and allows shortcuts to be assigned. Refer :ref:`settings-scripts`.
 
 +---------------------------------------------------+----------------------------------------------------------------------------+
 | Setting                                           | Description                                                                |
@@ -625,19 +601,19 @@ is ``Git Extensions`` from which a further (cascaded) menu can be opened. This s
 menu and which will appear in the main context menu. Items that are checked will appear in the cascaded menu.
 
 To the right side of the list of check boxes is a preview that shows you how the Git Extensions menu items will be arranged with
-your current choices. 
+your current choices.
 
-By default, what is displayed in the context menu also depends on what item is right-clicked in Windows Explorer; a file or a folder 
+By default, what is displayed in the context menu also depends on what item is right-clicked in Windows Explorer; a file or a folder
 (and whether the folder is a Git repository or not). If you want Git Extensions to always include all of its context menu items,
 check the box ``Always show all commands``.
 
 .. _settings-advanced:
-   
+
 Advanced
 --------
 This page allows advanced settings to be modified. Clicking on the '+' symbol on the tree of settings will display further settings.
-Refer :ref:`settings-confirmations`.   
- 
+Refer :ref:`settings-confirmations`.
+
 +-------------+-------------------------------------+----------------------------------------------------------------------------+
 |Group        | Setting                             | Description                                                                |
 +=============+=====================================+============================================================================+
@@ -827,5 +803,3 @@ Plugins provide extra functionality for Git Extensions.
 |             +-------------------------------------+----------------------------------------------------------------------------+
 |             |Disable SSL verification             |Check this option if you do not require SSL verification to access Stash.   |
 +-------------+-------------------------------------+----------------------------------------------------------------------------+
-
-
