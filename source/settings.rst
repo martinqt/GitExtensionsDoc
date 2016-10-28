@@ -58,18 +58,19 @@ Git
 ---
 
 This page contains the settings needed to access git repositories. The repositories will be accessed using external
-tools. For Windows usually MsysGit or cygwin are used. Git Extensions will try to configure these settings automatically.
+tools. For Windows usually "Git for Windows" or Cygwin are used. Git Extensions will try to configure these settings automatically.
 
 +-------------+-------------------------------------+----------------------------------------------------------------------------+
 |Group        | Setting                             | Description                                                                |
 +=============+=====================================+============================================================================+
 |Git          |Command used to run git (git.cmd or  | Needed for Git Extensions to run Git commands. Set the full command used   |
-|             |git.exe)                             | to run git (MsysGit or cygwin). Use the ``Browse`` button to find the      |
-|             |                                     | executable on your file system.                                            |
+|             |git.exe)                             | to run git ("Git for Windows" or Cygwin). Use the ``Browse`` button to     |
+|             |                                     | find the executable on your file                                           |
 |             +-------------------------------------+----------------------------------------------------------------------------+
-|             |Path to Linux tools (sh). Leave empty| A few linux tools are used by Git Extensions. When MsysGit is installed,   |
-|             |when it is in the path.              | these tools are located in the bin directory of MsysGit. Use the           |
-|             |                                     | ``Browse`` button to find the directory on your file system.               |
+|             |Path to Linux tools (sh). Leave empty| A few linux tools are used by Git Extensions. When Git for Windows is      |
+|             |when it is in the path.              | installed, these tools are located in the bin directory of Git for         |
+|             |                                     | Windows. Use the ``Browse`` button to find the directory on your file      |
+|             |                                     | system.                                                                    |
 +-------------+-------------------------------------+----------------------------------------------------------------------------+
 |Environment  |``Change HOME`` button               | This button opens a dialog where the HOME directory can be changed.        |
 +-------------+-------------------------------------+----------------------------------------------------------------------------+
@@ -362,7 +363,7 @@ Categories, can be changed using the context menus in the Start Page. See :ref:`
 |                                                   | repository link on the Start Page.                                         |
 +---------------------------------------------------+----------------------------------------------------------------------------+
 
-An RSS Feed can be useful to follow repositories on GitHub for example. See this page on GitHub: https://help.github.com/articles/viewing-your-feeds.
+An RSS Feed can be useful to follow repositories on GitHub for example. See this page on GitHub: https://help.github.com/articles/about-your-profile/.
 You can also follow commits on public GitHub repositories by
 
 1) In your browser, navigate to the public repository on GitHub.
@@ -428,7 +429,7 @@ the global configuration for the current repository.
 +-------------+-------------------------------------+----------------------------------------------------------------------------+
 |Line endings |Checkout/commit radio buttons        |Choose how git should handle line endings when checking out and checking in |
 |             |                                     |files. Refer to                                                             |
-|             |                                     |https://help.github.com/articles/dealing-with-line-endings#platform-all     |
+|             |                                     |https://help.github.com/articles/dealing-with-line-endings/#platform-all    |
 +-------------+-------------------------------------+----------------------------------------------------------------------------+
 |             |Files content encoding               | The default encoding for file contents.                                    |
 +-------------+-------------------------------------+----------------------------------------------------------------------------+
@@ -736,7 +737,7 @@ Plugins provide extra functionality for Git Extensions.
 |Gerrit Code  |**The Gerrit plugin provides integration with Gerrit for GitExtensions. This plugin has been based on the         |
 |Review       |git-review tool.**                                                                                                |
 |             |                                                                                                                  |
-|             |For more information see: http://code.google.com/p/gerrit/                                                        |
+|             |For more information see: https://www.gerritcodereview.com/                                                       |
 +-------------+-------------------------------------+----------------------------------------------------------------------------+
 |GitFlow      |**The GitFlow plugin provides high-level repository operations for Vincent Driessen's branching model**           |
 |             |                                                                                                                  |
@@ -766,7 +767,7 @@ Plugins provide extra functionality for Git Extensions.
 +-------------+-------------------------------------+----------------------------------------------------------------------------+
 |gource       |**Gource is a software version control visualization tool.**                                                      |
 |             |                                                                                                                  |
-|             |For more information see: https://code.google.com/p/gource/                                                       |
+|             |For more information see: http://gource.io/                                                                       |
 |             +-------------------------------------+----------------------------------------------------------------------------+
 |             |Path to "gource"                     | Enter the path to the gource software.                                     |
 |             +-------------------------------------+----------------------------------------------------------------------------+
@@ -790,10 +791,10 @@ Plugins provide extra functionality for Git Extensions.
 |Release Notes|**This plugin will generate 'release notes'. This involves summarising all commits between the specified from and |
 |Generator    |to commit expressions when the plugin is started. This output can be copied to the clipboard in various formats.**|
 +-------------+-------------------------------------+----------------------------------------------------------------------------+
-|Create       |**If your repository is hosted on Atlassian Stash then this plugin will enable you to create a pull request for   |
-|Stash Pull   |Stash from Git Extensions**                                                                                       |
+|Create       |**If your repository is hosted on Atlassian Bitbucket Server (Stash) then this plugin will enable you to create   |
+|Stash Pull   |a pull request for Stash from Git Extensions**                                                                    |
 |Request      |                                                                                                                  |
-|             |For more information see: https://www.atlassian.com/software/stash                                                |
+|             |For more information see: https://www.atlassian.com/software/bitbucket/server                                     |
 |             +-------------------------------------+----------------------------------------------------------------------------+
 |             |Stash Username                       |The username required to access Stash.                                      |
 |             +-------------------------------------+----------------------------------------------------------------------------+
@@ -801,5 +802,6 @@ Plugins provide extra functionality for Git Extensions.
 |             +-------------------------------------+----------------------------------------------------------------------------+
 |             |Specify the base URL to Stash        |The URL from which you will access Stash.                                   |
 |             +-------------------------------------+----------------------------------------------------------------------------+
-|             |Disable SSL verification             |Check this option if you do not require SSL verification to access Stash.   |
+|             |Disable SSL verification             |Check this option if you do not require SSL verification to access          |
+|             |                                     |Bitbucket Server (Stash).                                                   |
 +-------------+-------------------------------------+----------------------------------------------------------------------------+
