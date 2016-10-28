@@ -2,7 +2,7 @@ Getting Started
 ===============
 
 This section is primarily written for Windows users. There are extra sections
-about installing Git Extensions on Linux and Mac OS X. 
+about installing Git Extensions on Linux and Mac OS X.
 
 Installation
 ------------
@@ -14,7 +14,7 @@ and Git Extensions. The installer can be found `here <https://github.com/gitexte
 
 .. figure:: /images/install/install2.png
 
-    Git Extensions depends heavily on Git for Windows. When Git for Windows is not installed, ensure the "Install Git for Windows" checkbox is checked. Kdiff3 is 
+    Git Extensions depends heavily on Git for Windows. When Git for Windows is not installed, ensure the "Install Git for Windows" checkbox is checked. Kdiff3 is
     optional, but is advised as a merge tool.
 
 .. image:: /images/install/install3.png
@@ -35,35 +35,58 @@ You can watch this video as a starting point: `Install Git Extensions on Ubuntu 
 
 For further help go to https://groups.google.com/forum/?fromgroups=#!forum/gitextensions
 
-Installation (Mac)
+This section only covers mono installation, you should have git installed in your Linux at this point. Please refer to https://git-scm.com/download/linux
+
+First, make sure you have the latest mono version on your Linux. This section will cover installation of Mono 4.6 on a Linux.
+
+1) Install mono latest version. You can always check for this here: http://www.mono-project.com/download/#download-lin
+2) If everything went okay, you should open your terminal and check mono version::
+
+    $ mono --version
+    Mono JIT compiler version 4.6.1 (Stable 4.6.1.5/ef43c15 Wed Oct 12 09:10:37 UTC 2016)
+    Copyright (C) 2002-2014 Novell, Inc, Xamarin Inc and Contributors. www.mono-project.com
+        TLS:           __thread
+        SIGSEGV:       altstack
+        Notifications: epoll
+        Architecture:  amd64
+        Disabled:      none
+        Misc:          softdebug
+        LLVM:          supported, not enabled.
+        GC:            sgen
+3) Now download Git Extensions latest version from https://github.com/gitextensions/gitextensions/releases/latest. Remember to select the appropriate package otherwise you could have problems.
+4) Browse into the folder where you extracted the package and just run mono command, like the example below::
+
+    $ mono GitExtensions.exe
+
+Installation (macOS)
 ------------------
 
-This section only covers mono installation, you should have git installed in your Mac at this point. Please refer to http://git-scm.com/downloads
+This section only covers mono installation, you should have git installed in your Mac at this point. Please refer to https://git-scm.com/download/mac
 
-First, make sure you have the latest mono version on your Mac. This section will cover installation of mono 3.8.0 on a Mac.
+First, make sure you have the latest mono version on your Mac. This section will cover installation of Mono 4.6 on a Mac.
 
-1) Download mono latest version. You can always check for this here: http://www.go-mono.com/mono-downloads/download.html
+1) Download mono latest version. You can always check for this here: http://www.mono-project.com/download/#download-mac
 2) After you have completed the download, you will see a .dmg file. Double click it to open the package.
 3) Inside the .dmg file you will have MonoFramework-{version}.pkg. Double click to start the installation process.
 4) Follow the wizard until it's completion.
 5) If everything went okay, you should open your terminal and check mono version::
 
     $ mono --version
-    Mono JIT compiler version 3.8.0 (mono-3-8/2baeee2 Wed Jan 16 16:40:16 EST 2013)
-    Copyright (C) 2002-2012 Novell, Inc, Xamarin, Inc and Contributors. www.mono-project.com
+    Mono JIT compiler version 4.6.1 (mono-4.6.0-branch-c8sr0/abb06f1 Fri Sep 23 19:24:23 EDT 2016)
+    Copyright (C) 2002-2014 Novell, Inc, Xamarin Inc and Contributors. www.mono-project.com
         TLS:           normal
-        SIGSEGV:       normal
+        SIGSEGV:       altstack
         Notification:  kqueue
         Architecture:  x86
         Disabled:      none
-        Misc:          softdebug 
-        LLVM:          yes(2.9svn-mono)
-        GC:            Included Boehm (with typed GC)
+        Misc:          softdebug
+        LLVM:          yes(3.6.0svn-mono-master/8b1520c)
+        GC:            sgen
 
 6) Now download Git Extensions latest version from https://github.com/gitextensions/gitextensions/releases/latest. Remember to select the appropriate package otherwise you could have problems.
 7) Browse into the folder where you extracted the package and just run mono command, like the example below::
 
-    $ mono GitExtensions.exe 
+    $ mono GitExtensions.exe
 
 This is the minimal setup you need in order to run Git Extensions.
 
@@ -76,8 +99,8 @@ Troubleshooting Mac Installation
 Settings
 --------
 
-All settings will be verified when Git Extensions is started for the first time. If Git Extensions requires 
-any settings to be changed, the Settings dialog will be shown. All incorrect settings will be marked in red. 
+All settings will be verified when Git Extensions is started for the first time. If Git Extensions requires
+any settings to be changed, the Settings dialog will be shown. All incorrect settings will be marked in red.
 You can ask Git Extensions to try to fix the setting for you by clicking on it.
 When installing Git Extensions for the first time (and you do not have Git already installed on your system),
 you will normally be required to configure your username and email address.
@@ -105,7 +128,7 @@ and add the repository to it, or you can add the repository to an existing categ
 
 A context menu is available for both the category and the repositories listed underneath it.
 
-Entries on Category context menu 
+Entries on Category context menu
 
 +------------------+-------------------------------------------------------------------------------------------------------+
 |Move Up           | Move the category (and any repositories under it) higher on the page.                                 |
@@ -138,10 +161,10 @@ Entries on repository context menu
 |branch            | checked out branch for the repository.                                                                |
 +------------------+-------------------------------------------------------------------------------------------------------+
 
-To open an existing repository, simply click the link to the repository under Recent Repositories or within the Categories that you have set up, or 
+To open an existing repository, simply click the link to the repository under Recent Repositories or within the Categories that you have set up, or
 select Open repository (from where you can select a repository to open from your local file system).
 
-To create a new repository, one of the following options under Common Actions can be selected. 
+To create a new repository, one of the following options under Common Actions can be selected.
 
 Clone repository
 ----------------
@@ -150,26 +173,26 @@ You can clone an existing repository using this option. It displays the followin
 
 .. image:: /images/clone.png
 
-The repository you want to clone could be on a network share or could be a repository that is accessed through an internet 
+The repository you want to clone could be on a network share or could be a repository that is accessed through an internet
 or intranet connection. Depending on the protocol (http or ssh) you might need to load a SSH key into PuTTY. You also need to specify where
-the cloned repository will be created and the initial branch that is checked out. If the cloned repository contains submodules, then these 
-can be initialised using their default settings if required.  
+the cloned repository will be created and the initial branch that is checked out. If the cloned repository contains submodules, then these
+can be initialised using their default settings if required.
 
-There are two different types of repositories you can create when making a clone. A personal repository contains the complete 
-history and also contains a working copy of the source tree. A central repository is used as a public repository where 
-developers push the changes they want to share with others to. A central repository contains the complete history but does not 
+There are two different types of repositories you can create when making a clone. A personal repository contains the complete
+history and also contains a working copy of the source tree. A central repository is used as a public repository where
+developers push the changes they want to share with others to. A central repository contains the complete history but does not
 have a working directory like personal repositories.
 
 Clone SVN repository
 --------------------
 
-You can clone an existing SVN repository using this option, which creates a Git repository from the SVN repository you specify. 
-For further information refer to the `Pro Git book <http://git-scm.com/book/en/Git-and-Other-Systems-Migrating-to-Git>`_.
+You can clone an existing SVN repository using this option, which creates a Git repository from the SVN repository you specify.
+For further information refer to the `Pro Git book <https://git-scm.com/book/en/v2/Git-and-Other-Systems-Migrating-to-Git>`_.
 
 Clone Github repository
 -----------------------
 
-This option allows you to 
+This option allows you to
 
 1) Fork a repository on GitHub so it is created in your personal space on GitHub.
 2) Clone any repositories on your personal space on GitHub so that it becomes a local repository on your machine.
@@ -187,10 +210,10 @@ When you do not want to work on an existing project, you can create your own rep
 
 Select a directory where the repository is to be created. You can choose to create a Personal repository or a Central repository.
 
-A personal repository looks the same as a normal working directory but has a directory named ``.git`` at the root level 
+A personal repository looks the same as a normal working directory but has a directory named ``.git`` at the root level
 containing the version history. This is the most common repository.
 
-Central repositories only contain the version history. Because a central repository has no working directory you cannot 
-checkout a revision in a central repository. It is also impossible to merge or pull changes in a central repository. This 
+Central repositories only contain the version history. Because a central repository has no working directory you cannot
+checkout a revision in a central repository. It is also impossible to merge or pull changes in a central repository. This
 repository type can be used as a public repository where developers can push changes to or pull changes from.
 
