@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: GitExtensions 2.48\n"
+"Project-Id-Version: GitExtensions 2.49\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-24 23:16+0300\n"
+"POT-Creation-Date: 2016-10-28 18:30+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -149,7 +149,7 @@ msgid "If you just fetch the commits from the remote repository and you already 
 msgstr ""
 
 #: ..\remote_feature.rst:135
-msgid "When you choose to merge the remote branch after fetching the changes a branch will be created, and will be merged you’re your commit. Doing this creates a lot of branches and merges, making the history harder to read."
+msgid "When you choose to merge the remote branch after fetching the changes a branch will be created, and will be merged into your commit. Doing this creates a lot of branches and merges, making the history harder to read."
 msgstr ""
 
 #: ..\remote_feature.rst:140
