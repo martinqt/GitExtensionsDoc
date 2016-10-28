@@ -19,6 +19,24 @@ source_file = source/locale/pot/command_line.pot
 source_lang = en
 type = PO
 
+[git-extensions-manual.commit]
+file_filter = source/locale/<lang>/LC_MESSAGES/commit.po
+source_file = source/locale/pot/commit.pot
+source_lang = en
+type = PO
+
+[git-extensions-manual.getting_started]
+file_filter = source/locale/<lang>/LC_MESSAGES/getting_started.po
+source_file = source/locale/pot/getting_started.pot
+source_lang = en
+type = PO
+
+[git-extensions-manual.git_extensions]
+file_filter = source/locale/<lang>/LC_MESSAGES/git_extensions.po
+source_file = source/locale/pot/git_extensions.pot
+source_lang = en
+type = PO
+
 [git-extensions-manual.Index]
 file_filter = source/locale/<lang>/LC_MESSAGES/index.po
 source_file = source/locale/pot/index.pot
@@ -40,6 +58,12 @@ type = PO
 [git-extensions-manual.merge_conflicts]
 file_filter = source/locale/<lang>/LC_MESSAGES/merge_conflicts.po
 source_file = source/locale/pot/merge_conflicts.pot
+source_lang = en
+type = PO
+
+[git-extensions-manual.modify_history]
+file_filter = source/locale/<lang>/LC_MESSAGES/modify_history.po
+source_file = source/locale/pot/modify_history.pot
 source_lang = en
 type = PO
 
