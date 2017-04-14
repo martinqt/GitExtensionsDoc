@@ -1,7 +1,7 @@
 Commit
 ======
 
-A commit is a set of changes with some extra information. Every commit contains the follow information:
+A commit is a set of changes with some extra information. Every commit contains the following information:
 
 * Changes
 * Committer name and email
