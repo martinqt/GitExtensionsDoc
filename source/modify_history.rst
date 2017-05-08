@@ -1,15 +1,18 @@
 Modify Git history 
 ==================
 
-There is 2 different cases, and consequently 2 way to do it, with git when we want to modify the history:
-- Modify the last commit of the current branch with doing an amend
-- Modify a older commit with doing a ``interactive rebase``
+There are 2 different cases, and consequently 2 ways to do it with git when we want to modify the history:
+
+- Modify the last commit of the current branch with doing an ``amend``
+- Modify an older commit with doing an ``interactive rebase``
 
 Note: There are 2 things to understand when working with the history with git:
-- As git only create immutable commits (sealed by the sha1), "modifying" a commit is in fact creating a new commit more or less similar.
+
+- As git only creates immutable commits (sealed by the sha1), "modifying" a commit is in fact creating a new more or less similar commit.
 - Consequently, the entire history of children following the changed commit will be different.
- So, except if the history has not been already push, or if you have good reasons, that is a bad practice to change the history
-  because you will mess the history of others developers.
+
+So, except if the history has not been already pushed, or if you have good reasons, it is a bad practice to change the history
+because you will mess the history of other developers.
 
 Modify the last commit
 ----------------------

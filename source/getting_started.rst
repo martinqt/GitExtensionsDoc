@@ -59,7 +59,7 @@ First, make sure you have the latest mono version on your Linux. This section wi
     $ mono GitExtensions.exe
 
 Installation (macOS)
-------------------
+--------------------
 
 This section only covers mono installation, you should have git installed in your Mac at this point. Please refer to https://git-scm.com/download/mac
 
