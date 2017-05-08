@@ -17,3 +17,24 @@ div.note {
 div.note p.admonition-title {
     color: #058C1A;
 }
+
+.setting .descname
+{
+    border-radius: 0.5em;
+    padding: 2px 5px;
+    background-color: lightgray;
+}
+
+.settinggroup > dt > .descname
+{
+    border: 1px solid;
+    border-bottom: none;
+    padding: 3px;
+}
+
+.settingbutton .descname
+{
+    border: 1px solid;    
+    padding: 2px 5px;
+    background-color: lightgray;
+}

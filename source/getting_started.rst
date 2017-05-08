@@ -138,8 +138,8 @@ Entries on Category context menu
 |Remove            | Remove the category (and any repositories under it) from the page. Note: Git repositories are *not*   |
 |                  | physically removed either locally or remotely.                                                        |
 +------------------+-------------------------------------------------------------------------------------------------------+
-|Edit              | Shows the Start Page settings window where both category and repository details can be modified.      |
-|                  | See :ref:`settings-start-page`.                                                                       |
+|Edit              | Shows the :ref:`settings-start-page` settings window where both category and repository details       |
+|                  | can be modified.                                                                                      |
 +------------------+-------------------------------------------------------------------------------------------------------+
 
 Entries on repository context menu
@@ -154,8 +154,8 @@ Entries on repository context menu
 |Remove            | Remove the repository from the category. Note: the repository is *not* physically removed either      |
 |                  | locally or remotely.                                                                                  |
 +------------------+-------------------------------------------------------------------------------------------------------+
-|Edit              | Shows the Start Page settings window where both category and repository details can be modified.      |
-|                  | See :ref:`settings-start-page`.                                                                       |
+|Edit              | Shows the :ref:`settings-start-page` settings window where both category and repository details       |
+|                  | can be modified.                                                                                      |
 +------------------+-------------------------------------------------------------------------------------------------------+
 |Show current      | Toggles the display of the branch name next to the repository name. This identifies the currently     |
 |branch            | checked out branch for the repository.                                                                |
