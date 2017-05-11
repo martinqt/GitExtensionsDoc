@@ -181,7 +181,7 @@ The settings that are used by Git are stored in the configuration files of Git. 
       The quick search will be enabled when you start typing and the revision graph has the focus.
       
   .. settingsgroup:: Email settings for sending patches
-      :id: patches-email
+    :id: patches-email
 
     .. setting:: SMTP server name
       :id: server-name
@@ -265,7 +265,7 @@ The settings that are used by Git are stored in the configuration files of Git. 
       - ``FileNameOnly`` - the path is always removed, leaving only the name of the file, even if there is space for the path.                         
         
   .. settingsgroup:: Author images
-      :id: author-images
+    :id: author-images
     
     .. setting:: Get author image from gravatar.com
       :id: gravatar
