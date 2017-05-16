@@ -10,17 +10,18 @@ The settings dialog can be invoked at any time by selecting ``Settings`` from th
 The following buttons are always available on any page of the Settings dialog. Sometimes the ``Cancel``
 button has no effect for the page - this will be noted on the page in the area next to the buttons.
 
-+-------------------------------+--------------------------------------------------------------------------+
-| Button                        | Description                                                              |
-+===============================+==========================================================================+
-|``OK``                         | Save any entered changes made in *any* settings page and close the       |
-|                               | Settings dialog.                                                         |
-+-------------------------------+--------------------------------------------------------------------------+
-|``Cancel``                     | Any entered changes in *any* settings page are *not* saved. The Settings |
-|                               | dialog is closed.                                                        |
-+-------------------------------+--------------------------------------------------------------------------+
-|``Apply``                      | Any entered changes in *any* settings page are saved.                    |
-+-------------------------------+--------------------------------------------------------------------------+
+.. list-table::
+  :widths: 31 108
+  :header-rows: 1
+  
+  * - Button 
+    - Description
+  * - ``OK``
+    - Save any entered changes made in *any* settings page and close the Settings dialog.                                                  
+  * - ``Cancel``
+    - Any entered changes in *any* settings page are *not* saved. The Settings dialog is closed.                                                       
+  * - ``Apply``
+    - Any entered changes in *any* settings page are saved.
 
 Settings that are specific to Git Extensions and apply globally will be stored in a file called ``GitExtensions.settings``
 either in the user's application data path or with the program.
