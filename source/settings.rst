@@ -60,7 +60,7 @@ The settings that are used by Git are stored in the configuration files of Git. 
       
       Needed for Git Extensions to run Git commands. Set the full command used 
       to run git ("Git for Windows" or Cygwin). Use the ``Browse`` button to   
-      find the executable on your file                                         
+      find the executable on your file system.
       
     .. setting:: Path to Linux tools (sh). 
       :id: sh-path
