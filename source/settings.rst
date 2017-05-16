@@ -87,13 +87,13 @@ The settings that are used by Git are stored in the configuration files of Git. 
 
   .. settingsgroup:: Performance
 
-    .. setting:: Show repository status in browse dialog
+    .. setting:: Show number of changed files on commit button
       :id: changes-no
 
       When enabled, the number of pending commits are shown on the toolbar as a figure in parentheses next to the Commit button.
       Git Extensions must be stopped and restarted to activate changes to this option.
       
-    .. setting:: Show current working dir changes in revision graph
+    .. setting:: Show current working directory changes in revision graph
       :id: working-dir-changes
       
       When enabled, two extra revisions are added to the revision graph. 
@@ -160,6 +160,12 @@ The settings that are used by Git are stored in the configuration files of Git. 
 
       Try to follow file renames in the file history.
       
+    .. setting:: Follow exact renames and copies only
+      :id: follow-exact-renames
+
+      Follow file renames and copies for which similarity index is 100%. That is when a file
+      is renamed or copied and is commited with no changes made to its content.
+
     .. setting:: Open last working dir on startup
       :id: open-last-repo
 
