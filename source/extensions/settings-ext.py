@@ -99,6 +99,9 @@ class SettingDescription(SettingBaseDirective):
         targetid = self.compute_target_id()
         caption = self.arguments[0]
         signode = addnodes.desc_signature(targetid, '')
+        signode['names'].append(caption)
+        signode['ids'].append(targetid)
+        signode['first'] = 1
         targetnode = nodes.target('', '', ids=[targetid], names=[caption])
         signode += targetnode 
         signode += addnodes.desc_name(caption, caption)
