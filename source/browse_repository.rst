@@ -1,3 +1,5 @@
+.. _browse-repository:
+
 Browse Repository
 =================
 

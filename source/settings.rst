@@ -210,11 +210,26 @@ The settings that are used by Git are stored in the configuration files of Git. 
 
   .. settingsgroup:: Behaviour
 
+    .. setting:: Provide auto-completion in commit dialog
+    
+      Enables auto-completion in commit dialog message box. Auto-completion words
+      are taken from the changed files shown by the commit dialog. For each file type
+      there can be configured a regular expression that decides which words should be
+      considered as candidates for auto-completion. The default regular expressions included
+      with Git Extensions can be found here: https://github.com/gitextensions/gitextensions/blob/master/GitExtensions/AutoCompleteRegexes.txt
+      You can override the default regular expressions by creating an AutoCompleteRegexes.txt file in
+      the Git Extensions installation directory.
+      
     .. setting:: Show errors when staging files
       :id: staging-errors
     
       If an error occurs when files are staged (in the Commit dialog),
       then the process dialog showing the results of the git command is shown if this setting is checked.
+      
+    .. setting:: Ensure the second line of commit message is empty
+      :id: empty-second-line
+      
+      Enforces the second line of a commit message to be blank.
       
     .. setting:: Compose commit messages in Commit dialog 
       :id: compose-message
@@ -228,6 +243,17 @@ The settings that are used by Git are stored in the configuration files of Git. 
       The number of commit messages, from the top of the current branch,
       that will be made available from the ``Commit message`` combo box on the Commit dialog.
       
+    .. setting:: Remember 'Amend commit' checkbox on commit form close
+      :id: remember-amend
+      
+      Remembers the state of the 'Amend commit' checkbox when the 'Commit dialog' is being closed.
+      The remembered state will be restored on the next 'Commit dialog' creation.
+      The 'Amend commit' checkbox is being unchecked after each commit.
+      So, when the 'Commit dialog' is being closed automatically after commiting changes,
+      the 'Amend commit' checkbox is going to be unchecked first and its state will be saved after that.
+      Therefore the checked state is remembered only if the 'Commit dialog' is being closed 
+      by an user without commiting changes.
+    
     .. setting:: Show additional buttons in commit button area
       :id: additional-buttons
 
@@ -387,9 +413,9 @@ The settings that are used by Git are stored in the configuration files of Git. 
       
     .. setting:: Nested pattern
       
-      ``Nested pattern`` can be used when only a part of the text matched by the `Search pattern <#revision-links-revision-search-in>`_
+      ``Nested pattern`` can be used when only a part of the text matched by the :ref:`settings-revision-links-revision-data-search-pattern`
       should be used to format a link. When the ``Nested pattern`` is empty,
-      matches found by the `Search pattern <#revision-links-revision-search-in>`_ are used to create links.          
+      matches found by the :ref:`settings-revision-links-revision-data-search-pattern` are used to create links.          
 
     .. setting:: Links: Caption/URI
       :id: revision-links
@@ -428,6 +454,11 @@ The settings that are used by Git are stored in the configuration files of Git. 
 
       Show commit text in gray for branches not related to the current branch.
       
+    .. setting:: Highlight authored revisions
+
+      Highlight all the revisions authored by the same author as the author of the currently selected revision (matched by email).
+      If there is no revision selected, then the current user's email is used to match revisions to be highlighted.
+      
     .. setting:: Color tag
 
       Color to show tags in.
@@ -443,7 +474,11 @@ The settings that are used by Git are stored in the configuration files of Git. 
     .. setting:: Color other label
 
       Color to show other labels in.
-    
+
+    .. setting:: Color authored revisions
+
+      Color to show authored revisions in.
+            
   .. settingsgroup:: Application Icon
 
     .. setting:: Icon style
@@ -511,7 +546,7 @@ The settings that are used by Git are stored in the configuration files of Git. 
 
 
   An RSS Feed can be useful to follow repositories on GitHub for example. See this page on GitHub: https://help.github.com/articles/about-your-profile/.
-  You can also follow commits on public GitHub repositories by
+  You can also follow commits on public GitHub repositories by:
 
   1) In your browser, navigate to the public repository on GitHub.
   2) Select the branch you are interested in.
@@ -593,7 +628,7 @@ The settings that are used by Git are stored in the configuration files of Git. 
 
   .. setting:: Files content encoding
 
-    The default encoding for file contents.  
+    The default encoding for files content.  
 
 .. settingspage:: Build server integration
 
@@ -615,6 +650,36 @@ The settings that are used by Git are stored in the configuration files of Git. 
 
       Select an integration target.
 
+  .. settingsgroup:: AppVeyor
+
+    .. setting:: Account name
+      
+      AppVeyor account name. You don't have to enter it if the projects you want to query for build status are public.
+      
+    .. setting:: API token
+
+      AppVeyor API token. Requiered if the :ref:`settings-build-server-integration-appveyor-account-name` is entered.
+      See https://ci.appveyor.com/api-token      
+  
+    .. setting:: Project(s) name(s)
+    
+      Projects names separated with '|', e.g. `gitextensions/gitextensions|jbialobr/gitextensions`
+      
+    .. setting:: Display tests results in build status summary for every build result
+        
+      Include tests results in the build status summary for every build result.
+      
+    .. setting:: Display GitHub pull requests builds
+    
+      Display build status for revisions which GitHub pull requests are based on.
+      If you have fetched revisions from other users' forks, GitExtensions will show 
+      a build status for those revisions for which a build was performed as a part of 
+      a pull request's check.
+      
+    .. setting:: GitHubToken
+  
+      Token to allow access the GitHub API. You can generate your private token at https://github.com/settings/tokens
+  
   .. settingsgroup:: Jenkins
 
     .. setting:: Jenkins server URL
@@ -734,6 +799,12 @@ The settings that are used by Git are stored in the configuration files of Git. 
 
     If checked, the script is added to the context menu that is displayed when right-clicking on a line in the Commit Log page.
 
+  .. setting:: Is PowerShell
+
+    If checked, the command is started through a powershell.exe process.
+    If the :ref:`settings-scripts-run-in-background` is checked, the powershell console is closed after finishing. If not,
+    the powershell console is left for the user to close it manually.
+  
   .. setting:: Command
 
     Enter the command to be run. This can be any command that your system can run e.g. an executable program,
@@ -749,6 +820,10 @@ The settings that are used by Git are stored in the configuration files of Git. 
   .. setting:: On Event
 
     Select when this command will be executed, either before/after certain Git commands, or displayed on the User Menu bar.
+
+  .. setting:: Icon
+    
+    Select an icon to be displayed in a menu item when the script is marked to be shown in the user menu bar.
 
 .. settingspage:: Hotkeys
 
@@ -798,7 +873,7 @@ The settings that are used by Git are stored in the configuration files of Git. 
 .. settingspage:: Advanced
 
   This page allows advanced settings to be modified. Clicking on the '+' symbol on the tree of settings will display further settings.
-  Refer :ref:`settings-confirmations`.
+  Refer :ref:`settings-advanced-confirmations`.
 
   .. settingsgroup:: Checkout
 
@@ -826,52 +901,171 @@ The settings that are used by Git are stored in the configuration files of Git. 
     
       In the Push, Merge and Rebase dialogs, advanced options are hidden by default and shown only after you click a link or checkbox. 
       If this setting is checked then these options are always shown on those dialogs.
-          
-    .. setting:: Remember the ignore-white-space preference
     
-      If checked, the diff views will be able to remember the ignore-white-spaces preference.
-          
-.. settingspage:: Confirmations
+    .. setting:: Check for release candidate versions
+    
+      Include release candidate versions when checking for a newer version.
+    
+    .. setting:: Use Console Emulator for console output in command dialogs
+    
+      Using Console Emulator for console output in command dialogs may be useful the running
+      command requires an user input, e.g. push, pull using ssh, confirming gc.
+      
+    .. setting:: Auto normalise branch name
+    
+      Controls whether branch name should be automatically normalised as per git branch
+      naming rules. If enabled, any illegal symbols will be replaced with the replacement symbol of your choice.
 
-  This page allows you to turn off certain confirmation popup windows.
+  .. settingspage:: Confirmations
+
+    This page allows you to turn off certain confirmation popup windows.
+    
+    .. settingsgroup:: Don’t ask to confirm to
+      
+      .. setting:: Amend last commit
+      
+        If checked, do not display the popup warning about 
+        the rewriting of history when you have elected to amend the last committed change.
+      
+      .. setting:: Commit when no branch is currently checked out
+      
+        When commiting changes and there is no branch currently being checked out, then
+        GitExtensions warns you and proposes to checkout or create a branch. Enable this 
+        option to continue working with no warning.
+        
+      .. setting:: Apply stashed changes after successful pull
+
+        In the Pull dialog, if ``Auto stash`` is checked, then any changes will be stashed before the pull is performed.
+        Any stashed changes are then re-applied after the pull is complete. 
+        If this setting is checked, the stashed changes are applied with no confirmation popup.
+
+      .. setting:: Apply stashed changes after successful checkout
+      
+        In the Checkout Branch dialog, if ``Stash`` is checked, then any changes will be stashed before the branch is checked out.
+        If this setting is checked, then the stashed changes will be automatically re-applied
+        after successful checkout of the branch with no confirmation popup.
+            
+      .. setting:: Add a tracking reference for newly pushed branch
+      
+        When you push a local branch to a remote and it doesn’t have a tracking reference,
+        you are asked to confirm whether you want to add such a reference. If this setting is checked,
+        a tracking reference will always be added if it does not exist.
+            
+      .. setting:: Push a new branch for the remote
+      
+        When pushing a new branch that does not exist on the remote repository, 
+        a confirmation popup will normally be displayed. If this setting is checked, 
+        then the new branch will be pushed with no confirmation popup.
+            
+      .. setting:: Update submodules on checkout
+      
+        When you check out a branch from a repository that has submodules,
+        you will be asked to update the submodules. If this setting is checked,
+        the submodules will be updated without asking.
+      
+      .. setting:: Resolve conflicts
+      
+        If enabled, then when conflicts are detected GitExtensions will start the Resolve conflicts dialog
+        automatically without any prompt.
+        
+      .. setting:: Commit changes after conflicts have been resolved
+      
+        Enable this option to start the Commit dialog automatically after all conflicts have been resolved.
+        
+      .. setting:: Confirm for the second time to abort a merge
+      
+        When aborting a merge, rebase or other operation that caused conflicts to be resolved,
+        an user is warned about the consequences of aborting and asked if he/she wants to continue.
+        If the user chooses to continue the aborting operation, then he/she is asked for the second time
+        if he/she is sure that he/she wants to abort. Enable this option to skip this second confirmation.
+
+.. settingspage:: Detailed
+
+  This page allows detailed settings to be modified. Clicking on the '+' symbol on the tree of settings will display further settings.
+
+  .. settingsgroup:: Push window
+    
+    .. setting:: Get remote branches directly from the remote
+    
+      Git caches locally remote data. This data is updated each time a fetch operation is performed.
+      For a better performance GitExtensions uses the locally cached remote data to fill out controls
+      on the Push dialog. Enable this option if you want GitExtensions to use remote data recieved
+      directly from the remote server.
   
-  .. settingsgroup:: Don’t ask to confirm to
+  .. settingsgroup:: Merge window
     
-    .. setting:: Amend last commit
+    .. setting:: Add log messages
     
-      If checked, do not display the popup warning about 
-      the rewriting of history when you have elected to amend the last committed change.
-          
-    .. setting:: Apply stashed changes after successful pull
+      If enabled, then in addition to branch names, git will populate the log message with one-line descriptions 
+      from at most the given number actual commits that are being merged.
+      See https://git-scm.com/docs/git-merge#git-merge---logltngt
 
-      In the Pull dialog, if ``Auto stash`` is checked, then any changes will be stashed before the pull is performed.
-      Any stashed changes are then re-applied after the pull is complete. 
-      If this setting is checked, the stashed changes are applied with no confirmation popup.
+  .. settingspage:: Browse repository window
+  
+    .. setting:: Show revision details next to the revision list
 
-    .. setting:: Apply stashed changes after successful checkout
+      Enable to move the commit details panel from the tab pages at the bottom of the window
+      to the top right corner.
+      
+      .. image:: /images/settings/rev-details-on-the-right.png
+        :width: 800px
+
+    .. settingsgroup:: Console emulator
     
-      In the Checkout Branch dialog, if ``Stash`` is checked, then any changes will be stashed before the branch is checked out.
-      If this setting is checked, then the stashed changes will be automatically re-applied
-      after successful checkout of the branch with no confirmation popup.
-          
-    .. setting:: Add a tracking reference for newly pushed branch
-    
-      When you push a local branch to a remote and it doesn’t have a tracking reference,
-      you are asked to confirm whether you want to add such a reference. If this setting is checked,
-      a tracking reference will always be added if it does not exist.
-          
-    .. setting:: Push a new branch for the remote
-    
-      When pushing a new branch that does not exist on the remote repository, 
-      a confirmation popup will normally be displayed. If this setting is checked, 
-      then the new branch will be pushed with no confirmation popup.
-          
-    .. setting:: Update submodules on checkout
-    
-      When you check out a branch from a repository that has submodules,
-      you will be asked to update the submodules. If this setting is checked,
-      the submodules will be updated without asking.  
-          
+      .. setting:: Show the Console tab
+      
+        Show the Console tab in the :ref:`browse-repository` window.
+      
+      .. settingsgroup:: Console settings
+      
+        .. setting:: Console style
+        
+          Choose one of the predefined ConEmu schemes. See http://conemu.github.io/en/SettingsColors.html.
+        
+        .. setting:: Shell to run
+        
+          Choose one of the predefined terminals.
+        
+        .. setting:: Font size
+        
+          Console font size.
+
+  .. settingspage:: Diff Viewer
+  
+    .. setting:: Remember the 'Ignore whitespaces' preference
+      
+      Remember in the GitExtensions settings the latest chosen value of the 'Ignore whitespaces' preference.
+      Use the remembered value the next time GitExtensions is opened.
+
+    .. setting:: Remember the 'Show nonprinting characters' preference
+      
+      Remember in the GitExtensions settings the latest chosen value of the 'Show nonprinting characters' preference.
+      Use the remembered value the next time GitExtensions is opened.     
+
+    .. setting:: Remember the 'Show entire file' preference
+      
+      Remember in the GitExtensions settings the latest chosen value of the 'Show entire file' preference.
+      Use the remembered value the next time GitExtensions is opened.     
+
+    .. setting:: Remember the 'Number of context lines' preference
+      
+      Remember in the GitExtensions settings the latest chosen value of the 'Number of context lines' preference.
+      Use the remembered value the next time GitExtensions is opened.     
+
+    .. setting:: Omit uninteresting changes from combined diff
+      
+      Includes git `--cc` switch when generating a diff. See https://git-scm.com/docs/git-diff-tree#git-diff-tree---cc
+
+    .. setting:: Open Submodule Diff in separate window
+      
+      If enabled then double clicking on a submodule in the Diff file list opens a new instance of
+      GitExtensions with the submodule as the selectect repository. If disabled, the File history 
+      window is opened for the double clicked submodule.
+
+    .. setting:: Show file differences for all parents in browse dialog
+      
+      Enable this option to see diff against each of the revision parents, combined diff including.
+      
 .. settingspage:: Plugins
 
   Plugins provide extra functionality for Git Extensions.
@@ -1029,26 +1223,26 @@ The settings that are used by Git are stored in the configuration files of Git. 
     This involves summarising all commits between the specified from and to commit expressions
     when the plugin is started. This output can be copied to the clipboard in various formats.
     
-  .. settingspage:: Create Stash Pull Request
+  .. settingspage:: Create Bitbucket Pull Request
 
-    If your repository is hosted on Atlassian Bitbucket Server (Stash)
-    then this plugin will enable you to create a pull request for Stash from Git Extensions
+    If your repository is hosted on Atlassian Bitbucket Server
+    then this plugin will enable you to create a pull request for Bitbucket from Git Extensions
 
     For more information see: https://www.atlassian.com/software/bitbucket/server
 
-    .. setting:: Stash Username
+    .. setting:: Bitbucket Username
 
-      The username required to access Stash.
+      The username required to access Bitbucket.
 
-    .. setting:: Stash Password
+    .. setting:: Bitbucket Password
 
-      The password required to access Stash.
+      The password required to access Bitbucket.
 
-    .. setting:: Specify the base URL to Stash
+    .. setting:: Specify the base URL to Bitbucket
 
-      The URL from which you will access Stash.
+      The URL from which you will access Bitbucket.
 
     .. setting:: Disable SSL verification
 
-      Check this option if you do not require SSL verification to access Bitbucket Server (Stash).
+      Check this option if you do not require SSL verification to access Bitbucket Server.
       
