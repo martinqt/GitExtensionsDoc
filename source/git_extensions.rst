@@ -10,7 +10,7 @@ Features
 --------
 
 * Windows Explorer integration for Git
-* Visual Studio (2005/2008/2010/2012) plug-in for Git
+* Visual Studio (2010 - 2015) plug-in for Git
 * Feature rich user interface for Git
 * Single installer installs Git, Git Extensions and the merge tool KDiff3 
 * 32bit and 64bit support
