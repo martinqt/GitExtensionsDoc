@@ -32,7 +32,7 @@ class SettingBaseDirective(Directive):
         else:
             targetid = nodes.make_id(self.arguments[0].lower())
             
-        if 'setting_group' in self.env.temp_data:
+        if 'setting_group' in self.env.temp_data and len(self.env.temp_data['setting_group']) > 0:
             targetid = self.env.temp_data['setting_group'][-1] + '-' + targetid
 
         return targetid
@@ -56,8 +56,6 @@ class SettingsPage(SettingBaseDirective):
         """
         """
         self.env = self.state.document.settings.env  # type: BuildEnvironment
-        if 'setting_group' in self.env.temp_data:
-            del self.env.temp_data['setting_group']
 
         targetid = self.compute_target_id()
         caption = self.arguments[0]
@@ -72,8 +70,12 @@ class SettingsPage(SettingBaseDirective):
         titlenode = nodes.title(targetid, caption)
         node += titlenode
         self.add_label(targetid, caption)
-        self.env.temp_data['setting_group'] = [targetid]
+
+        if not 'setting_group' in self.env.temp_data:
+            self.env.temp_data['setting_group'] = []
+        self.env.temp_data['setting_group'].append(targetid)
         self.state.nested_parse(self.content, self.content_offset, node)
+        self.env.temp_data['setting_group'].pop()
         return [node]        
 
         
