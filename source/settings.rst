@@ -688,7 +688,7 @@ The settings that are used by Git are stored in the configuration files of Git. 
 
     .. setting:: Project name
 
-      Enter the name of the project which tracks this repository in Jenkins.
+      Enter the name of the project which tracks this repository in Jenkins. Separate project names with "|". Multi-branch pipeline projects are supported by adding "?m" to the project name.
 
   .. settingsgroup:: TeamCity
   
