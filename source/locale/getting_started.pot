@@ -29,11 +29,11 @@ msgid "Installation"
 msgstr ""
 
 #: ..\getting_started.rst:10
-msgid "There is a single click installer GitExtensions-X.XX.XX-SetupComplete.msi that installs Git for Windows 32bit, Kdiff3 32bit and Git Extensions. The installer can be found `here <https://github.com/gitextensions/gitextensions/releases/latest>`_."
+msgid "The single click Git Extensions installer can be found `here <https://github.com/gitextensions/gitextensions/releases/latest>`_."
 msgstr ""
 
 #: ..\getting_started.rst:17
-msgid "Git Extensions depends heavily on Git for Windows. When Git for Windows is not installed, ensure the \"Install Git for Windows\" checkbox is checked. Kdiff3 is optional, but is advised as a merge tool."
+msgid "Git Extensions depends heavily on Git for Windows."
 msgstr ""
 
 #: ..\getting_started.rst:24

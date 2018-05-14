@@ -25,7 +25,7 @@ button has no effect for the page - this will be noted on the page in the area n
 
 Settings that are specific to Git Extensions and apply globally will be stored in a file called ``GitExtensions.settings``
 either in the user's application data path or with the program.
-The location is dependant on the IsPortable setting in the ``GitExtensions.exe.config`` file that is with the program.
+The location is dependent on the IsPortable setting in the ``GitExtensions.exe.config`` file that is with the program.
 Settings that are specific to Git Extensions but apply to only the current repository will be stored in a file of the same
 name, ``GitExtensions.settings``, but in either the root folder of the repository or the ``.git`` folder of the repository,
 depending on whether or not they are distributed with that repository.
@@ -92,19 +92,18 @@ The settings that are used by Git are stored in the configuration files of Git. 
 
       When enabled, the number of pending commits are shown on the toolbar as a figure in parentheses next to the Commit button.
       Git Extensions must be stopped and restarted to activate changes to this option.
+      Turn this off if you experience slowdowns.
       
     .. setting:: Show current working directory changes in revision graph
       :id: working-dir-changes
       
       When enabled, two extra revisions are added to the revision graph. 
       The first shows the current working directory status. The second shows the staged files.
-      This option can cause slowdowns when browsing large repositories.
       
     .. setting:: Use FileSystemWatcher to check if index is changed
       :id: filesystemwatcher
 
       Using the FileSystemWatcher to check index state improves the performance in some cases.
-      Turn this off if you experience refresh problems in commit log.
       
     .. setting:: Show stash count on status bar in browse window
       :id: stash-count
@@ -1077,7 +1076,7 @@ The settings that are used by Git are stored in the configuration files of Git. 
       
 .. settingspage:: Plugins
 
-  Plugins provide extra functionality for Git Extensions.
+  Plugins provide extra functionality for Git Extensions. This list is incomplete.
 
   .. settingspage:: Auto compile SubModules
   
@@ -1232,10 +1231,10 @@ The settings that are used by Git are stored in the configuration files of Git. 
     This involves summarising all commits between the specified from and to commit expressions
     when the plugin is started. This output can be copied to the clipboard in various formats.
     
-  .. settingspage:: Create Bitbucket Pull Request
+  .. settingspage:: Bitbucket Server
 
     If your repository is hosted on Atlassian Bitbucket Server
-    then this plugin will enable you to create a pull request for Bitbucket from Git Extensions
+    then this plugin will enable you to create a pull request for Bitbucket from Git Extensions. The plugin cannot be used for bitbucket.org.
 
     For more information see: https://www.atlassian.com/software/bitbucket/server
 
