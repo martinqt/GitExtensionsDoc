@@ -1,21 +1,14 @@
 Getting Started
 ===============
 
-This section is primarily written for Windows users. There are extra sections
-about installing Git Extensions on Linux and Mac OS X.
-
 Installation
 ------------
 
-There is a single click installer GitExtensions-X.XX.XX-SetupComplete.msi that installs Git for Windows 32bit, Kdiff3 32bit
-and Git Extensions. The installer can be found `here <https://github.com/gitextensions/gitextensions/releases/latest>`_.
+The single click Git Extensions installer can be found `here <https://github.com/gitextensions/gitextensions/releases/latest>`_.
 
 .. image:: /images/install/install1.png
 
-.. figure:: /images/install/install2.png
-
-    Git Extensions depends heavily on Git for Windows. When Git for Windows is not installed, ensure the "Install Git for Windows" checkbox is checked. Kdiff3 is
-    optional, but is advised as a merge tool.
+    Git Extensions depends heavily on Git for Windows.
 
 .. image:: /images/install/install3.png
 
@@ -28,73 +21,6 @@ and Git Extensions. The installer can be found `here <https://github.com/gitexte
     Choose the SSH client to use. PuTTY is the default because it has better Windows integration.
 
 .. image:: /images/install/install6.png
-
-Installation (Linux)
---------------------
-You can watch this video as a starting point: `Install Git Extensions on Ubuntu 11.04  <http://www.youtube.com/watch?v=zk2MMUQuW4s>`_
-
-For further help go to https://groups.google.com/forum/?fromgroups=#!forum/gitextensions
-
-This section only covers mono installation, you should have git installed in your Linux at this point. Please refer to https://git-scm.com/download/linux
-
-First, make sure you have the latest mono version on your Linux. This section will cover installation of Mono 4.6 on a Linux.
-
-1) Install mono latest version. You can always check for this here: http://www.mono-project.com/download/#download-lin
-2) If everything went okay, you should open your terminal and check mono version::
-
-    $ mono --version
-    Mono JIT compiler version 4.6.1 (Stable 4.6.1.5/ef43c15 Wed Oct 12 09:10:37 UTC 2016)
-    Copyright (C) 2002-2014 Novell, Inc, Xamarin Inc and Contributors. www.mono-project.com
-        TLS:           __thread
-        SIGSEGV:       altstack
-        Notifications: epoll
-        Architecture:  amd64
-        Disabled:      none
-        Misc:          softdebug
-        LLVM:          supported, not enabled.
-        GC:            sgen
-3) Now download Git Extensions latest version from https://github.com/gitextensions/gitextensions/releases/latest. Remember to select the appropriate package otherwise you could have problems.
-4) Browse into the folder where you extracted the package and just run mono command, like the example below::
-
-    $ mono GitExtensions.exe
-
-Installation (macOS)
---------------------
-
-This section only covers mono installation, you should have git installed in your Mac at this point. Please refer to https://git-scm.com/download/mac
-
-First, make sure you have the latest mono version on your Mac. This section will cover installation of Mono 4.6 on a Mac.
-
-1) Download mono latest version. You can always check for this here: http://www.mono-project.com/download/#download-mac
-2) After you have completed the download, you will see a .dmg file. Double click it to open the package.
-3) Inside the .dmg file you will have MonoFramework-{version}.pkg. Double click to start the installation process.
-4) Follow the wizard until it's completion.
-5) If everything went okay, you should open your terminal and check mono version::
-
-    $ mono --version
-    Mono JIT compiler version 4.6.1 (mono-4.6.0-branch-c8sr0/abb06f1 Fri Sep 23 19:24:23 EDT 2016)
-    Copyright (C) 2002-2014 Novell, Inc, Xamarin Inc and Contributors. www.mono-project.com
-        TLS:           normal
-        SIGSEGV:       altstack
-        Notification:  kqueue
-        Architecture:  x86
-        Disabled:      none
-        Misc:          softdebug
-        LLVM:          yes(3.6.0svn-mono-master/8b1520c)
-        GC:            sgen
-
-6) Now download Git Extensions latest version from https://github.com/gitextensions/gitextensions/releases/latest. Remember to select the appropriate package otherwise you could have problems.
-7) Browse into the folder where you extracted the package and just run mono command, like the example below::
-
-    $ mono GitExtensions.exe
-
-This is the minimal setup you need in order to run Git Extensions.
-
-Troubleshooting Mac Installation
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-1) If your Git Extensions crashes with an exception that a font is missing (generic sans serif), you probably can fix this by installing Xquartz. This is a version of the X.Org X Windows System that runs on OS X. I am not sure what the side effects are. This can be installed from here: http://xquartz.macosforge.org/landing/
-2) If Git Extensions still crashes because it is unable to load a plugin, empty the plugins folder.
 
 Settings
 --------

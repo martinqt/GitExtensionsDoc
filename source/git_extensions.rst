@@ -1,19 +1,21 @@
 Git Extensions
 ==============
 
-Git Extensions is a toolkit aimed at making working with Git under Windows more intuitive
-(note that Git Extensions is also available on Linux and Macintosh OS X using Mono). The shell 
+Git Extensions is a toolkit aimed at making working with Git under Windows more intuitive.
+The shell 
 extension will integrate in Windows Explorer and presents a context menu on files and directories. 
-There is also a Visual Studio plug-in to use Git from the Visual Studio IDE.
+There is also a Visual Studio extension to use Git from the Visual Studio IDE.
 
 Features
 --------
 
 * Windows Explorer integration for Git
-* Visual Studio (2010 - 2015) plug-in for Git
 * Feature rich user interface for Git
-* Single installer installs Git, Git Extensions and the merge tool KDiff3 
 * 32bit and 64bit support
+* Visual Studio extension (2015-2017)
+
+Specific in 2.5x releases:
+* Visual Studio (2010 - 2015) add-in
 * Runs under Linux or Mac OS X using `Mono <http://www.mono-project.com>`_
 
 Video tutorials
