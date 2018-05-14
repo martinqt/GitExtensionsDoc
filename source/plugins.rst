@@ -18,6 +18,8 @@ List of the available plugins
 * Release Notes Generator
 * Statistics
 
+(Incomplete list)
+
 GitFlow
 -------
 

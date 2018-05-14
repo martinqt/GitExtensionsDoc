@@ -1,21 +1,14 @@
 Getting Started
 ===============
 
-This section is primarily written for Windows users. There are extra sections
-about installing Git Extensions on Linux and Mac OS X.
-
 Installation
 ------------
 
-There is a single click installer GitExtensions-X.XX.XX-SetupComplete.msi that installs Git for Windows 32bit, Kdiff3 32bit
-and Git Extensions. The installer can be found `here <https://github.com/gitextensions/gitextensions/releases/latest>`_.
+The single click Git Extensions installer can be found `here <https://github.com/gitextensions/gitextensions/releases/latest>`_.
 
 .. image:: /images/install/install1.png
 
-.. figure:: /images/install/install2.png
-
-    Git Extensions depends heavily on Git for Windows. When Git for Windows is not installed, ensure the "Install Git for Windows" checkbox is checked. Kdiff3 is
-    optional, but is advised as a merge tool.
+    Git Extensions depends heavily on Git for Windows.
 
 .. image:: /images/install/install3.png
 
@@ -29,8 +22,8 @@ and Git Extensions. The installer can be found `here <https://github.com/gitexte
 
 .. image:: /images/install/install6.png
 
-Installation (Linux)
---------------------
+Installation (Linux) (2.5x only)
+--------------------------------
 You can watch this video as a starting point: `Install Git Extensions on Ubuntu 11.04  <http://www.youtube.com/watch?v=zk2MMUQuW4s>`_
 
 For further help go to https://groups.google.com/forum/?fromgroups=#!forum/gitextensions
@@ -58,12 +51,12 @@ First, make sure you have the latest mono version on your Linux. This section wi
 
     $ mono GitExtensions.exe
 
-Installation (macOS)
---------------------
+Installation (macOS) (2.5x only)
+--------------------------------
 
 This section only covers mono installation, you should have git installed in your Mac at this point. Please refer to https://git-scm.com/download/mac
 
-First, make sure you have the latest mono version on your Mac. This section will cover installation of Mono 4.6 on a Mac.
+First, make sure you have the latest 32-bit mono version on your Mac. This section will cover installation of Mono 4.6 on a Mac.
 
 1) Download mono latest version. You can always check for this here: http://www.mono-project.com/download/#download-mac
 2) After you have completed the download, you will see a .dmg file. Double click it to open the package.
