@@ -59,8 +59,8 @@ filter in the advanced filter dialog.
 
 .. image:: /images/advance_filter_dialog.png
 
-Singe file history
-------------------
+Single file history
+-------------------
 
 To display the single file history, right click on a file name in the ``File tree`` or in the ``Diff`` tab and select ``File history``.
 
