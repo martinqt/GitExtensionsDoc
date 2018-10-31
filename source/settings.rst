@@ -808,6 +808,13 @@ The settings that are used by Git are stored in the configuration files of Git. 
 
     Enter the command to be run. This can be any command that your system can run e.g. an executable program,
     a .bat script, a Python command, etc. Use the ``Browse`` button to find the command to run.
+    
+    There are some special prefixes which change the way the script is executed:
+
+    * ``plugin:<plugin-name>``: Where ``<plugin-name>`` is the name of a *plugin* (refer :ref:`settings-plugins`).
+      If a plugin with that name is found, it is run.
+    * ``navigateTo:<script-path>``: (since v3.0) Where ``<script-path>`` is the path to a file containing the script to run.
+      That script is expected to return a commit hash as the first line of its output. The UI will navigate to that commit once the script completes.
 
   .. setting:: Arguments
 
