@@ -8,7 +8,9 @@ Git Extensions |release| Manual
    getting_started
    settings
    browse_repository
+   file_history
    commit
+   stash
    tag
    branches
    patches
@@ -17,9 +19,11 @@ Git Extensions |release| Manual
    modify_history
    notes
    submodules
+   worktrees
    maintenance
    translations
-   integration
+   windows_explorer
+   visual_studio
    command_line
    z_appendix
    plugins
