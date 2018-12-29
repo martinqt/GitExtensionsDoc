@@ -124,6 +124,8 @@ The GitFlow plugin permit to :
 
 .. settingspage:: Jira Commit Hint
 
+  .. image:: /images/plugins/jira_commit_hint.png
+
 Provides hints for Atlassian Jira issues in the commit form.
 For example, you can configure Key - Summary message for all your in progress tasks.
 
@@ -145,11 +147,11 @@ For example, you can configure Key - Summary message for all your in progress ta
 
     .. setting:: JQL Query
 
-      Query to jira, results of which you want to show in "Commit Templates" in Commit Form. For more information see: https://confluence.atlassian.com/jiracoreserver073/advanced-searching-861257209.html
+      Query to Jira, results of which you want to show in "Commit Templates" in Commit Form. For more information see: https://confluence.atlassian.com/jiracoreserver073/advanced-searching-861257209.html
 
     .. setting:: Jira fields
 
-      It's a hint which key words you can use in Message Template.
+      Key words that you can use in Message Template.
 
     .. setting:: Message Template
 
