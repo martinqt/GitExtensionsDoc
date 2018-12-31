@@ -258,11 +258,6 @@ depending on whether or not they are distributed with that repository.
           If unchecked, all branches are shown in the same color.
           This color can be selected.
 
-        .. setting:: Striped branch change
-
-          (Unused)
-          .. todo Any effect?
-
         .. setting:: Draw alternate background
 
           Alternate background colour for revision rows.
