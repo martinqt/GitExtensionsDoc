@@ -275,6 +275,14 @@ depending on whether or not they are distributed with that repository.
 
           Show commit text in gray for branches not related to the current branch.
 
+        .. setting:: Highlight authored revisions
+
+          Highlight revisions committed by the same author as the selected revision.
+
+        .. setting:: Color authored revisions
+
+          Color to highlight authored revisions.
+
         .. setting:: Color tag
 
           Color to show tags in.
