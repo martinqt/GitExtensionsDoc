@@ -909,8 +909,8 @@ depending on whether or not they are distributed with that repository.
 
       .. setting:: Vertical ruler position
 
-        Position for ruler.
-        .. todo Any effect?
+        Position for ruler in TextEditor controls. Set to 0 to disable.
+        (This should be moved to the TextEditor context menu.)
 
   .. settingspage:: SSH
 

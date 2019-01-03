@@ -25,14 +25,13 @@ For description of 2.x specific features, see the `2.x documentation <../release
 Video tutorials
 ---------------
 
-There are video tutorials for some basic functions on YouTube, for older Git Extensions versions.
+There are video tutorials for some basic functions on YouTube (made for older Git Extensions versions).
 
 #. `Clone <http://www.youtube.com/watch?v=TlZXSkJGKF8>`_
 #. `Commit changes <http://www.youtube.com/watch?v=B8uvje6X7lo>`_
 #. `Push changes <http://www.youtube.com/watch?v=JByfXdbVAiE>`_
 #. `Pull changes <http://www.youtube.com/watch?v=9g8gXPsi5Ko>`_
 #. `Handle merge conflicts <http://www.youtube.com/watch?v=Kmc39RvuGM8>`_
-#. `Install Git Extensions on Ubuntu 11.04  <http://www.youtube.com/watch?v=zk2MMUQuW4s>`_
 
 Links
 -----
