@@ -258,11 +258,6 @@ depending on whether or not they are distributed with that repository.
           If unchecked, all branches are shown in the same color.
           This color can be selected.
 
-        .. setting:: Striped branch change
-
-          (Unused)
-          .. todo Any effect?
-
         .. setting:: Draw alternate background
 
           Alternate background colour for revision rows.
@@ -274,6 +269,14 @@ depending on whether or not they are distributed with that repository.
         .. setting:: Draw non relatives text gray
 
           Show commit text in gray for branches not related to the current branch.
+
+        .. setting:: Highlight authored revisions
+
+          Highlight revisions committed by the same author as the selected revision.
+
+        .. setting:: Color authored revisions
+
+          Color to highlight authored revisions.
 
         .. setting:: Color tag
 
@@ -906,8 +909,8 @@ depending on whether or not they are distributed with that repository.
 
       .. setting:: Vertical ruler position
 
-        Position for ruler.
-        .. todo Any effect?
+        Position for ruler in TextEditor controls. Set to 0 to disable.
+        (This should be moved to the TextEditor context menu.)
 
   .. settingspage:: SSH
 
