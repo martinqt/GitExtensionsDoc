@@ -208,6 +208,11 @@ depending on whether or not they are distributed with that repository.
         - ``Trimstart`` - no horizontal scroll bar. Filenames are truncated at the start only.
         - ``FileNameOnly`` - the path is always removed, leaving only the name of the file, even if there is space for the path.
 
+      .. setting:: Sort by author date
+        :id: sort-author-date
+
+        This setting causes commits to be sorted by author date (rather than commit date) in the revision grid. Sorting by author date may delay rendering of the revision graph.
+
     .. settingsgroup:: Author images
       :id: author-images
 
