@@ -585,6 +585,7 @@ depending on whether or not they are distributed with that repository.
     .. setting:: On Event
 
       Select when this command will be executed, either before/after certain Git commands, or displayed on the User Menu bar.
+      Since the git pull command includes a fetch, before/after fetch events are triggered on pure fetches as well as on pulls.
 
       .. setting:: Icon
 
