@@ -46,3 +46,12 @@ To use the PDF builder, you'll need to install:
 * pil `easy_install pil`
 
 Also add `,'rst2pdf.pdfbuilder'` to the source/conf.py file at the line 28. Then run `make.cmd pdf`.
+
+Version update
+--------------
+
+ * Set version in source/conf.py
+ * Create release branch release/x.y (this is the default from the GE About menu for released versions, 'master' for development builds).
+ * When releasing final, push 'latest' branch to release/x.y commit (this branch is the default when browsing https://git-extensions-documentation.readthedocs.io/).
+ * Edit versions in https://readthedocs.org/projects/git-extensions-documentation/versions/ (admin privileges needed). Keep relevant versions active.
+ * Trigger a build for changed versions
