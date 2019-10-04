@@ -778,6 +778,10 @@ depending on whether or not they are distributed with that repository.
 
           Browse fetch/prune popup.
 
+        .. setting:: Switch Worktree
+
+          Switch worktree popup.
+		  
   .. settingspage:: Detailed
 
     This page allows detailed settings to be modified.
