@@ -1,1 +1,8 @@
 build
+*.orig
+tx.exe
+GitExtensions.settings.backup
+source/locale/.doctrees/
+/source/__pycache__/
+/source/extensions/__pycache__/
+*.pyc

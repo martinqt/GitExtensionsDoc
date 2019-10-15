@@ -1,0 +1,122 @@
+[main]
+host = https://www.transifex.com
+
+[git-extensions-manual.branches]
+file_filter = source/locale/<lang>/LC_MESSAGES/branches.po
+source_file = source/locale/pot/branches.pot
+source_lang = en
+type = PO
+
+[git-extensions-manual.browse_repository]
+file_filter = source/locale/<lang>/LC_MESSAGES/browse_repository.po
+source_file = source/locale/pot/browse_repository.pot
+source_lang = en
+type = PO
+
+[git-extensions-manual.command_line]
+file_filter = source/locale/<lang>/LC_MESSAGES/command_line.po
+source_file = source/locale/pot/command_line.pot
+source_lang = en
+type = PO
+
+[git-extensions-manual.commit]
+file_filter = source/locale/<lang>/LC_MESSAGES/commit.po
+source_file = source/locale/pot/commit.pot
+source_lang = en
+type = PO
+
+[git-extensions-manual.getting_started]
+file_filter = source/locale/<lang>/LC_MESSAGES/getting_started.po
+source_file = source/locale/pot/getting_started.pot
+source_lang = en
+type = PO
+
+[git-extensions-manual.git_extensions]
+file_filter = source/locale/<lang>/LC_MESSAGES/git_extensions.po
+source_file = source/locale/pot/git_extensions.pot
+source_lang = en
+type = PO
+
+[git-extensions-manual.Index]
+file_filter = source/locale/<lang>/LC_MESSAGES/index.po
+source_file = source/locale/pot/index.pot
+source_lang = en
+type = PO
+
+[git-extensions-manual.integration]
+file_filter = source/locale/<lang>/LC_MESSAGES/integration.po
+source_file = source/locale/pot/integration.pot
+source_lang = en
+type = PO
+
+[git-extensions-manual.maintenance]
+file_filter = source/locale/<lang>/LC_MESSAGES/maintenance.po
+source_file = source/locale/pot/maintenance.pot
+source_lang = en
+type = PO
+
+[git-extensions-manual.merge_conflicts]
+file_filter = source/locale/<lang>/LC_MESSAGES/merge_conflicts.po
+source_file = source/locale/pot/merge_conflicts.pot
+source_lang = en
+type = PO
+
+[git-extensions-manual.modify_history]
+file_filter = source/locale/<lang>/LC_MESSAGES/modify_history.po
+source_file = source/locale/pot/modify_history.pot
+source_lang = en
+type = PO
+
+[git-extensions-manual.notes]
+file_filter = source/locale/<lang>/LC_MESSAGES/notes.po
+source_file = source/locale/pot/notes.pot
+source_lang = en
+type = PO
+
+[git-extensions-manual.patches]
+file_filter = source/locale/<lang>/LC_MESSAGES/patches.po
+source_file = source/locale/pot/patches.pot
+source_lang = en
+type = PO
+
+[git-extensions-manual.plugins]
+file_filter = source/locale/<lang>/LC_MESSAGES/plugins.po
+source_file = source/locale/pot/plugins.pot
+source_lang = en
+type = PO
+
+[git-extensions-manual.remote_feature]
+file_filter = source/locale/<lang>/LC_MESSAGES/remote_feature.po
+source_file = source/locale/pot/remote_feature.pot
+source_lang = en
+type = PO
+
+[git-extensions-manual.settings]
+file_filter = source/locale/<lang>/LC_MESSAGES/settings.po
+source_file = source/locale/pot/settings.pot
+source_lang = en
+type = PO
+
+[git-extensions-manual.submodules]
+file_filter = source/locale/<lang>/LC_MESSAGES/submodules.po
+source_file = source/locale/pot/submodules.pot
+source_lang = en
+type = PO
+
+[git-extensions-manual.tag]
+file_filter = source/locale/<lang>/LC_MESSAGES/tag.po
+source_file = source/locale/pot/tag.pot
+source_lang = en
+type = PO
+
+[git-extensions-manual.translations]
+file_filter = source/locale/<lang>/LC_MESSAGES/translations.po
+source_file = source/locale/pot/translations.pot
+source_lang = en
+type = PO
+
+[git-extensions-manual.z_appendix]
+file_filter = source/locale/<lang>/LC_MESSAGES/z_appendix.po
+source_file = source/locale/pot/z_appendix.pot
+source_lang = en
+type = PO

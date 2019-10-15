@@ -1,0 +1,122 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, GitExtensions
+# This file is distributed under the same license as the GitExtensions package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GitExtensions 2.48\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-05-24 23:16+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ..\git_extensions.rst:2
+msgid "Git Extensions"
+msgstr ""
+
+#: ..\git_extensions.rst:4
+msgid "Git Extensions is a toolkit aimed at making working with Git under Windows more intuitive (note that Git Extensions is also available on Linux and Macintosh OS X using Mono). The shell extension will integrate in Windows Explorer and presents a context menu on files and directories. There is also a Visual Studio plug-in to use Git from the Visual Studio IDE."
+msgstr ""
+
+#: ..\git_extensions.rst:10
+msgid "Features"
+msgstr ""
+
+#: ..\git_extensions.rst:12
+msgid "Windows Explorer integration for Git"
+msgstr ""
+
+#: ..\git_extensions.rst:13
+msgid "Visual Studio (2005/2008/2010/2012) plug-in for Git"
+msgstr ""
+
+#: ..\git_extensions.rst:14
+msgid "Feature rich user interface for Git"
+msgstr ""
+
+#: ..\git_extensions.rst:15
+msgid "Single installer installs Git, Git Extensions and the merge tool KDiff3"
+msgstr ""
+
+#: ..\git_extensions.rst:16
+msgid "32bit and 64bit support"
+msgstr ""
+
+#: ..\git_extensions.rst:17
+msgid "Runs under Linux or Mac OS X using `Mono <http://www.mono-project.com>`_"
+msgstr ""
+
+#: ..\git_extensions.rst:20
+msgid "Video tutorials"
+msgstr ""
+
+#: ..\git_extensions.rst:22
+msgid "There are video tutorials for some basic functions on YouTube."
+msgstr ""
+
+#: ..\git_extensions.rst:24
+msgid "`Clone <http://www.youtube.com/watch?v=TlZXSkJGKF8>`_"
+msgstr ""
+
+#: ..\git_extensions.rst:25
+msgid "`Commit changes <http://www.youtube.com/watch?v=B8uvje6X7lo>`_"
+msgstr ""
+
+#: ..\git_extensions.rst:26
+msgid "`Push changes <http://www.youtube.com/watch?v=JByfXdbVAiE>`_"
+msgstr ""
+
+#: ..\git_extensions.rst:27
+msgid "`Pull changes <http://www.youtube.com/watch?v=9g8gXPsi5Ko>`_"
+msgstr ""
+
+#: ..\git_extensions.rst:28
+msgid "`Handle merge conflicts <http://www.youtube.com/watch?v=Kmc39RvuGM8>`_"
+msgstr ""
+
+#: ..\git_extensions.rst:29
+msgid "`Install Git Extensions on Ubuntu 11.04  <http://www.youtube.com/watch?v=zk2MMUQuW4s>`_"
+msgstr ""
+
+#: ..\git_extensions.rst:32
+msgid "Links"
+msgstr ""
+
+#: ..\git_extensions.rst:34
+msgid "See the following links for the Git Extensions download page, source code and documentation."
+msgstr ""
+
+#: ..\git_extensions.rst:36
+msgid "Download page: https://sourceforge.net/projects/gitextensions/"
+msgstr ""
+
+#: ..\git_extensions.rst:37
+msgid "Source Code: https://github.com/gitextensions/gitextensions"
+msgstr ""
+
+#: ..\git_extensions.rst:38
+msgid "Source Code Issue tracker: https://github.com/gitextensions/gitextensions/issues"
+msgstr ""
+
+#: ..\git_extensions.rst:39
+msgid "Documentation: https://github.com/gitextensions/GitExtensionsDoc"
+msgstr ""
+
+#: ..\git_extensions.rst:40
+msgid "Documentation Issue tracker: https://github.com/gitextensions/GitExtensionsDoc/issues"
+msgstr ""
+
+#: ..\git_extensions.rst:41
+msgid "Wiki: https://github.com/gitextensions/gitextensions/wiki"
+msgstr ""
+
+#: ..\git_extensions.rst:43
+msgid "Please feel free to raise any issues with Git Extensions or its documentation at the appropriate Issue tracker link as shown above."
+msgstr ""
+
