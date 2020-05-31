@@ -29,4 +29,6 @@ It is possible to apply a single patch file or all patches in a directory. When 
 you need to resolve them before you can continue. Git Extensions will help you applying all patches by marking the next
 recommended step.
 
+Use 'Sign-Off' checkbox to sign off commits of applying patch. Git Extensions will remember your choice.
+
 .. image:: /images/apply_patche.png
